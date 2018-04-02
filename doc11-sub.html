@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc11-sub.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body class="flex-col">
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제16호서식(1)] &lt;개정 2015.3.6.&gt;</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">신용카드매출전표등 수령명세서(을)</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <div class="inc-number-wrapper flex-row">
+        <div class="label">사업자등록번호</div>
+        <div class="data">{{row04.comBizNo}}</div>
+      </div>
+    </div>
+
+    <div class="row05 flex-row">
+      3. 그 밖의 신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계
+    </div>
+
+    <div class="row06">
+      <table>
+        <tr>
+          <td rowspan="2" style="width: 5%">일 렬<br>번 호</td>
+          <td rowspan="2" style="width: 30%">⑨ 카드회원번호</td>
+          <td rowspan="2" style="width: 15%">⑩ 공급자(가맹점)<br>사업자등록번호</td>
+          <td colspan="3" style="width: 50%">⑪ 그 밖의 신용카드 등 거래명세 합계</td>
+          <!-- 
+            <td></td>
+            <td></td> 
+          -->
+        </tr>
+        <tr>
+          <!-- 
+            <td></td>
+            <td></td>
+            <td></td> 
+          -->
+          <td>거 래 건 수</td>
+          <td>공 급 가 액</td>
+          <td>세 액</td>
+        </tr>
+        <tr ng-repeat="(val, row) in row06.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.cdMemberDiv}}</td>
+          <td>{{row.franchComBizNo}}</td>
+          <td>{{row.tranCount}}</td>
+          <td>{{row.supplyAmount}}</td>
+          <td>{{row.vatAmount}}</td>
+        </tr>
+        <tr ng-repeat="index in row06.left;">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row07 flex-row">
+      작성방법
+    </div>
+
+    <div class="row08 flex-row">
+      <div>※</div>
+      <div>
+        『신용카드매출전표등 수령명세서(갑)』[별지 제16호서식(1)] “3. 그 밖의 신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계”의 내용이 많은 경우에 이어서 작성합니다.
+      </div>
+    </div>
+
+    <div class="page-size-label">
+      210㎜×297㎜[백상지 80g/㎡(재활용품)]
+    </div>
+  </div>
+
+</body>
+
+</html>

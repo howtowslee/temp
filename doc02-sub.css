@@ -1,0 +1,162 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: flex-end;
+  margin-bottom: 0.5vw;
+}
+
+.row04 .inc-number-wrapper {
+  border: 1px solid black;
+  width: 50%;
+}
+
+.row04 .inc-number-wrapper .label {
+  border-right: 1px solid black;
+  padding: 1vw 3vw;
+  width: 40%;
+}
+
+.row04 .inc-number-wrapper .data {
+  padding: 1vw 3vw;
+  width: 60%;
+}
+
+.row05 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row05 th, .row05 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row05 th:first-child, .row05 td:first-child {
+  border-left: 0vw;
+}
+
+.row05 th:last-child, .row05 td:last-child {
+  border-right: 0vw;
+}
+
+.row05 th {
+  padding: 0.5vw;
+}
+
+.row05 td {
+  height: 5vw;
+}
+
+.row06 {
+  text-align: center;
+  font-size: 2vw;
+  background-color: #f5f5f5;
+  border-top: 0.1pt solid black;
+  padding: 1vw 1vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.row07 {
+  text-align: left;
+  width: 100%;
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.row08 {
+  justify-content: flex-end;
+  padding: 1vw 0vw;
+}
+
+.row09 {
+  justify-content: flex-start;
+  padding: 2vw;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  margin-bottom: 2vw;
+}
+
+.row09 .wrapper {
+  width: 50%;
+  border: 0.1pt solid black;
+}
+
+.row09 .wrapper div {
+  width: 50%;
+  padding: 1vw 2vw;
+}
+
+.row09 .wrapper .number {
+  width: 50%;
+  border-right: 0.1pt solid black;
+}
+
+.row09 .wrapper .input {
+  width: 50%;
+}
+/*# sourceMappingURL=doc02-sub.css.map */

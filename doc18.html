@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc18.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body class="flex-col">
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제22호서식] &lt;개정 2014.3.14&gt;</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">신용카드매출전표등 발행금액 집계표</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <span>※ 아래의 작성방법을 읽고 작성하시기 바랍니다.</span>
+      <span></span>
+    </div>
+
+    <div class="row05 flex-row">
+      1. 제출자 인적사항
+    </div>
+
+    <div class="row06 flex-row">
+      <div class="box left flex-col">
+        <div class="label">① 상호(법인명)</div>
+        <div class="data">{{row06.comName}}</div>
+      </div>
+      <div class="box right flex-col">
+        <div class="label">② 성명(대표자)</div>
+        <div class="data">{{row06.comCeo}}</div>
+      </div>
+      <div class="box left flex-col">
+        <div class="label">③ 사업장 소재지</div>
+        <div class="data">{{row06.comAddress}}</div>
+      </div>
+      <div class="box right flex-col">
+        <div class="label">④ 사업자등록번호</div>
+        <div class="data">{{row06.comBizNo}}</div>
+      </div>
+    </div>
+
+    <div class="row07 flex-row">
+      2. 신용카드매출전표등 발행금액 현황
+    </div>
+
+    <div class="row08">
+      <table>
+        <tr>
+          <td>구분</td>
+          <td>⑤ 합계</td>
+          <td>
+            ⑥ 신용ㆍ직불ㆍ<br>
+            기명식 선불카드
+          </td>
+          <td>⑦ 현금영수증</td>
+        </tr>
+        <tr>
+          <td>합계</td>
+          <td>{{row08.sum.allSumIncom}}</td>
+          <td>{{row08.sum.cdIncom}}</td>
+          <td>{{row08.sum.cashBillIncom}}</td>
+        </tr>
+        <tr>
+          <td>과세 매출분</td>
+          <td>{{row08.add.allSumIncom}}</td>
+          <td>{{row08.add.cdIncom}}</td>
+          <td>{{row08.add.cashBillIncom}}</td>
+        </tr>
+        <tr>
+          <td>면세 매출분</td>
+          <td>{{row08.notax.allSumIncom}}</td>
+          <td>{{row08.notax.cdIncom}}</td>
+          <td>{{row08.notax.cashBillIncom}}</td>
+        </tr>
+        <tr>
+          <td>봉사료</td>
+          <td>{{row08.serve.allSumIncom}}</td>
+          <td>{{row08.serve.cdIncom}}</td>
+          <td>{{row08.serve.cashBillIncom}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row09">
+      3. 신용카드매출전표등 발행금액(⑤ 합계) 중 세금계산서(계산서) 발급명세
+    </div>
+
+    <div class="row10 flex-row">
+      <div class="flex-row label">⑧ 세금계산서 발급금액</div>
+      <div class="flex-row data">{{row10.tax}}</div>
+      <div class="flex-row label">⑨ 계산서 발급금액</div>
+      <div class="flex-row data">{{row10.sumIncom}}</div>
+    </div>
+
+    <div class="row11 flex-row">
+      작 성 방 법
+    </div>
+
+    <div class="row12">
+      <div class="comment flex-row">        
+        1. 신용카드매출전표등 발행금액 현황(⑤~⑦): 부가가치세 과세 매출분, 면세 매출분 및 봉사료로 각각 구분하여 기입하고, 과세 매출분란은 공급대가(부가가치세를 포함합니다)를 기입합니다.
+      </div>
+      <div class="comment flex-row">
+        2. 신용카드매출전표등 발행금액(⑤ 합계) 중 세금계산서(계산서) 발급명세(⑧ㆍ⑨): ⑧ 세금계산서란은 ⑤ 합계란의 과세 매출분 합계금액 중 세금계산서를 발급한 금액을 기입하고, ⑨ 계산서 발급금액란은 ⑤ 합계란의 면세 매출분 합계금액 중 계산서를 발급한 금액을 각각 기입합니다.
+      </div>
+    </div>
+
+    <div class="page-size-label">
+      210㎜×297㎜[백상지 80g/㎡(재활용품)]
+    </div>
+    
+  </div>
+
+</body>
+
+</html>

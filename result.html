@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc08.css">
+  <style>* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+/*# sourceMappingURL=style.css.map */</style>
+  <style>* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.row05 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row06 {
+  border-bottom: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row06 > div {
+  text-align: left;
+  justify-content: space-between;
+  padding: 2vw 1vw;
+}
+
+.row06 > div:first-child {
+  width: 55%;
+  border-right: 0.1pt solid black;
+}
+
+.row06 > div:last-child {
+  width: 45%;
+}
+
+.row07 {
+  border-bottom: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row07 > div {
+  text-align: left;
+  justify-content: space-between;
+  padding: 2vw 1vw;
+}
+
+.row07 > div:first-child {
+  width: 55%;
+  border-right: 0.1pt solid black;
+}
+
+.row07 > div:last-child {
+  width: 45%;
+}
+
+.row07 > div .label {
+  text-align: left;
+  width: 100%;
+}
+
+.row07 > div .data {
+  text-align: right;
+  width: 100%;
+}
+
+.row08 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  margin-top: 1vw;
+  font-size: 2vw;
+}
+
+.row09 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row09 table th:nth-child(1) {
+  width: 28%;
+}
+
+.row09 table th:nth-child(2) {
+  width: 6%;
+}
+
+.row09 table th:nth-child(3) {
+  width: 6%;
+}
+
+.row09 table th:nth-child(4) {
+  width: 30%;
+}
+
+.row09 table th:nth-child(5) {
+  width: 30%;
+}
+
+.row09 th, .row09 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row09 th:first-child, .row09 td:first-child {
+  border-left: 0vw;
+}
+
+.row09 th:last-child, .row09 td:last-child {
+  border-right: 0vw;
+}
+
+.row09 th {
+  height: 4vw;
+}
+
+.row10 {
+  padding: 0.5vw 0vw;
+  margin-bottom: 1vw;
+  border-bottom: 0.1pt solid black;
+}
+
+.row11 {
+  align-items: flex-start;
+  padding: 2vw 0;
+  border-top: 0.1pt solid black;
+}
+
+.row11 .label {
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.row11 .comment {
+  padding-left: 2vw;
+}
+
+.row12 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row12 th, .row12 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row12 th:first-child, .row12 td:first-child {
+  border-left: 0vw;
+}
+
+.row12 th:last-child, .row12 td:last-child {
+  border-right: 0vw;
+}
+
+.row12 th {
+  padding: 0.5vw;
+}
+
+.row12 td {
+  height: 4vw;
+}
+
+.row13 {
+  justify-content: flex-start;
+  padding: 2vw;
+  border-bottom: 0.1pt solid black;
+  margin-bottom: 2vw;
+}
+
+.row13 .wrapper {
+  width: 35vw;
+  height: 4vw;
+  border: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row13 .wrapper .number {
+  width: 50%;
+  height: 100%;
+  border-right: 0.1pt solid black;
+}
+
+.row13 .wrapper .input {
+  width: 50%;
+}
+
+.row14 {
+  text-align: right;
+  border-bottom: 3px solid #999999;
+  width: 100%;
+  padding-bottom: 0.5vw;
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.row15 {
+  text-align: center;
+  font-size: 2vw;
+  background-color: #f5f5f5;
+  border-top: 0.1pt solid black;
+  padding: 1vw 1vw;
+  margin-bottom: 2vw;
+}
+
+.row16 {
+  border-bottom: 0.1pt solid black;
+}
+
+.row16 div {
+  margin-bottom: 1vw;
+  line-height: 2vw;
+}
+
+.row16 .comment {
+  text-indent: -2vw;
+  padding-left: 2vw;
+}
+
+.row16 .sub-comment {
+  text-indent: -2vw;
+  padding-left: 4vw;
+  margin-top: 2vw;
+}
+/*# sourceMappingURL=doc02.css.map */</style>
+</head>
+<body>
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>&#xBD80;&#xAC00;&#xAC00;&#xCE58;&#xC138;&#xBC95; &#xC2DC;&#xD589;&#xADDC;&#xCE59; [&#xBCC4;&#xC9C0; &#xC81C;39&#xD638;&#xC11C;&#xC2DD;(1)]</span>
+      <span>&#xD648;&#xD0DD;&#xC2A4;(www.hometax.go.kr)&#xC5D0;&#xC11C;&#xB3C4; &#xC2E0;&#xCCAD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</span>
+    </div>
+    <div class="row02 flex-row">&#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xD569;&#xACC4;&#xD45C;(&#xAC11;)</div>
+    <div class="row03 flex-row">
+      2017&#xB144; &#xC81C;1&#xAE30; ( 1&#xC6D4; 1&#xC77C; ~ 6&#xC6D4; 30&#xC77C;)
+    </div>
+    <div class="row04 flex-row">
+      <span>&#x203B; &#xC544;&#xB798;&#xC758; &#xC791;&#xC131;&#xBC29;&#xBC95;&#xC744; &#xC77D;&#xACE0; &#xC791;&#xC131;&#xD558;&#xC2DC;&#xAE30; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;.</span>
+      <span>(&#xC55E;&#xCABD;)</span>
+    </div>
+    <div class="row05 flex-row">
+      1. &#xC81C;&#xCD9C;&#xC790; &#xC778;&#xC801;&#xC0AC;&#xD56D;
+    </div>
+    <div class="row06 flex-row">
+      <div class="flex-row">
+        <div class="label">&#x2460; &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xBC88;&#xD638;</div>
+        <div class="data">101 - 01 - xxxxx</div>
+      </div>
+      <div class="flex-row">
+        <div class="label">&#x2461; &#xC0C1;&#xD638;(&#xBC95;&#xC778;&#xBA85;)</div>
+        <div class="data">&#xAD6D;&#xC138;&#xC0C1;&#xC0AC;</div>
+      </div>
+    </div>
+    <div class="row06 flex-row">
+      <div class="flex-row">
+        <div class="label">&#x2462; &#xC131;&#xBA85;(&#xB300;&#xD45C;&#xC790;)</div>
+        <div class="data">&#xAE40; &#xAD6D; &#xC138;</div>
+      </div>
+      <div class="flex-row">
+        <div class="label">&#x2463; &#xC0AC;&#xC5C5;&#xC7A5; &#xC18C;&#xC7AC;&#xC9C0;</div>
+        <div class="data">&#xC885;&#xB85C;&#xAD6C; &#xC885;&#xB85C;2&#xAC00; xxx</div>
+      </div>
+    </div>
+    <div class="row07 flex-row">
+      <div class="flex-col">
+        <div class="label">&#x2464; &#xAC70;&#xB798;&#xAE30;&#xAC04;</div>
+        <div class="data">2017&#xB144; 1&#xC6D4; 1&#xC77C; ~ 2017&#xB144; 6&#xC6D4; 30&#xC77C;</div>
+      </div>
+      <div class="flex-col">
+        <div class="label">&#x2465; &#xC791;&#xC131;&#xC77C;</div>
+        <div class="data">2017&#xB144; 6&#xC6D4; 30&#xC77C;</div>
+      </div>
+    </div>
+    <div class="row08 flex-row">
+      2. &#xB9E4;&#xC785;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xCD1D;&#xD569;&#xACC4;
+    </div>
+    <div class="row09 flex-row">
+      <table>
+        <tr>
+          <th class="th1" colspan="2" rowspan="2">&#xAD6C; &#xBD84;</th>
+          <th class="th2" rowspan="2">&#x2466; <br> &#xB9E4;&#xC785;<br>&#xCC98;&#xC218;</th>
+          <th class="th3" rowspan="2">&#x2467; <br> &#xB9E4;&#xC218;</th>
+          <th class="th4" colspan="5" style="border: 0vw; border-right: 1px solid black;">&#x2468; &#xACF5;&#xAE09;&#xAC00;&#xC561;</th>
+          <th class="th5" colspan="5" style="border: 0vw;">&#x2469; &#xC138;&#xC561;</th>
+        </tr>
+        <tr>
+          <!-- 
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td> 
+          -->
+          <td style="border: 0vw; width: 6%; height: 4vw;">&#xC870;</td>
+          <td style="border: 0vw; width: 6%">&#xC2ED;&#xC5B5;</td>
+          <td style="border: 0vw; width: 6%">&#xBC31;&#xB9CC;</td>
+          <td style="border: 0vw; width: 6%">&#xCC9C;</td>
+          <td style="border: 0vw; width: 6%; border-right: 1px solid black">&#xC77C;</td>
+          <td style="border: 0vw; width: 6%">&#xC870;</td>
+          <td style="border: 0vw; width: 6%">&#xC2ED;&#xC5B5;</td>
+          <td style="border: 0vw; width: 6%">&#xBC31;&#xB9CC;</td>
+          <td style="border: 0vw; width: 6%">&#xCC9C;</td>
+          <td style="border: 0vw; width: 6%">&#xC77C;</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="height: 4vw;">&#xD569; &#xACC4;</td>
+          <!-- <td></td> -->
+          <td>2</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td>130</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+          <td></td>
+          <td>13</td>
+          <td>000</td>
+          <td>000</td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="width: 15%">
+            &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C;<br> 
+            &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;<br> 
+            &#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C;<br>
+            &#xC804;&#xC790; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td style="width: 15%; height: 4vw;">
+            &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xBC88;&#xD638;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td style="height: 4vw">
+            &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td style="height: 4vw">&#xC18C; &#xACC4;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="3">
+            &#xC704; &#xC804;&#xC790;<br> 
+            &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;<br> 
+            &#xC678; &#xC758;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td style="height: 4vw">
+            &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xBC88;&#xD638;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td>2</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td>130</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+          <td></td>
+          <td>13</td>
+          <td>000</td>
+          <td>000</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td style="height: 4vw">
+            &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;<br> 
+            &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td style="height: 5vw">&#xC18C; &#xACC4;</td>
+          <td>2</td>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td>130</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+          <td></td>
+          <td>13</td>
+          <td>000</td>
+          <td>000</td>
+        </tr>
+      </table>
+    </div>
+    <div class="row10 flex-row">
+      * &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;&#xB85C; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB294; &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D; &#xC804; &#xB9E4;&#xC785;&#xC138;&#xC561; &#xACF5;&#xC81C;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB294; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB9CC; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+    </div>
+    <div class="row11 flex-col">
+      <div class="label">3. &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;&#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xBA85;&#xC138;</div>
+      <div class="comment">(&#xD569;&#xACC4;&#xAE08;&#xC561;&#xC73C;&#xB85C; &#xC801;&#xC74C;)</div>
+    </div>
+    <div class="row12">
+      <table>
+        <tr>
+          <th rowspan="2">
+            &#x246A;<br>&#xBC88;&#xD638;
+          </th>
+          <th rowspan="2">
+            &#x246B;<br>&#xC0AC;&#xC5C5;&#xC790;<br>&#xB4F1;&#xB85D;&#xBC88;&#xD638;
+          </th>
+          <th rowspan="2">
+            &#x246C; &#xC0C1; &#xD638;<br>(&#xBC95;&#xC778;&#xBA85;)
+          </th>
+          <th rowspan="2">
+            &#x246D;<br>&#xB9E4;&#xC218;
+          </th>
+          <th colspan="5" style="border: 0vw; border-right: 1px solid black;">&#x246E; &#xACF5;&#xAE09;&#xAC00;&#xC561;</th>
+          <!-- <th></th>
+          <th></th>
+          <th></th>
+          <th></th> -->
+          <th colspan="5" style="border: 0vw">&#x246F; &#xC138;&#xC561;</th>
+          <!-- <th></th>
+          <th></th>
+          <th></th>
+          <th></th> -->
+          <th rowspan="2">&#xBE44;&#xACE0;</th>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td style="width: 5%; border: 0vw; ">&#xC870;</td>
+          <td style="width: 5%; border: 0vw; ">&#xC2ED;&#xC5B5;</td>
+          <td style="width: 5%; border: 0vw; ">&#xBC31;&#xB9CC;</td>
+          <td style="width: 5%; border: 0vw; ">&#xCC9C;</td>
+          <td style="width: 5%; border: 0vw; border-right: 1px solid black">&#xC77C;</td>
+          <td style="width: 5%; border: 0vw; ">&#xC870;</td>
+          <td style="width: 5%; border: 0vw; ">&#xC2ED;&#xC5B5;</td>
+          <td style="width: 5%; border: 0vw; ">&#xBC31;&#xB9CC;</td>
+          <td style="width: 5%; border: 0vw; ">&#xCC9C;</td>
+          <td style="width: 5%; border: 0vw; ">&#xC77C;</td>
+          <!-- <td></td> -->
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>101-01-xxxxx</td>
+          <td>&#xC131;&#xC2E4;&#xC81C;&#xD488;</td>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td>120</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+          <td></td>
+          <td>12</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>101-02-xxxxx</td>
+          <td>&#xC131;&#xC2E4;&#xC790;&#xB3D9;&#xCC28;</td>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td>10</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>000</td>
+          <td>000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="row13 flex-row">
+      <div class="wrapper flex-row">
+        <div class="number flex-row">&#x2470; &#xAD00;&#xB9AC;&#xBC88;&#xD638;(&#xB9E4;&#xC785;)</div>
+        <div class="input flex-row">
+          <span>123</span>
+          <span>-</span>
+          <span>123</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-size-label">
+      210&#x339C;&#xD7;297&#x339C;[&#xBC31;&#xC0C1;&#xC9C0; 80g/&#x33A1;(&#xC7AC;&#xD65C;&#xC6A9;&#xD488;)]
+    </div>
+    <div style="page-break-before:always;"></div>
+  </div>
+  <div class="content">
+    <div class="row14 flex-row">
+      (&#xB4A4;&#xCABD;)
+    </div>
+    <div class="row15">
+      &#xC791; &#xC131; &#xBC29; &#xBC95;
+    </div>
+    <div class="row16">
+      <div>
+        &#xC774; &#xD569;&#xACC4;&#xD45C;&#xB294; &#xC544;&#xB798;&#xC758; &#xC791;&#xC131;&#xBC29;&#xBC95;&#xC5D0; &#xB530;&#xB77C; &#xD55C;&#xAE00;&#xACFC; &#xC544;&#xB77C;&#xBE44;&#xC544;&#xC22B;&#xC790;&#xB85C; &#xC815;&#xD655;&#xD558;&#xACE0; &#xC120;&#xBA85;&#xD558;&#xAC8C; &#xC801;&#xC5B4;&#xC57C; &#xD558;&#xBA70;, &#xACF5;&#xAE09;&#xAC00;&#xC561;&#xACFC; &#xC138;&#xC561;&#xC740; &#xC6D0; &#xB2E8;&#xC704;&#xAE4C;&#xC9C0; &#xD45C;&#xC2DC;&#xD558;&#xC5EC;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x2460;~&#x2463;: &#xC81C;&#xCD9C;&#xC790;&#xC758; &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xC99D;&#xC5D0; &#xC801;&#xD78C; &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xBC88;&#xD638;(&#xB610;&#xB294; &#xACE0;&#xC720;&#xBC88;&#xD638;), &#xC0C1;&#xD638;(&#xBC95;&#xC778;&#xBA85;), &#xC131;&#xBA85;(&#xB300;&#xD45C;&#xC790;), &#xC0AC;&#xC5C5;&#xC7A5; &#xC18C;&#xC7AC;&#xC9C0;&#xB97C; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x2464;: &#xC2E0;&#xACE0;&#xB300;&#xC0C1;&#xAE30;&#xAC04;&#xC744; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;(&#xC608;&#xC2DC;: 2010&#xB144; 1&#xC6D4; 1&#xC77C; ~ 2010&#xB144; 6&#xC6D4; 30&#xC77C;).
+      </div>
+      <div class="comment">
+        &#x2465;: &#xC774; &#xD569;&#xACC4;&#xD45C;&#xB97C; &#xC791;&#xC131;&#xD558;&#xC5EC; &#xC81C;&#xCD9C;&#xD558;&#xB294; &#xC5F0;&#xC6D4;&#xC77C;&#xC744; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x2466;~&#x2469;: &#xD569;&#xACC4;&#xB780;&#xC5D0;&#xB294; &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;&#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84; &#xC18C;&#xACC4;&#xC640; &#xC704; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84; &#xC18C;&#xACC4;&#xC758; &#xB2E8;&#xC21C;&#xD569;&#xACC4;&#xB97C; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+        &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;&#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;&#xC5D0;&#xB294; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB85C; &#xBC1C;&#xAE09;&#xBC1B;&#xACE0;, &#xACFC;&#xC138;&#xAE30;&#xAC04;(&#xC608;&#xC815;&#xC2E0;&#xACE0;&#xB300;&#xC0C1;&#xC790;&#xC758; &#xACBD;&#xC6B0; &#xC608;&#xC815;&#xC2E0;&#xACE0;&#xAE30;&#xAC04;) &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;(&#xD1A0;&#xC694;&#xC77C;, &#xACF5;&#xD734;&#xC77C;&#xC778; &#xACBD;&#xC6B0; &#xADF8; &#xB2E4;&#xC74C; &#xB0A0;)&#xAE4C;&#xC9C0; &#xAD6D;&#xC138;&#xCCAD;&#xC5D0; &#xC804;&#xC1A1;&#xB41C; &#xB9E4;&#xC785;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xC5D0; &#xB300;&#xD55C; &#xB9E4;&#xC785;&#xCC98; &#xC218;, &#xCD1D;&#xB9E4;&#xC218;, &#xCD1D;&#xACF5;&#xAE09;&#xAC00;&#xC561; &#xBC0F; &#xCD1D;&#xC138;&#xC561;&#xC744; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+        &#xC704; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;&#xC5D0;&#xB294; &#xC885;&#xC774;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;, &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB85C; &#xBC1C;&#xAE09;&#xBC1B;&#xC558;&#xC73C;&#xB098; &#xADF8; &#xAC1C;&#xBCC4;&#xBA85;&#xC138;&#xAC00; &#xACFC;&#xC138;&#xAE30;&#xAC04;(&#xC608;&#xC815;&#xC2E0;&#xACE0;&#xB300;&#xC0C1;&#xC790;&#xC758; &#xACBD;&#xC6B0; &#xC608;&#xC815;&#xC2E0;&#xACE0;&#xAE30;&#xAC04;) &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;(&#xD1A0;&#xC694;&#xC77C;, &#xACF5;&#xD734;&#xC77C;&#xC778; &#xACBD;&#xC6B0; &#xADF8; &#xB2E4;&#xC74C; &#xB0A0;)&#xAE4C;&#xC9C0; &#xAD6D;&#xC138;&#xCCAD;&#xC5D0; &#xC804;&#xC1A1;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xC5D0; &#xB300;&#xD55C; &#xB9E4;&#xC785;&#xCC98; &#xC218;, &#xCD1D;&#xB9E4;&#xC218;, &#xCD1D;&#xACF5;&#xAE09;&#xAC00;&#xC561; &#xBC0F; &#xCD1D;&#xC138;&#xC561;&#xC744; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x246A;: &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB2EC; 11&#xC77C;&#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xBA85;&#xC138;&#xB294; &#xC704; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;&#xC5D0; &#xB300;&#xD55C; &#xAC01;&#xAC01;&#xC758; &#xB9E4;&#xC785;&#xCC98;&#xBCC4;&#xB85C; 1&#xBC88;&#xBD80;&#xD130; &#xBD80;&#xC5EC;&#xD558;&#xC5EC; &#xB9C8;&#xC9C0;&#xB9C9;&#xAE4C;&#xC9C0; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xC801;&#xACE0;[&#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xD569;&#xACC4;&#xD45C;(&#xAC11;)&#xC11C;&#xC2DD;&#xC744; &#xCD08;&#xACFC;&#xD558;&#xB294; &#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xAC70;&#xB798;&#xBD84;&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB294; &#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xD569;&#xACC4;&#xD45C;(&#xC744;)&#xC11C;&#xC2DD;&#xC5D0; &#xC774;&#xC5B4;&#xC11C; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;], &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;&#xB85C; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB294; &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D; &#xC804; &#xB9E4;&#xC785;&#xC138;&#xC561; &#xACF5;&#xC81C;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB294; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB9CC; &#xC801;&#xC73C;&#xBA70;, &#xB9E4;&#xC785;&#xC790;&#xAC00; &#xC138;&#xBB34;&#xC11C;&#xC7A5;&#xC5D0;&#xAC8C; &#xC694;&#xCCAD;&#xD558;&#xC5EC; &#xBC1C;&#xAE09;&#xD558;&#xB294; &#xB9E4;&#xC785;&#xC790;&#xBC1C;&#xD589;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB294; &#xBCC4;&#xB3C4;&#xC758; &#x300C;&#xB9E4;&#xC785;&#xC790;&#xBC1C;&#xD589;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xD569;&#xACC4;&#xD45C;&#x300D;&#xC5D0; &#xC801;&#xACE0;, &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84;&#xC5D0;&#xB294; &#xD3EC;&#xD568;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x246B;&#x318D;&#x246C;: &#xC704; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xC758; &#xAC70;&#xB798;&#xCC98;(&#xACF5;&#xAE09;&#xC790;) &#xC0AC;&#xC5C5;&#xC790;&#xB4F1;&#xB85D;&#xBC88;&#xD638;&#xC640; &#xC0C1;&#xD638;(&#xBC95;&#xC778;&#xBA85;)&#xB97C; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;.
+      </div>
+      <div class="comment">
+        &#x246D;~&#x246F;: &#xC704; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678;&#xC758; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xBD84; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xB97C; &#xAC70;&#xB798;&#xCC98;(&#xACF5;&#xAE09;&#xC790;)&#xBCC4;&#xB85C; &#xD569;&#xD558;&#xC5EC; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xB9E4;&#xC218;, &#xACF5;&#xAE09;&#xAC00;&#xC561;, &#xC138;&#xC561;&#xC744; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC218;&#xC815;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xB9E4;&#xC218;&#xC640; &#xAE08;&#xC561;&#xC744; &#xB354;&#xD558;&#xC5EC; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;(&#xC608;&#xC815;&#xC2E0;&#xACE0; &#xB204;&#xB77D;&#xBD84;&#xC744; &#xD655;&#xC815;&#xC2E0;&#xACE0; &#xC2DC; &#xC81C;&#xCD9C;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xAC70;&#xB798;&#xCC98;&#xC5D0; &#xB354;&#xD558;&#xC5EC; &#xC801;&#xC2B5;&#xB2C8;&#xB2E4;).
+      </div>
+      <div class="comment">
+        &#x2470;: &#xC0AC;&#xC5C5;&#xC790;&#xAC00; &#xC801;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;(&#xAD8C;&#xBC88;&#xD638;-&#xD398;&#xC774;&#xC9C0;&#xBC88;&#xD638;).
+      </div>
+      <div class="sub-comment">
+        &#x203B; 3. &#xACFC;&#xC138;&#xAE30;&#xAC04; &#xC885;&#xB8CC;&#xC77C; &#xB2E4;&#xC74C; &#xB0A0; 11&#xC77C;&#xAE4C;&#xC9C0; &#xC804;&#xC1A1;&#xB41C; &#xC804;&#xC790;&#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C; &#xC678; &#xBC1C;&#xAE09;&#xBC1B;&#xC740; &#xB9E4;&#xC785;&#xCC98;&#xAC00; 6&#xAC1C;&#xB97C; &#xCD08;&#xACFC;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#x300E;&#xB9E4;&#xC785;&#xCC98;&#xBCC4; &#xC138;&#xAE08;&#xACC4;&#xC0B0;&#xC11C;&#xD569;&#xACC4;&#xD45C;(&#xC744;)&#x300F;[&#xBCC4;&#xC9C0; &#xC81C;39&#xD638;&#xC11C;&#xC2DD;(2)]&#xC5D0; &#xC774;&#xC5B4;&#xC11C; &#xC791;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

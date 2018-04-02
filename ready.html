@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MoneyPin은 준비중입니다</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+<style>
+  /* 분홍FF3462 / 파랑88C6FF */
+
+  body {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( 45deg, #88C6FF, #FF3462);
+  }
+
+  @keyframes bouncing-loader {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.1;
+      transform: translateY(-1vw);
+    }
+  }
+
+  .bouncing-loader {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width:1024px) {
+    .bouncing-loader>div {
+      width: 2vw;
+      height: 2vw;
+      margin: 3vw 1.5vw;  
+    }
+    .ready{
+      font-size: 2vw; 
+    }
+    .email{
+      font-size: 1.5vw;
+    }
+  }
+  @media (min-width:415px) and (max-width:1023px) {
+    .bouncing-loader>div {
+      width: 3vw;
+      height: 3vw;
+      margin: 3vw 2vw;  
+    }
+    .ready{
+      font-size: 3vw; 
+    }
+    .email{
+      font-size: 2.5vw;
+    }  
+  }
+  @media (max-width:414px) {
+    .bouncing-loader>div {
+      width: 5vw;
+      height: 5vw;
+      margin: 3vw 2vw;  
+    }
+    .ready{
+      font-size: 5vw; 
+    }
+    .email{
+      font-size: 4vw;
+    }  
+  }
+  
+  .bouncing-loader>div {
+    /* margin: 2vw 0.8vw; */
+    background: #FFF;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+  }
+
+  .bouncing-loader>div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .bouncing-loader>div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .ready{
+    color: #FFF;    
+    font-weight: 600;
+  }
+  .email{
+    position: absolute;
+    width: 100vw;
+    bottom: 10vh;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+  }
+</style>
+
+<body>
+  <div class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="ready">
+    준비중
+  </div>
+  <a class="email" href="mailto:hello@moneypin.biz">
+    hello@moneypin.biz
+  </a> 
+</body>
+
+</html>

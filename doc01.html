@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc01.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body>
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제21호서식] &lt;개정 2017.3.10.&gt; </span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">
+      <div class="main-title">
+        일반과세자 부가가치세
+      </div>
+      <div class="selection-wrapper flex-col">
+        <div class="selection">
+          [ ]예정 [ ]확정
+        </div>
+        <div class="selection">
+          [ ]기한후과세표준
+        </div>
+        <div class="selection">
+          [ ]영세율 등 조기환급
+        </div>
+      </div>
+      <div class="main-title">
+        신고서
+      </div>
+    </div>
+
+    <div class="row03 flex-row">
+      <span>※ 뒤쪽의 작성방법을 읽고 작성하시기 바랍니다.</span>
+      <span>(4쪽 중 제1쪽)</span>
+    </div>
+
+    <div class="row04 flex-row">
+      <div>관리번호</div>
+      <div>처리기간</div>
+      <div>즉시</div>
+    </div>
+    <div class="row05 flex-row">
+      신고기간 년 제 기 ( 월 일 ~ 월 일)
+    </div>
+    <div class="row06 flex-row">
+      <table>
+        <tr>
+          <td rowspan="3" style="width: 10%">사업자</td>
+          <td style="width: 15%">상호
+            <br>(법인명)</td>
+          <td style="width: 15%">
+            {{row06.comName}}
+          </td>
+          <td style="width: 15%">성명
+            <br>(대표자명)</td>
+          <td style="width: 15%">
+            {{row06.comCeo}}
+          </td>
+          <td style="width: 30%">
+            <div class="inc-number-wrapper flex-row">
+              <div class="label flex-row">사업자등록번호</div>
+              <div ng-repeat="i in [0,1,2,3,4,5,6,7,8,9,10,11]" class="number flex-row">{{row06.comBizNo.substr(i,1)}}</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>생년월일</td>
+          <td colspan="2">{{row06.ceoBirth}}</td>
+          <!-- <td></td> -->
+          <td>
+            <div class="phone-number-wrapper flex-col">
+              <div class="label">전화번호</div>
+              <div class="data">{{row06.phone}}</div>
+            </div>
+          </td>
+          <td>
+            <div class="inc-info-wrapper flex-row">
+              <div class="name flex-col">
+                <div class="label flex-row">사업장</div>
+                <div class="data flex-row">{{row06.name}}</div>
+              </div>
+              <div class="address flex-col">
+                <div class="label flex-row">주소지</div>
+                <div class="data flex-row">{{row06.address}}</div>
+              </div>
+              <div class="phone flex-col">
+                <div class="label flex-row">휴대전화</div>
+                <div class="data flex-row">{{row06.cellPhone}}</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>사업장 주소</td>
+          <td colspan="3">{{row06.comAddress}}</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>
+            <div class="address-wrapper flex-row">
+              <div class="label flex-row">전자우편
+                <br>주소</div>
+              <div class="data flex-row">{{row06.email}}</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row07 flex-row">
+      ❶ 신 고 내 용
+    </div>
+
+    <div class="row08">
+      <table>
+        <tr>
+          <td colspan="4" style="width: 50%;">구 분</td>
+          <!-- <td></td>
+          <td></td>
+          <td></td> -->
+          <td style="width:20%">금 액</td>
+          <td style="width:10%">세 율</td>
+          <td style="width:20%">세 액</td>
+        </tr>
+
+        <tr>
+          <td rowspan="9" style="width: 5%; border-bottom: 0px;">
+            과세<br>표준<br>및<br>매출<br>세액
+          </td>
+          <td rowspan="4">
+            과세
+          </td>
+          <td>세금계산서 발급분</td>
+          <td style="width: 10%;">(1)</td>
+          <td>{{row08.billOut.amount}}</td>
+          <td>10/100</td>
+          <td>{{row08.billOut.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>매입자발행 세금계산서</td>
+          <td>(2)</td>
+          <td>{{row08.billOutRe.amount}}</td>
+          <td>10/100</td>
+          <td>{{row08.billOutRe.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>신용카드ㆍ현금영수증 발행분</td>
+          <td>(3)</td>
+          <td>{{row08.cdCash.amount}}</td>
+          <td>10/100</td>
+          <td>{{row08.cdCash.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>기타(정규영수증 외 매출분)</td>
+          <td>(4)</td>
+          <td>{{row08.etcOut.amount}}</td>
+          <td>10/100</td>
+          <td>{{row08.etcOut.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="2">영세율</td>
+          <td>세금계산서 발급분</td>
+          <td>(5)</td>
+          <td>{{row08.billOutSm.amount}}</td>
+          <td>0/100</td>
+          <td>{{row08.billOutSm.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>기타</td>
+          <td>(6)</td>
+          <td>{{row08.etcOutSm.amount}}</td>
+          <td>0/100</td>
+          <td>{{row08.etcOutSm.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">예정신고 누락분</td>
+          <!-- <td></td> -->
+          <td>(7)</td>
+          <td>{{row08.billOutDrop.amount}}</td>
+          <td>{{row08.billOutDrop.rate}}</td>
+          <td>{{row08.billOutDrop.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">대손세액 가감</td>
+          <!-- <td></td> -->
+          <td>(8)</td>
+          <td>{{row08.outDeptVat.amount}}</td>
+          <td>{{row08.outDeptVat.rate}}</td>
+          <td>{{row08.outDeptVat.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">합계</td>
+          <!-- <td></td> -->
+          <td>(9)</td>
+          <td>{{row08.sum.standardVatAmount}}</td>
+          <td>㉮</td>
+          <td>{{row08.sum.calVat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row09">
+      <table>
+        <tr>
+          <td rowspan="9" style="width: 5%; border-bottom: 0px;">
+            매입<br>세액
+          </td>
+          <td rowspan="3" style="width: 10%;">
+            세금계산서
+            <br> 수취분
+          </td>
+          <td style="width: 25%;">일반매입</td>
+          <td style="width: 10%;">(10)</td>
+          <td style="width: 20%;">{{row09.billInGet.amount}}</td>
+          <td style="width: 10%;">{{row09.billInGet.rate}}</td>
+          <td style="width: 20%;">{{row09.billInGet.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>수출기업 수입분 납부유예</td>
+          <td>(10-1)</td>
+          <td class="back-gray"></td>
+          <td>{{row09.export.rate}}</td>
+          <td>{{row09.export.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>고정자산 매입</td>
+          <td>(11)</td>
+          <td>{{row09.billInGetFix.amount}}</td>
+          <td>{{row09.billInGetFix.rate}}</td>
+          <td>{{row09.billInGetFix.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">예정신고 누락분</td>
+          <!-- <td></td> -->
+          <td>(12)</td>
+          <td>{{row09.billInDrop.amount}}</td>
+          <td>{{row09.billInDrop.rate}}</td>
+          <td>{{row09.billInDrop.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">매입자발행 세금계산서</td>
+          <!-- <td></td> -->
+          <td>(13)</td>
+          <td>{{row09.billInRe.amount}}</td>
+          <td>{{row09.billInRe.rate}}</td>
+          <td>{{row09.billInRe.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">그 밖의 공제매입세액</td>
+          <!-- <td></td> -->
+          <td>(14)</td>
+          <td>{{row09.etcDedDe.amount}}</td>
+          <td>{{row09.etcDedDe.rate}}</td>
+          <td>{{row09.etcDedDe.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">합계 (10)-(10-1)+(11)+(12)+(13)+(14)</td>
+          <!-- <td></td> -->
+          <td>(15)</td>
+          <td>{{row09.sum.amount}}</td>
+          <td>{{row09.sum.rate}}</td>
+          <td>{{row09.sum.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">공제받지 못할 매입세액</td>
+          <!-- <td></td> -->
+          <td>(16)</td>
+          <td>{{row09.inNoded.amount}}</td>
+          <td>{{row09.inNoded.rate}}</td>
+          <td>{{row09.inNoded.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">차감계 (15)-(16)</td>
+          <!-- <td></td> -->
+          <td>(17)</td>
+          <td>{{row09.plusMinus.amount}}</td>
+          <td>㉯</td>
+          <td>{{row09.plusMinus.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row10 flex-row">
+      <table>
+        <tr>
+          <td style="width: 70%">납부(환급)세액 (매출세액㉮-매입세액㉯)</td>
+          <td style="width: 10%;">㉰</td>
+          <td style="width: 20%;">{{row10.paidVat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row11">
+      <table>
+        <tr>
+          <td rowspan="3" style="width: 5%;">
+              경감<br>
+              ㆍ<br>
+              공제<br>
+              세액
+          </td>
+          <td style="width: 35%;">그 밖의 경감 공제세액</td>
+          <td style="width: 10%;">(18)</td>
+          <td class="back-gray" style="width: 20%;"></td>
+          <td style="width: 10%;">{{row11.etcDed.rate}}</td>
+          <td style="width: 20%;">{{row11.etcDed.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>신용카드매출전표등 발생공제 등</td>
+          <td>(19)</td>
+          <td>{{row11.cdIncome.amount}}</td>
+          <td>{{row11.cdIncome.rate}}</td>
+          <td>{{row11.cdIncome.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>합계</td>
+          <td>(20)</td>
+          <td>{{row11.dedSum.amount}}</td>
+          <td>㉱</td>
+          <td>{{row11.dedSum.vat}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">예정신고 미환급 세액</td>
+          <!-- <td></td> -->
+          <td>(21)</td>
+          <td>{{row11.yetReturn.amount}}</td>
+          <td>㉲</td>
+          <td>{{row11.yetReturn.vat}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">예정고지세액</td>
+          <!-- <td></td> -->
+          <td>(22)</td>
+          <td>{{row11.assined.amount}}</td>
+          <td>㉳</td>
+          <td>{{row11.assined.vat}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">사업양수자의 대리납부 기납부세액</td>
+          <!-- <td></td> -->
+          <td>(23)</td>
+          <td class="back-gray"></td>
+          <td>㉴</td>
+          <td>{{row11.mnaPaidVat}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">매입자 납부특례 기납부세액</td>
+          <!-- <td></td> -->
+          <td>(24)</td>
+          <td class="back-gray"></td>
+          <td>㉵</td>
+          <td>{{row11.mnaSpaidVat}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">가산세액계</td>
+          <!-- <td></td> -->
+          <td>(25)</td>
+          <td>{{row11.added.amount}}</td>
+          <td>㉶</td>
+          <td>{{row11.added.vat}}</td>
+        </tr>
+        <tr>
+          <td colspan="4">차감ㆍ가감하여 납부할 세액(환급받을 세액)(㉰-㉱-㉲-㉳-㉴-㉵+㉶)</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>(26)</td>
+          <td>{{row11.plusMinusVat}}</td>
+        </tr>
+        <tr>
+          <td colspan="5">총괄 납부 사업자가 납부할 세액(환급받을 세액)</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>{{row11.totalPayVat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row12 flex-row">
+      <div class="flex-row label">
+        ❷ 국세환급금 계좌신고
+        <br> (환급세액이 2천만원 미만인 경우)
+      </div>
+      <div class="flex-row bank-label">거래은행</div>
+      <div class="flex-row bank-data">은행 지점</div>
+      <div class="flex-row account-label">계좌번호</div>
+      <div class="flex-row account-data">{{row12.account}}</div>
+    </div>
+
+    <div class="row13 flex-row">
+      <div class="flex-row label">
+        ❸ 폐 업 신 고
+      </div>
+      <div class="flex-row close-label">폐업일</div>
+      <div class="flex-row close-data">{{row13.bizCloseDate}}</div>
+      <div class="flex-row reason-label">폐업 사유</div>
+      <div class="flex-row reason-data">{{row13.bizCloseReason}}</div>
+    </div>
+
+    <div class="row14 flex-row">
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <td colspan="5">❹ 과 세 표 준 명 세</td>
+            <!-- <td></td>
+            <td></td>
+            <td></td>
+            <td></td> -->
+          </tr>
+          <tr>
+            <td>업태</td>
+            <td>종목</td>
+            <td>생산요소</td>
+            <td>업종코드</td>
+            <td>금액</td>
+          </tr>
+          <tr>
+            <td>(27)</td>
+            <td>{{row14.data27.comBizEvent}}</td>
+            <td>{{row14.data27.production}}</td>
+            <td>
+              <div class="code-wrapper flex-row">
+                <div ng-repeat="i in [0,1,2,3,4,5]" class="cell">{{row14.data27.comBizTypeCode.substr(i,1)}}</div>
+              </div>
+            </td>
+            <td>{{row14.data27.amount}}</td>
+          </tr>
+          <tr>
+            <td>(28)</td>
+            <td>{{row14.data28.comBizEvent}}</td>
+            <td>{{row14.data28.production}}</td>
+            <td>
+              <div class="code-wrapper flex-row">
+                <div ng-repeat="i in [0,1,2,3,4,5]" class="cell">{{row14.data28.comBizTypeCode.substr(i,1)}}</div>
+              </div>
+            </td>
+            <td>{{row14.data28.amount}}</td>
+          </tr>
+          <tr>
+            <td>(29)</td>
+            <td>{{row14.data29.comBizEvent}}</td>
+            <td>{{row14.data29.production}}</td>
+            <td>
+              <div class="code-wrapper flex-row">
+                <div ng-repeat="i in [0,1,2,3,4,5]" class="cell">{{row14.data29.comBizTypeCode.substr(i,1)}}</div>
+              </div>
+            </td>
+            <td>{{row14.data29.amount}}</td>
+          </tr>
+          <tr>
+            <td>{{row14.data30.comBizEvent}}</td>
+            <td>{{row14.data30.production}}</td>
+            <td>
+              <div class="code-wrapper flex-row">
+                <div ng-repeat="i in [0,1,2,3,4,5]" class="cell">{{row14.data30.comBizTypeCode.substr(i,1)}}</div>
+              </div>
+            </td>
+            <td>{{row14.data30.amount}}</td>
+          <tr>
+            <td>(31)합 계</td>
+            <td>{{row14.sum.comBizEvent}}</td>
+            <td>{{row14.sum.production}}</td>
+            <td>{{row14.sum.comBizTypeCode}}</td>
+            <td>{{row14.sum.amount}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="terms-wrapper flex-col">
+        <div class="user-check-wrapper">
+          <div class="label">
+            「부가가치세법」 제48조ㆍ제49조 또는 제59조와 「국세기본법」 제45조의3에 따라 위의 내용을 신고하며, 위 내용을 충분히 검토하였고 신고인이 알고 있는 사실 그대로를 정확하게 적었음을 확인합니다.
+          </div>
+          <div class="date">
+            {{row14.registDate | date: "yyyy년 mm월 dd일"}}
+          </div>
+          <div class="user-stemp-wrapper flex-row">
+            <div class="user-label">
+              신고인: {{row14.registUser}}
+            </div>
+            <div class="user-stemp">
+              (서명 또는 인)
+            </div>
+          </div>
+        </div>
+        <div class="agent-check-wrapper">
+          <div class="label">
+            세무대리인은 조세전문자격자로서 위 신고서를 성실하고 공정하게 작성하였음을 확인합니다.
+          </div>
+          <div class="agent-stemp-wrapper flex-row">
+            <div class="agent-stemp-label">세무대리인: {{row14.agent}} </div>
+            <div class="agent-stemp">(서명 또는 인)</div>
+          </div>
+        </div>
+        <div class="stemp-wrapper">
+          세무서장 귀하
+        </div>
+        <div class="comment-wrapper flex-row">
+          <div class="document">
+            첨부서류
+          </div>
+          <div class="comment">
+            뒤쪽 참조
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row15 flex-row">
+      <div class="flex-row agent">세무대리인</div>
+      <div class="flex-row name-label">성명</div>
+      <div class="flex-row name-data">{{row15.agent}}</div>
+      <div class="flex-row inc-number-label">사업자등록번호</div>
+      <div class="flex-row inc-number-data">{{row15.comBizNo}}</div>
+      <div class="flex-row phone-label">전화번호</div>
+      <div class="flex-row phone-data">{{row15.phone}}</div>
+    </div>
+
+    <div class="page-size-label">
+      210mm×297mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+    </div>
+    <div style="page-break-before:always;"></div>
+
+  </div>
+
+  <div class="content">
+    <div class="page-number">(4쪽 중 제2쪽)</div>
+    <div class="row16">
+      <table>
+        <tr>
+          <td style="width: 10%">
+            신고인
+            <br> 제출서류
+          </td>
+          <td>
+            <div class="note-wrapper">
+              <div class="note flex-row">
+                <div class="note-cell">1. 매출처별 세금계산서합계표</div>
+                <div class="note-cell">2. 매입처별 세금계산서합계표</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">3. 매입자발행 세금계산서합계표</div>
+                <div class="note-cell">4. 영세율 첨부서류</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">5. 대손세액 공제신고서</div>
+                <div class="note-cell">6. 매입세액 불공제분 계산근거</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">7. 매출처별 계산서합계표</div>
+                <div class="note-cell">8. 매입처별 계산서합계표</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">9. 신용카드매출전표등 수령명세서</div>
+                <div class="note-cell">10. 전자화폐결제명세서(전산작성분 첨부 가능)</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">11. 부동산임대공급가액명세서</div>
+                <div class="note-cell">12. 건물관리명세서(주거용 건물관리의 경우는 제외합니다)</div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">13. 현금매출명세서 </div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">
+                  14. 주사업장 총괄 납부를 하는 경우 사업장별 부가가치세 과세표준 및 납부세액(환급세액) 신고명세서
+                </div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">
+                  15. 사업자 단위 과세를 적용받는 사업자의 경우에는 사업자 단위 과세의 사업장별 부가가치세 과세표준 및 납부세액(환급세액) 신고명세서
+                </div>
+              </div>
+              <div class="note flex-row">
+                <div class="note-cell">16. 건물 등 감가상각자산 취득명세서</div>
+                <div class="note-cell">17. 의제매입세액 공제신고서</div>
+              </div>
+              <div class="note flex-row">
+                18. 그 밖에 필요한 증명서류
+                <div class="note-cell"></div>
+                <div class="note-cell"></div>
+              </div>
+            </div>
+          </td>
+          <td rowspan="2" style="width: 5%;">수수료
+            <br>없음</td>
+        </tr>
+        <tr>
+          <td>
+            담당 공무원
+            <br> 확인사항
+          </td>
+          <td class="regist">
+            사업자등록증(사업을 폐업하고 확정신고하는 사업자의 경우에는 해당 서류를 제출하게 하고 이를 확인)
+          </td>
+          <!-- <td></td> -->
+        </tr>
+      </table>
+    </div>
+
+    <div class="row17">
+      <div class="label">
+        행정정보 공동이용 동의서
+      </div>
+      <div class="note">
+        본인은 이 건 업무처리와 관련하여 담당 공무원이 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 위의 담당 공무원 확인 사항을 확인하는 것에 동의합니다. *동의하지 않는 경우에는 신고인이 직접 관련 서류를
+        제출해야 합니다.
+      </div>
+      <div class="stemp-wrapper flex-row">
+        <div class="stemp-label">신고인</div>
+        <div class="stemp-data"></div>
+        <div class="stemp-comment">(서명 또는 인)</div>
+      </div>
+    </div>
+
+    <div class="row18">
+      <div class="label">
+        작 성 방 법
+      </div>
+      <div class="terms-wrapper">
+        <div class="comment">
+          ※ 이 신고서는 한글과 아라비아 숫자로 적고, 금액은 원 단위까지 표시합니다.
+          <br>
+          <div class="gray-box"></div>표시란은 사업자가 적지 않습니다.
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">❶ 신고내용란</div>
+          <div class="terms-list">
+            <div class="terms">
+              (1) ~ (4): 해당 신고대상기간에 부가가치세가 과세되는 사업실적 중 세금계산서 발급분은 (1)란에, 매입자로부터 받은 매입자발행 세금계산서의 금액과 세액은 (2)란에, 신용카드매출전표등 발행분과 전자화폐수취분은
+              (3)란에, 세금계산서 발급의무가 없는 부분 등 그 밖의 매출은 (4)란에 적습니다(금액에 세율을 곱하여 세액란에 적습니다).
+            </div>
+            <div class="terms">
+              (5)ㆍ(6): 해당 신고대상기간에 영세율이 적용되는 사업실적 중 세금계산서 발급분은 (5)란에, 세금계산서 발급의무가 없는 부분은 (6)란에 적습니다.
+            </div>
+            <div class="terms">
+              (7): 예정신고를 할 때 누락된 금액을 확정신고할 때 신고하는 경우에 적으며, 4쪽 중 제3쪽 (36)합계란의 금액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (8): 부가가치세가 과세되는 재화 또는 용역의 공급에 대한 외상매출금 등이 대손되어 대손세액을 공제받는 사업자가 적으며, 대손세액을 공제받는 경우에는 대손세액을 차감표시(△)하여 적고, 대손금액의 전부 또는 일부를
+              회수하여 회수금액에 관련된 대손세액을 납부하는 경우에는 해당 납부 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (10)ㆍ(10-1)ㆍ(11): 발급받은 세금계산서상의 공급가액 및 세액을 고정자산 매입분(11)과 그 외의 매입분(10)으로 구분 집계하여 각각의 난에 적고, 「부가가치세법 시행령」 제91조의2제8항에 따라 재화의
+              수입에 대한 부가가치세 납부유예를 승인받아 납부유예된 세액을 (10-1)란에 적습니다.
+            </div>
+            <div class="terms">
+              (12): 예정신고를 하였을 때 누락된 금액을 확정신고하는 경우에 적으며, 4쪽 중 제3쪽 (39)합계란의 금액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (13): 매입자가 관할 세무서장으로부터 거래사실확인 통지를 받고 발행한 매입자발행 세금계산서의 금액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (14): 발급받은 신용카드매출전표등의 매입세액, 의제매입세액, 재활용폐자원 등에 대한 매입세액, 재고매입세액, 변제대손세액 또는 외국인 관광객에 대한 환급세액이 있는 사업자가 적으며, 4쪽 중 제3쪽 (48)합계란의
+              금액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (16): 발급받은 세금계산서의 매입세액 중 공제받지 못할 매입세액, 과세사업과 면세사업등에 공통으로 사용된 공통매입세액 중 면세사업등과 관련된 매입세액 또는 대손처분받은 세액이 있는 사업자가 적으며, 4쪽 중 제3쪽
+              (52)합계란의 금액 및 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (18): 택시운송사업자 경감세액 등[4쪽 중 제3쪽 (58)합계란의 금액]을 적습니다.
+            </div>
+            <div class="terms">
+              (19):개인사업자(직전 연도의 과세공급가액이 10억원을 초과하는 사업자는 제외)로서 소매업자, 음식점업자, 숙박업자 등 「부가가치세법 시행령」 제73조제1항 및 제2항에 따른 사업자가 신용카드 및 전자화폐에 의한 매출이
+              있는 경우에 적으며, 금액란에는 신용카드매출전표 발행금액 등과 전자화폐 수취금액을, 세액란에는 그 금액의 13/1,000에 해당하는 금액(연간 500만원을 한도로 합니다)을 적습니다.
+            </div>
+            <div class="terms">
+              (21): 예정신고를 할 때 일반환급세액이 있는 것으로 신고한 경우 그 환급세액을 적습니다.
+            </div>
+            <div class="terms">
+              (22): 해당 과세기간 중에 예정고지된 세액이 있는 경우 그 예정고지세액을 적습니다.
+            </div>
+            <div class="terms">
+              (23): 「부가가치세법 시행령」 제95조제5항에 따라 사업양수자가 국고에 납입한 부가가치세액을 적습니다.
+            </div>
+            <div class="terms">
+              (24): 「조세특례제한법 시행령」 제106조의9제5항 및 제106조의13제4항에 따른 부가가치세 관리기관이 국고에 직접 입금한 부가가치세액을 적습니다.
+            </div>
+            <div class="terms">
+              (25): 신고한 내용에 가산세가 적용되는 경우가 있는 사업자만 적으며, 4쪽 중 제3쪽 (77)합계란의 세액을 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">❷ 국세환급금계좌신고란</div>
+          <div class="terms-list">
+            <div class="terms">
+              (26)란에 "환급받을 세액"이 발생한 사업자가 적으며, 2천만원 이상인 경우에는 별도로 "계좌개설신고서"를 제출해야 합니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">❸ 폐업신고란</div>
+          <div class="terms-list">
+            <div class="terms">
+              사업을 폐업하고 확정신고하는 사업자만 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">❹ 과세표준 명세란</div>
+          <div class="terms-list">
+            <div class="terms last">
+              (27) ~ (31): 과세표준 합계액(9)을 업태, 종목, 생산요소별로 적되, 생산요소는 임의적 기재사항으로 2015. 1. 1. 이후 신고분부터 적습니다. (30)수입금액제외란은 고정자산매각, 직매장공급 등 소득세수입금액에서 제외되는 금액을 적고, (31)란의 합계액이 (9)란의 금액과 일치해야 합니다.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="page-break-before:always;"></div>
+  </div>
+
+  <div class="content">
+    <div class="page-number">(4쪽 중 제3쪽)</div>
+    <div class="row19">
+      <div class="comment">
+        ※ 이 쪽은 해당 사항이 있는 사업자만 사용합니다.
+      </div>
+      <div class="comment">
+        ※ 뒤쪽의 작성방법을 읽고 작성하시기 바랍니다.
+      </div>
+      <div class="comment flex-row">
+        사업자등록번호 
+        <div class="number-box">{{row19.comBizNo.substr(0,1)}}</div>
+        <div class="number-box">{{row19.comBizNo.substr(1,1)}}</div>
+        <div class="number-box last">{{row19.comBizNo.substr(2,1)}}</div>
+        -
+        <div class="number-box">{{row19.comBizNo.substr(3,1)}}</div>
+        <div class="number-box last">{{row19.comBizNo.substr(4,1)}}</div>
+        -
+        <div class="number-box">{{row19.comBizNo.substr(5,1)}}</div>
+        <div class="number-box">{{row19.comBizNo.substr(6,1)}}</div>
+        <div class="number-box">{{row19.comBizNo.substr(7,1)}}</div>
+        <div class="number-box">{{row19.comBizNo.substr(8,1)}}</div>
+        <div class="number-box last">{{row19.comBizNo.substr(9,1)}}</div>
+        *사업자등록번호는 반드시 적으시기 바랍니다.
+      </div>
+    </div>
+
+    <div class="row20">
+      <table>
+        <tr>
+          <td rowspan="9" style="width: 10%">
+            예정신고<br>
+            누락분<br>
+            명세
+          </td>
+          <td rowspan="6" style="width: 10%">(7)매출</td>
+          <td colspan="3" style="width: 40%">구분</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td style="width: 15%">금액</td>
+          <td style="width: 10%">세율</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td rowspan="2">과세</td>
+          <td>세금계산서</td>
+          <td>(32)</td>
+          <td>{{row20.billOut.amount}}</td>
+          <td>10/100</td>
+          <td>{{row20.billOut.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>기타</td>
+          <td>(33)</td>
+          <td>{{row20.billOutEtc.amount}}</td>
+          <td>10/100</td>
+          <td>{{row20.billOutEtc.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td rowspan="2">영세율</td>
+          <td>세금계산서</td>
+          <td>(34)</td>
+          <td>{{row20.billOutSm.amount}}</td>
+          <td>0/100</td>
+          <td class="back-gray">{{row20.billOutSm.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>기타</td>
+          <td>(35)</td>
+          <td>{{row20.billOutSmEtc.amount}}</td>
+          <td>0/100</td>
+          <td class="back-gray">{{row20.billOutSmEtc.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td colspan="2">합계</td>
+          <!-- <td></td> -->
+          <td>(36)</td>
+          <td>{{row20.outDropSum.amount}}</td>
+          <td class="back-gray">{{row20.outDropSum.rate}}</td>
+          <td>{{row20.outDropSum.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="3">(12)매입</td>
+          <td colspan="2">세금계산서</td>
+          <!-- <td></td> -->
+          <td>(37)</td>
+          <td>{{row20.billIn.amount}}</td>
+          <td class="back-gray">{{row20.billIn.rate}}</td>
+          <td>{{row20.billIn.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td colspan="2">그 밖의 공제매입세액</td>
+          <!-- <td></td> -->
+          <td>(38)</td>
+          <td>{{row20.etcDedDe.amount}}</td>
+          <td class="back-gray">{{row20.etcDedDe.rate}}</td>
+          <td>{{row20.etcDedDe.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td colspan="2">합 계</td>
+          <!-- <td></td> -->
+          <td>(39)</td>
+          <td>{{row20.billInSum.amount}}</td>
+          <td class="back-gray">{{row20.billInSum.rate}}</td>
+          <td>{{row20.billInSum.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row21">
+      <table>
+        <tr>
+          <td rowspan="10" style="width: 10%">
+            (14)<br>
+            그 밖의 공제<br>
+            매입세액<br>
+            명세
+          </td>
+          <td colspan="3" style="width: 50%">구분</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td style="width: 15%">금액</td>
+          <td style="width: 10%">세율</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="2">신용카드매출전표등 수령명세서 제출분</td>
+          <td>일반매입</td>
+          <td>(40)</td>
+          <td>{{row21.normalBuy.amount}}</td>
+          <td>{{row21.normalBuy.rate}}</td>
+          <td>{{row21.normalBuy.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>고정자산매입</td>
+          <td>(41)</td>
+          <td>{{row21.fixBuy.amount}}</td>
+          <td>{{row21.fixBuy.rate}}</td>
+          <td>{{row21.fixBuy.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">의제매입세액</td>
+          <!-- <td></td> -->
+          <td>(42)</td>
+          <td>{{row21.dedInputTax.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row21.dedInputTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">재활용폐자원등 매입세액</td>
+          <!-- <td></td> -->
+          <td>(43)</td>
+          <td>{{row21.recycleDedInputTax.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row21.recycleDedInputTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">과세사업전환 매입세액</td>
+          <!-- <td></td> -->
+          <td>(44)</td>
+          <td class="back-gray">{{row21.businessChangeTax.amount}}</td>
+          <td class="back-gray">{{row21.businessChangeTax.rate}}</td>
+          <td>{{row21.businessChangeTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">재고매입세액</td>
+          <!-- <td></td> -->
+          <td>(45)</td>
+          <td class="back-gray">{{row21.inventoryTax.amount}}</td>
+          <td class="back-gray">{{row21.inventoryTax.rate}}</td>
+          <td>{{row21.inventoryTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">변제대손세액</td>
+          <!-- <td></td> -->
+          <td>(46)</td>
+          <td class="back-gray">{{row21.repaymentTax.amount}}</td>
+          <td class="back-gray">{{row21.repaymentTax.rate}}</td>
+          <td>{{row21.repaymentTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">외국인 관광객에 대한 환급세액</td>
+          <!-- <td></td> -->
+          <td>(47)</td>
+          <td class="back-gray">{{row21.foreignTax.amount}}</td>
+          <td class="back-gray">{{row21.foreignTax.rate}}</td>
+          <td>{{row21.foreignTax.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">합 계</td>
+          <!-- <td></td> -->
+          <td>(48)</td>
+          <td>{{row21.sum.amount}}</td>
+          <td class="back-gray">{{row21.sum.rate}}</td>
+          <td>{{row21.sum.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row22">
+      <table>
+        <tr>
+          <td rowspan="5" style="width: 10%">
+            (16)<br>
+            공제받지<br>
+            못할<br>
+            매입세액<br>
+            명세
+          </td>
+          <td colspan="2" style="width: 50%">구분</td>
+          <!-- <td></td> -->
+          <td style="width: 15%">금액</td>
+          <td style="width: 10%">세율</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>공제받지 못할 매입세액</td>
+          <td>(49)</td>
+          <td>{{row22.inNoDed.amount}}</td>
+          <td class="back-gray">{{row22.inNoDed.rate}}</td>
+          <td>{{row22.inNoDed.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>공통매입세액 면세사업등분</td>
+          <td>(50)</td>
+          <td>{{row22.comInTaxCut.amount}}</td>
+          <td class="back-gray">{{row22.comInTaxCut.rate}}</td>
+          <td>{{row22.comInTaxCut.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>대손처분받은 세액</td>
+          <td>(51)</td>
+          <td>{{row22.deptNoDed.amount}}</td>
+          <td class="back-gray">{{row22.deptNoDed.rate}}</td>
+          <td>{{row22.deptNoDed.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>합 계</td>
+          <td>(52)</td>
+          <td>{{row22.inNoDedSum.amount}}</td>
+          <td class="back-gray">{{row22.inNoDedSum.rate}}</td>
+          <td>{{row22.inNoDedSum.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row23">
+      <table>
+        <tr>
+          <td rowspan="7" style="width: 10%">
+            (18)<br>
+            그 밖의<br>
+            경감ㆍ공제<br>
+            세액 명세
+          </td>
+          <td colspan="2" style="width: 50%">구분</td>
+          <!-- <td></td> -->
+          <td style="width: 15%">금액</td>
+          <td style="width: 10%">세율</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>전자신고 세액공제</td>
+          <td>(53)</td>
+          <td class="back-gray">{{row23.eleReport.amount}}</td>
+          <td class="back-gray">{{row23.eleReport.rate}}</td>
+          <td>{{row23.eleReport.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>전자세금계산서 발급세액 공제</td>
+          <td>(54)</td>
+          <td class="back-gray">{{row23.eleTaxStatement.amount}}</td>
+          <td class="back-gray">{{row23.eleTaxStatement.rate}}</td>
+          <td>{{row23.eleTaxStatement.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>택시운송사업자 경감세액</td>
+          <td>(55)</td>
+          <td class="back-gray">{{row23.taxi.amount}}</td>
+          <td class="back-gray">{{row23.taxi.rate}}</td>
+          <td>{{row23.taxi.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>현금영수증사업자 세액공제</td>
+          <td>(56)</td>
+          <td class="back-gray">{{row23.cashReceipt.amount}}</td>
+          <td class="back-gray">{{row23.cashReceipt.rate}}</td>
+          <td>{{row23.cashReceipt.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>기 타</td>
+          <td>(57)</td>
+          <td class="back-gray">{{row23.etc.amount}}</td>
+          <td class="back-gray">{{row23.etc.rate}}</td>
+          <td>{{row23.etc.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>합 계</td>
+          <td>(58)</td>
+          <td class="back-gray">{{row23.sum.amount}}</td>
+          <td class="back-gray">{{row23.sum.rate}}</td>
+          <td>{{row23.sum.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row24">
+      <table>
+        <tr>
+          <td rowspan="20" style="width: 10%">
+            (25)<br>
+            가산세 명세
+          </td>
+          <td colspan="3" style="width: 50%">구분</td>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td style="width: 15%">금액</td>
+          <td style="width: 10%">세율</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">사업자미등록 등</td>
+          <!-- <td></td> -->
+          <td>(59)</td>
+          <td>{{row24.noRegist.amount}}</td>
+          <td>1/100</td>
+          <td>{{row24.noRegist.tax}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="3">세금계산서</td>
+          <td>지연발급 등</td>
+          <td>(60)</td>
+          <td>{{row24.taxDelayIssue.amount}}</td>
+          <td>1/100</td>
+          <td>{{row24.taxDelayIssue.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>지연수취</td>
+          <td>(61)</td>
+          <td>{{row24.taxDelayTake.amount}}</td>
+          <td>5/1,000</td>
+          <td>{{row24.taxDelayTake.vat}}</td>
+        </tr>
+        
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>미발급 등</td>
+          <td>(62)</td>
+          <td>{{row24.taxNoIssue.amount}}</td>
+          <td>2/100</td>
+          <td>{{row24.taxNoIssue.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="2">전자세금계산서<br>발급명세 전송</td>
+          <td>지연전송</td>
+          <td>(63)</td>
+
+          <td>{{row24.eleTaxDelaySend.amount}}</td>
+          <td>5/1,000</td>
+          <td>{{row24.eleTaxDelaySend.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>미전송</td>
+          <td>(64)</td>
+          <td>{{row24.eleTaxNoSend.amount}}</td>
+          <td>1/100</td>
+          <td>{{row24.eleTaxNoSend.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="2">세금계산서<br>합계표</td>
+          <td>제출 불성실</td>
+          <td>(65)</td>
+          <td>{{row24.taxSumBadSubmit.amount}}</td>
+          <td>5/1,000</td>
+          <td>{{row24.taxSumBadSubmit.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>지연제출</td>
+          <td>(66)</td>
+          <td>{{row24.taxSumDelaySubmit.amount}}</td>
+          <td>3/1,000</td>
+          <td>{{row24.taxSumDelaySubmit.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="4">신고 불성실</td>
+          <td>무신고(일반)</td>
+          <td>(67)</td>
+          <td>{{row24.noReportNormal.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.noReportNormal.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>무신고(부당)</td>
+          <td>(68)</td>
+          <td>{{row24.noReportUnfair.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.noReportUnfair.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>과소ㆍ초과환급신고(일반)</td>
+          <td>(69)</td>
+          <td>{{row24.overReportNormal.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.overReportNormal.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>과소ㆍ초과환급신고(부당)</td>
+          <td>(70)</td>
+          <td>{{row24.overReportUnfaire.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.overReportUnfaire.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">납부 불성실</td>
+          <!-- <td></td> -->
+          <td>(71)</td>
+          <td>{{row24.badPay.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.badPay.vat}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">영세율 과세표준신고 불성실</td>
+          <!-- <td></td> -->
+          <td>(72)</td>
+          <td>{{row24.badZeroTaxReport.amount}}</td>
+          <td>5/1,000</td>
+          <td>{{row24.badZeroTaxReport.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">현금매출명세서 불성실</td>
+          <!-- <td></td> -->
+          <td>(73)</td>
+          <td>{{row24.badCashSalesReport.amount}}</td>
+          <td>1/100</td>
+          <td>{{row24.badCashSalesReport.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">부동산임대공급가액명세서 불성실</td>
+          <!-- <td></td> -->
+          <td>(74)</td>
+          <td>{{row24.badRealEstate.amount}}</td>
+          <td>1/100</td>
+          <td>{{row24.badRealEstate.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td rowspan="2">매입자 납부특례</td>
+          <td>거래계좌 미사용</td>
+          <td>(75)</td>
+          <td>{{row24.MnaSpaidNoAccount.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.MnaSpaidNoAccount.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td>거래계좌 지연입금</td>
+          <td>(76)</td>
+          <td>{{row24.MnaSpaidDelay.amount}}</td>
+          <td>뒤쪽참조</td>
+          <td>{{row24.MnaSpaidDelay.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">합 계</td>
+          <!-- <td></td> -->
+          <td>(77)</td>
+          <td class="back-gray">{{row24.sum.amount}}</td>
+          <td class="back-gray">{{row24.sum.rate}}</td>
+          <td>{{row24.sum.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row25">
+      <table>
+        <tr>
+          <td rowspan="5" style="width: 10%">
+            면세사업<br>
+            수입금액
+          </td>
+          <td colspan="2" style="width: 20%">업태</td>
+          <!-- <td></td> -->
+          <td>종목</td>
+          <td>코드번호</td>
+          <td>금액</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>(78)</td>
+          <td>{{row25.data78.comBizStatus}}</td>
+          <td>{{row25.data78.comBizEvent}}</td>
+          <td>
+            <div class="number-wrapper flex-row">
+              <div ng-repeat="i in [0,1,2,3,4,5]" class="number">{{row25.data78.comBizTypeCode.substr(i,1)}}</div>
+            </div>
+          </td>
+          <td>{{row25.data78.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>(79)</td>
+          <td>{{row25.data79.comBizStatus}}</td>
+          <td>{{row25.data79.comBizEvent}}</td>
+          <td>
+            <div class="number-wrapper flex-row">
+              <div ng-repeat="i in [0,1,2,3,4,5]" class="number">{{row25.data79.comBizTypeCode.substr(i,1)}}</div>
+            </div>
+          </td>
+          <td>{{row25.data79.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>(80)</td>
+          <td>수입금액 제외</td>
+          <td>{{row25.data80.comBizEvent}}</td>
+          <td>
+            <div class="number-wrapper flex-row">
+              <div ng-repeat="i in [0,1,2,3,4,5]" class="number">{{row25.data80.comBizTypeCode.substr(i,1)}}</div>
+            </div>
+          </td>
+          <td>{{row25.data80.amount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td colspan="2">{{row25.data81.comBizStatus}}</td>
+          <!-- <td></td> -->
+          <td>{{row25.data81.comBizEvent}}</td>
+          <td>(81)합 계</td>
+          <td>{{row25.data81.amount}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row26">
+      <table>
+        <tr>
+          <td rowspan="2" style="width: 10%">
+            계산서 발급<br>및 수취 명세
+          </td>
+          <td style="width: 20%">(82) 계산서 발급금액</td>
+          <td>{{row26.billIssueAmount}}</td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>(83) 계산서 수취금액</td>
+          <td>{{row26.billTakeAmount}}</td>
+        </tr>
+        
+      </table>
+    </div>
+    <div style="page-break-before:always;"></div>
+  </div>
+
+  <div class="content">
+    <div class="page-number">(4쪽 중 제4쪽)</div>
+    <div class="row27">
+      <div class="label">
+        작 성 방 법
+      </div>
+      <div class="terms-wrapper">
+
+        <div class="terms-section">
+          <div class="label-box">(7), (12) 예정신고 누락분 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+              (32) ~ (35), (37)ㆍ(38): 4쪽 중 제1쪽 (7)란, (12)란의 예정신고 누락분을 합계하여 적은 경우 그 예정신고 누락분의 명세를 적습니다. 다만, 매입자발행 세금계산서는 세금계산서란에 포함하여 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">(14) 그 밖의 공제매입세액 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+              (40)ㆍ(41): 사업과 관련한 재화나 용역을 공급받고 발급받은 신용카드매출전표 등을 신용카드매출전표등 수령명세서에 작성하여 제출함으로써 매입세액을 공제하는 경우에 일반매입과 고정자산매입을 구분하여 적습니다.
+            </div>
+            <div class="terms">
+              (42): 면세농산물등을 원재료로 제조ㆍ창출한 재화 또는 용역이 과세되어 의제매입세액을 공제받는 사업자가 적고, 금액란에는 의제매입세액 공제신고서의 면세농산물등의 매입가액을, 세액란에는 의제매입세액 공제신고서의 공제할 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (43): 재활용폐자원 등에 대한 매입세액을 공제받는 사업자가 적고, 금액란에는 재활용폐자원 등의 취득가액을, 세액란에는 「조세특례제한법 시행규칙」 별지 제69호서식(1) 재활용폐자원 및 중고자동차 매입세액 공제신고서(갑)의 공제할 세액을 적습니다.
+            </div>
+            <div class="terms">
+              (44): 면세사업등에 사용하는 감가상각자산을 과세사업에 사용하거나 소비하는 경우 취득 시 공제하지 않은 매입세액을 공제받는 경우에 적습니다.
+            </div>
+            <div class="terms">
+              (45): 간이과세자에서 일반과세자로 변경된 사업자가 그 변경되는 날 현재의 재고품등에 대하여 매입세액을 공제받는 경우에 적습니다.
+            </div>
+            <div class="terms">
+              (46): 공급받은 재화나 용역에 대한 외상매입금, 그 밖에 매입채무가 대손확정되어 매입세액을 불공제받은 후 대손금액의 전부 또는 일부를 변제한 경우 변제한 대손금액에 관련된 대손세액을 적습니다.
+            </div>
+            <div class="terms">
+              (47): 「조세특례제한법 시행령」 제109조의3제8항에 따른 특례적용의료기관 사업자가 공제받을 부가가치세액을 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">(16) 공제받지 못할 매입세액 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+            (49): 발급받은 세금계산서 중 매입세액을 공제받지 못할 세금계산서의 공급가액, 세액의 합계액을 적습니다.
+            </div>
+            <div class="terms">
+            (50): 부가가치세 과세사업과 면세사업 등에 공통으로 사용하는 공통매입세액 중 면세사업 등 해당 분으로 안분 계산한 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (51): 부가가치세가 과세되는 재화 또는 용역을 공급받고 매입세액을 공제받은 외상매입금 그 밖에 매입채무가 폐업 전에 대손이 확정되어 거래상대방이 대손세액을 공제받은 경우 관련 대손처분을 받은 세액을 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">(18) 그 밖의 경감ㆍ공제세액 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+            (53): 「조세특례제한법」 제104조의8제2항에 따른 전자신고 세액공제 금액(10,000원)을 확정신고할 때 적습니다.
+            </div>  
+            <div class="terms">
+            (54): 전자세금계산서를 발급하고 발급명세를 국세청에 전송한 경우 공제세액(발급건당 200원씩 연간 100만원 한도)을 적습니다.
+            </div>
+            <div class="terms">
+            (55): 일반택시운송사업자만 적고, 4쪽 중 제1쪽 ㉰란에 적은 납부세액의 95/100에 해당하는 금액을 적습니다.
+            </div>
+            <div class="terms">
+            (56): 「조세특례제한법」 제126조의3에 따른 현금영수증사업자에 대한 부가가치세 공제액을 적습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">(25) 가산세 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+            (59): 사업자등록을 하지 않거나 타인의 명의로 등록한 경우 또는 타인 명의의 사업자등록을 이용한 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (60): 세금계산서 발급시기를 경과하여 발급하거나 세금계산서의 필요적 기재사항의 전부 또는 일부가 착오 또는 과실로 적혀 있지 않거나 사실과 다른 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (61): 재화 또는 용역의 공급시기 이후에 발급받은 세금계산서로서 해당 공급시기가 속하는 과세기간의 확정 신고기한까지 발급받아 매입세액공제를 받은 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (62): 세금계산서를 발급하지 않거나 재화 또는 용역의 공급 없이 세금계산서를 발급 및 수취하거나 실제로 재화 또는 용역을 공급하는 자 및 공급받는 자가 아닌 자의 명의로 발급 및 수취한 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (63): 전자세금계산서 발급 의무 사업자가 전자세금계산서 발급일의 다음 날이 경과한 후 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음 달 11일(토요일 또는 공휴일인 경우는 그 다음 날)까지 세금계산서 발급명세를 전송한 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (64): 전자세금계산서 발급 의무 사업자가 전자세금계산서 발급일의 다음 날이 경과한 후 재화 또는 용역의 공급시기가 속하는 과세기간 말의 다음 달 11일(토요일 또는 공휴일인 경우는 그 다음 날)까지 세금계산서 발급명세를 전송하지 않은 경우 그 공급가액과 세액을 적습니다. 
+            </div>
+            <div class="terms">
+            (65): 「부가가치세법」 제60조제6항 및 제7항에 해당하는 경우(매출ㆍ매입처별 세금계산서합계표를 미제출ㆍ부실기재 등) 그 공급가액과 세액을 적습니다. 다만, 「부가가치세법」 제60조제6항제3호에 해당하는 경우는 (66)번에 적습니다. 
+            </div>
+            <div class="terms">
+            (66): 매출처별 세금계산서합계표를 각 예정신고와 함께 제출하지 않고 해당 예정신고기간이 속하는 과세기간의 확정신고와 함께 제출하는 경우 그 공급가액과 세액을 적습니다.  
+            </div>
+            <div class="terms">
+            (67)ㆍ(68):「국세기본법」 제47조의2에 따라 법정신고기한까지 신고하지 않은 납부세액과 그 가산세액을 적습니다.
+            </div>
+            <div class="terms">
+            - 부정행위에 따른 부당 무신고가산세: 납부세액의 40%,  - 그 외 일반 무신고가산세: 납부세액의 20%
+            </div>
+            <div class="terms">
+              ※ 법정신고기한이 지난 후 1개월 이내에 기한 후 신고ㆍ납부한 경우 가산세액의 50%, 1개월 초과 6개월 이내 20% 감면
+            </div>
+            <div class="terms">
+              (69)ㆍ(70):「국세기본법」 제47조의3에 따라 과소신고한 납부세액 또는 초과신고한 환급세액과 그 가산세액을 적습니다.
+              </div>
+            <div class="terms">
+            - 부정행위에 따른 부당 과소ㆍ초과환급신고 가산세: 납부세액의 40%,  - 그 외 일반 과소ㆍ초과환급신고 가산세  납부세액의 10%
+            </div>
+            <div class="terms">
+                ※ 법정신고기한이 지난 후 6개월 이내에 수정신고한 경우 가산세액의 50%, 6개월 초과 1년 이내 20%, 1년 초과 2년 이내 10% 감면
+                </div>
+            <div class="terms">
+              (71):「국세기본법」 제47조의4에 따라 납부하지 않거나 미달하게 납부한 세액 및 환급신고해야 할 환급세액을 초과한 환급세액과 그 가산세액을 적으며, 가산세율은 3×(경과일수)/10,000 입니다.
+              </div>
+            <div class="terms">
+            ※ 경과일수는 당초 납부기한의 다음 날부터 납부일까지 또는 환급받은 날의 다음 날부터 납부일까지의 기간의 일수를 말합니다.
+            </div>
+            <div class="terms">
+              (72): 영세율이 적용되는 과세표준을 신고하지 않거나 미달하게 신고한 경우 그 공급가액과 세액을 적습니다.
+              </div>
+            <div class="terms">
+            (73): 현금매출명세서를 제출해야 할 사업자가 그 명세서를 제출하지 않거나 사실과 다르게 적은 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (74): 부동산임대공급가액명세서를 제출해야 할 사업자가 그 명세서를 제출하지 않거나 사실과 다르게 적은 경우 그 공급가액과 세액을 적습니다.
+            </div>
+            <div class="terms">
+            (75):「조세특례제한법」 제106조의4제7항 및 제106조의9제6항에 따라 금지금 및 구리 스크랩등 거래계좌를 사용하지 않고 결제받은 경우 그 가산세액을 적으며, 가산세율은 제품가액의 100분의 10에 해당하는 금액입니다.
+            </div>
+            <div class="terms">
+            (76):「조세특례제한법」 제106조의4제8항 및 제106조의9제7항에 따라 거래시기에 부가가치세액을 거래계좌에 입금하지 않은 경우 공급일의 다음 날부터 부가가치세 입금일까지 기간에 대한 가산세액을 적으며, 가산세액은 지연입금액×3×(경과일수)/10,000 입니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="label-box">면세사업 수입금액란, 계산서 발급 및 수취 명세란</div>
+          <div class="terms-list">
+            <div class="terms">
+            (78)ㆍ(79): 부가가치세가 면제되는 사업의 수입금액을 업태, 종목별로 구분하여 적습니다.
+            </div>
+            <div class="terms">
+            (80): 수입금액 제외란은 고정자산 매각 등 종합소득세 수입금액에서 제외되는 금액을 적습니다.
+            </div>
+            <div class="terms">
+            (81): 수입금액 합계액을 적습니다.
+            </div>
+            <div class="terms">
+            (82): 부가가치세가 과세되지 않은 재화 또는 용역을 공급하고 발급한 계산서의 합계액을 적습니다.
+            </div>
+            <div class="terms">
+            (83): 거래상대방으로부터 발급받은 계산서의 합계액을 적습니다.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

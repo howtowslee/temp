@@ -1,0 +1,237 @@
+@import './style.scss';
+
+.row01{
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+  span{
+    font-size: 1vw;
+  }
+}
+.row02{
+  font-size: $pageTitle;
+  margin-bottom: 1vw;
+}
+.row03{
+  margin-bottom: 1vw;
+}
+.row04{
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+.row05{
+  justify-content: flex-start;
+  border-top: $border1 solid black;
+  border-bottom: $border1 solid black;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+.row06{
+  margin-bottom: 1vw;
+  border-bottom: $border1 solid black;
+  div{
+    box-sizing: border-box;
+  }
+  .inc-name{
+    width: 35%;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    border-right: $border1 solid black;
+    height: 5vw;
+  }
+  .name{
+    width: 35%;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    border-right: $border1 solid black;
+    height: 5vw;
+  }
+  .inc-number-label{
+    width: 30%;
+    height: 5vw;
+    justify-content: space-around;
+    .label{
+      width: 90%;
+    }
+    .data{
+      width: 90%;
+      text-align: right;
+    }
+  }
+  
+}
+.row07{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+.row08{
+  margin-bottom: 1vw;
+  table{
+    width: 100%;
+    border-top: $border1 solid black;
+    border-bottom: $border1 solid black;
+    border-collapse: collapse;
+    th, td{
+      border: $border2 solid black;
+      height: 2vw;
+      text-align: center;
+      &.label{
+        text-align: left;
+      }
+      &:first-child{
+        border-left: 0vw;
+      }
+      &:last-child{
+        border-right: 0vw;
+      }
+    }
+    
+  }
+}
+
+.row09{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+
+.row10{
+  margin-bottom: 1vw;
+  table{
+    width: 100%;
+    border-top: $border1 solid black;
+    border-bottom: $border1 solid black;
+    border-collapse: collapse;
+    th, td{
+      border: $border2 solid black;
+      height: 2vw;
+      text-align: center;
+      &.label{
+        text-align: left;
+      }
+      &:first-child{
+        border-left: 0vw;
+      }
+      &:last-child{
+        border-right: 0vw;
+      }
+    }
+  }
+}
+
+.row11{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+
+.row12{
+  margin-bottom: 2vw;
+  table{
+    width: 100%;
+    border-top: $border1 solid black;
+    border-bottom: $border1 solid black;
+    border-collapse: collapse;
+    th, td{
+      border: $border2 solid black;
+      height: 2vw;
+      text-align: center;
+      &.label{
+        text-align: left;
+      }
+      &:first-child{
+        border-left: 0vw;
+      }
+      &:last-child{
+        border-right: 0vw;
+      }
+    }
+  }
+}
+
+.row13{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+
+.row14{
+  margin-bottom: 2vw;
+  table{
+    width: 100%;
+    border-top: $border1 solid black;
+    border-bottom: $border1 solid black;
+    border-collapse: collapse;
+    th, td{
+      border: $border2 solid black;
+      height: 2vw;
+      text-align: center;
+      &.label{
+        text-align: left;
+      }
+      &:first-child{
+        border-left: 0vw;
+      }
+      &:last-child{
+        border-right: 0vw;
+      }
+    }
+  }
+}
+
+.row15{
+  text-align: right;
+  border-bottom: 3px solid #999999;
+  width: 100%;
+  padding-bottom: 0.5vw;
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+}
+
+.row16{
+  padding: 1vw 0vw;
+  background-color: #f5f5f5;
+  border-top: 2px solid #999999;
+  margin-bottom: 2vw;
+}
+
+.row17{
+  border-bottom: $border1 solid black;
+  .label{
+    font-size: $font2;
+    font-weight: 600;
+    margin-bottom: 1vw;
+    margin-top: 2vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+    div:first-child{
+      margin-right: 0.5vw;
+    }
+    .not-strong{
+      font-weight: 400;
+    }
+  }
+  .comment{
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1vw;
+    .comment-label{
+      width: 5%;
+      text-align: center;
+    }
+    .comment-content{
+      width: 95%;
+      line-height: 2vw;
+    }
+  }
+}

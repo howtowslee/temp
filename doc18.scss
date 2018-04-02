@@ -1,0 +1,128 @@
+@import './style.scss';
+
+.row01{
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+  span{
+    font-size: 1vw;
+  }
+}
+.row02{
+  font-size: $pageTitle;
+  margin-bottom: 1vw;
+}
+.row03{
+  margin-bottom: 1vw;
+}
+.row04{
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+.row05{
+  justify-content: flex-start;
+  border-top: $border1 solid black;
+  border-bottom: $border1 solid black;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+.row06{
+  flex-wrap: wrap;
+  margin-bottom: 1vw;
+  div{
+    box-sizing: border-box;
+  }
+  .box{
+    border-bottom: $border1 solid black;
+    font-size: $font2;
+    .label{
+      width: 100%;
+      padding: 0.5vw 1vw;
+      text-align: left;
+      font-size: $font2;
+    }
+    .data{
+      width: 100%;
+      padding: 1vw 0vw;
+      padding-right: 4vw;
+      text-align: right;
+      font-size: $font2;
+    }
+  }
+  .left{
+    width: 60%;
+    border-right: $border1 solid black;
+  }
+  .right{
+    width: 40%;
+  }
+}
+.row07{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+.row08{
+  margin-bottom: 1vw;
+  table{
+    width: 100%;
+    border-top: $border1 solid black;
+    border-bottom: $border1 solid black;
+    border-collapse: collapse;
+    th, td{
+      border: $border2 solid black;
+      height: 4vw;
+      text-align: center;
+      &.label{
+        text-align: left;
+      }
+      &:first-child{
+        border-left: 0vw;
+      }
+      &:last-child{
+        border-right: 0vw;
+      }
+    }
+    
+  }
+}
+
+.row09{
+  justify-content: flex-start;
+  border-top: $border3 solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: $label;
+}
+
+.row10{
+  border-top:$border1 solid black;
+  border-bottom:$border1 solid black;
+  margin-bottom: 10vw;
+  >div{
+    width: 25%;
+    text-align: center;
+    height: 5vw;
+    border-right: $border1 solid black;
+  }
+}
+.row11{
+  text-align: center;
+  font-size: $font3;
+  background-color: #f5f5f5;
+  border-top: $border1 solid black;
+  padding: 1vw 1vw;
+}
+
+.row12{
+  border-bottom: $border1 solid black;
+  margin-bottom: 2vw;
+  .comment{
+    text-indent: -2vw;
+    padding-left: 2vw;
+    margin: 1vw;
+    line-height: 2vw;
+  }
+}

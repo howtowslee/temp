@@ -1,0 +1,152 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+}
+
+.row01 span {
+  font-size: 1vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  width: 100%;
+  border-bottom: 0.1pt solid black;
+  padding-bottom: 1.5vw;
+  margin-bottom: 2vw;
+}
+
+.row04 {
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 2vw;
+  margin-bottom: 2vw;
+}
+
+.row04 .inc-number-wrapper {
+  width: 40vw;
+  justify-content: space-between;
+  border: 0.1pt solid black;
+}
+
+.row04 .inc-number-wrapper .label {
+  width: 40%;
+  text-align: center;
+  padding: 1vw 0vw;
+  border-right: 0.1pt solid black;
+  letter-spacing: 0.5vw;
+}
+
+.row04 .inc-number-wrapper .data {
+  width: 60%;
+  text-align: center;
+  padding: 1vw 0vw;
+}
+
+.row05 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.row06 {
+  margin-bottom: 2vw;
+}
+
+.row06 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row06 table th, .row06 table td {
+  border: 0.5px solid black;
+  height: 3vw;
+  text-align: center;
+}
+
+.row06 table th.label, .row06 table td.label {
+  text-align: left;
+}
+
+.row06 table th:first-child, .row06 table td:first-child {
+  border-left: 0vw;
+}
+
+.row06 table th:last-child, .row06 table td:last-child {
+  border-right: 0vw;
+}
+
+.row07 {
+  padding: 1vw 0vw;
+  background-color: #f5f5f5;
+  border-top: 2px solid #999999;
+  margin-bottom: 2vw;
+}
+
+.row08 {
+  align-items: flex-start;
+  border-bottom: 0.1pt solid black;
+  padding-bottom: 2vw;
+  margin-bottom: 2vw;
+}
+
+.row08 div:first-child {
+  margin-right: 1vw;
+}
+/*# sourceMappingURL=doc11-sub.css.map */

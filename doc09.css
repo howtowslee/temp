@@ -1,0 +1,264 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  margin-bottom: 4vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.row05 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row06 {
+  border-bottom: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row06 > div {
+  text-align: left;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.row06 > div .label {
+  width: 40%;
+  padding: 2vw 1vw;
+  border-right: 0.1pt solid black;
+}
+
+.row06 > div .data {
+  width: 60%;
+  padding: 2vw 1vw;
+  border-right: 0.1pt solid black;
+  text-align: center;
+}
+
+.row06 > div:last-child .data {
+  border-right: 0vw;
+}
+
+.row07 {
+  justify-content: flex-start;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  margin-top: 2vw;
+  font-size: 2vw;
+}
+
+.row08 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row08 table th:nth-child(1) {
+  width: 28%;
+}
+
+.row08 table th:nth-child(2) {
+  width: 6%;
+}
+
+.row08 table th:nth-child(3) {
+  width: 6%;
+}
+
+.row08 table th:nth-child(4) {
+  width: 30%;
+}
+
+.row08 table th:nth-child(5) {
+  width: 30%;
+}
+
+.row08 table th, .row08 table td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row08 table th:first-child, .row08 table td:first-child {
+  border-left: 0vw;
+}
+
+.row08 table th:last-child, .row08 table td:last-child {
+  border-right: 0vw;
+}
+
+.row08 table th {
+  height: 4vw;
+}
+
+.row09 {
+  align-items: flex-start;
+  padding: 2vw 0;
+}
+
+.row09 .label {
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.row09 .comment {
+  padding-left: 2vw;
+}
+
+.row10 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row10 th, .row10 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row10 th:first-child, .row10 td:first-child {
+  border-left: 0vw;
+}
+
+.row10 th:last-child, .row10 td:last-child {
+  border-right: 0vw;
+}
+
+.row10 th {
+  padding: 0.5vw;
+}
+
+.row10 td {
+  height: 4vw;
+}
+
+.row11 {
+  text-align: right;
+  border-bottom: 0.1pt solid black;
+  width: 100%;
+  padding-bottom: 0.5vw;
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.row12 {
+  justify-content: flex-start;
+  margin-bottom: 5vw;
+  height: 4vw;
+  justify-content: space-between;
+}
+
+.row12 .number {
+  width: 20%;
+  height: 100%;
+  border-bottom: 0.1pt solid black;
+  border-right: 0.1pt solid black;
+}
+
+.row12 .input {
+  width: 80%;
+}
+
+.row13 {
+  width: 100%;
+  margin-top: 5vw;
+  padding-top: 10vw;
+  margin-bottom: 75vw;
+  justify-content: flex-end;
+  border-bottom: 3px solid #999999;
+}
+
+.row15 {
+  text-align: center;
+  font-size: 2vw;
+  background-color: #f5f5f5;
+  border-top: 0.1pt solid black;
+  padding: 1vw 1vw;
+  margin-bottom: 2vw;
+}
+
+.row16 {
+  border-bottom: 0.1pt solid black;
+}
+
+.row16 div {
+  margin-bottom: 1vw;
+  line-height: 2vw;
+}
+
+.row16 .comment {
+  text-indent: -2vw;
+  padding-left: 2vw;
+}
+
+.row16 .sub-comment {
+  text-indent: -2vw;
+  padding-left: 4vw;
+  margin-top: 2vw;
+}
+/*# sourceMappingURL=doc09.css.map */

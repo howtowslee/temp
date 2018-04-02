@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+   
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc08-sub.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body>
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제39호서식(2)]</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">매입처별 세금계산서합계표(을)</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <div class="inc-number-wrapper flex-row">
+        <div class="flex-row label">사업자등록번호</div>
+        <div class="flex-row data">{{row04.comBizNo}}</div>
+      </div>
+    </div>
+
+    <div class="row05">
+      <table>
+        <tr>
+          <th rowspan="2">
+            ⑪<br>번호
+          </th>
+          <th rowspan="2">
+            ⑫<br>사업자<br>등록번호
+          </th>
+          <th rowspan="2">
+            ⑬ 상 호<br>(법인명)
+          </th>
+          <th rowspan="2">
+            ⑭<br>매수
+          </th>
+          <th colspan="5" style="border: 0vw; border-right: 1px solid black;">⑮ 공급가액</th>
+          <!-- <th></th>
+          <th></th>
+          <th></th>
+          <th></th> -->
+          <th colspan="5" style="border: 0vw">⑯ 세액</th>
+          <!-- <th></th>
+          <th></th>
+          <th></th>
+          <th></th> -->
+          <th rowspan="2">비고</th>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <!-- <td></td> -->
+          <td style="width: 5%; border: 0vw; ">조</td>
+          <td style="width: 5%; border: 0vw; ">십억</td>
+          <td style="width: 5%; border: 0vw; ">백만</td>
+          <td style="width: 5%; border: 0vw; ">천</td>
+          <td style="width: 5%; border: 0vw; border-right: 1px solid black">일</td>
+          <td style="width: 5%; border: 0vw; ">조</td>
+          <td style="width: 5%; border: 0vw; ">십억</td>
+          <td style="width: 5%; border: 0vw; ">백만</td>
+          <td style="width: 5%; border: 0vw; ">천</td>
+          <td style="width: 5%; border: 0vw; ">일</td>
+          <!-- <td></td> -->
+        </tr>
+        <tr ng-repeat="(val,row) in row05.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.comBizNo}}</td>
+          <td>{{row.comName}}</td>
+          <td>{{row.outcomCount}}</td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]">{{row.supplySum.substr(i,3)}}</td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]">{{row.vatSum.substr(i,3)}}</td>
+          <td></td>
+        </tr>
+        <tr ng-repeat="index in row05.left">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]"></td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]"></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row06">
+      작 성 방 법
+    </div>
+
+    <div class="row07">
+      이 서식은 과세기간 종료일 다음 날 11일까지 전송된 전자세금계산서 외 발급받은 매입처가 6개 이상으로서 『매입처별 세금계산서합계표(갑)』[별지 제39호서식(1)]을 초과하는 경우에 사용합니다.
+    </div>
+
+    <div class="row08 flex-row">
+      ( )쪽
+    </div>
+
+    <div class="row09 flex-row">
+      <div class="wrapper flex-row">
+        <div class="number flex-row">⑰ 관리번호(매입)</div>
+        <div class="input flex-row">
+          <span>{{row09.manageNum}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-size-label">
+      210mm×297mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+    </div>
+  </div>
+
+
+</body>
+
+</html>

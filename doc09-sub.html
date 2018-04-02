@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+   
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc09-sub.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body>
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>소득세법 시행규칙 [별지 제29호서식(2)] &lt;개정 2013.2.23&gt; </span>
+      <span>(앞 쪽)</span>
+    </div>
+
+    <div class="row02 flex-row">매입처별 계산서합계표(을)</div>
+
+    <div class="row03 flex-row">
+      ( 2017년 1기 )
+    </div>
+
+    <div class="row04 flex-row">
+      <div class="inc-number-wrapper flex-row">
+        <div class="label">사업자등록번호</div>
+        <div class="number flex-row">
+          <span>11111</span>-<span>11</span>-<span>111111</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row05">
+      <table>
+        <tr>
+          <th rowspan="2">
+            번호
+          </th>
+          <th rowspan="2">
+            사업자등록번호
+          </th>
+          <th rowspan="2">
+            상 호<br>(법인명)
+          </th>
+          <th rowspan="2">
+            매수
+          </th>
+          <th colspan="5" style="border: 0vw; border-right: 1px solid black;">매 입 금 액</th>
+          <!-- 
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th> 
+          -->
+          <th rowspan="2">비고</th>
+        </tr>
+        <tr>
+          <!-- 
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td> 
+          -->
+          <td style="width: 10%; text-align:right; border: 0vw; ">조</td>
+          <td style="width: 10%; text-align:right; border: 0vw; ">십억</td>
+          <td style="width: 10%; text-align:right; border: 0vw; ">백만</td>
+          <td style="width: 10%; text-align:right; border: 0vw; ">천</td>
+          <td style="width: 10%; text-align:right; border: 0vw; border-right: 1px solid black">일</td>
+          <!-- <td></td> -->
+        </tr>
+        <tr ng-repeat="(val,row) in row05.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.comBizNo}}</td>
+          <td>{{row.comName}}</td>
+          <td>{{row.outcomCount}}</td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]">{{row.supplySum.substr(i,3)}}</td>
+          <td></td>
+        </tr>
+        <tr ng-repeat="index in row05.left">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td ng-repeat="i in [-15,-12,-9,-6,-3]"></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="row06 flex-row">
+      ※ 이 서식은 매입처가 10개 이상으로서 매입처별계산서합계표(갑)을 초과하는 경우에 사용합니다
+    </div>
+
+    <div class="row07 flex-row">
+      ( )쪽
+    </div>
+
+    <div class="row08 flex-row">
+      <div class="number-wrapper flex-row">
+        <div class="number flex-row">관리번호(매입)</div>
+        <div class="input flex-row">
+          <span>{{row08.manageNum}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-size-label">
+      210mm×297mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+    </div>
+
+  </div>
+
+</body>
+
+</html>

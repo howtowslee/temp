@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+   
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc10.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body class="flex-col">
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제27호서식]</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">건물 등 감가상각자산 취득명세서</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <span>※ 아래의 작성방법을 읽고 작성하시기 바랍니다.</span>
+      <span></span>
+    </div>
+
+    <div class="row05 flex-row">
+      <div class="number flex-row">
+        <span>접수번호</span>
+        <span>{{row05.registNumber}}</span>
+      </div>
+      <div class="date flex-row">
+        <span>접수일 </span>  
+        <span>{{row05.registDate.getTime() | date:'yyyy/MM/dd'}}</span>  
+      </div>
+      <div class="suspense flex-row">
+        <span>처리기간</span>  
+        <span>즉시</span>  
+      </div>
+    </div>
+
+    <div class="row06 flex-row">
+      1. 제출자 인적사항
+    </div>
+
+    <div class="row07 flex-row">
+      <div class="box left flex-col">
+        <div class="label">① 성명(법인명)</div>
+        <div class="data">{{row07.comName}}</div>
+      </div>
+      <div class="box right flex-col">
+        <div class="label">② 사업자등록번호</div>
+        <div class="data">{{row07.comBizNo}}</div>
+      </div>
+      <div class="box left flex-col">
+        <div class="label">③ 업태</div>
+        <div class="data">{{row07.comBizStatus}}</div>
+      </div>
+      <div class="box right flex-col">
+        <div class="label">④ 종목</div>
+        <div class="data">{{row07.comBizEvent}}</div>
+      </div>
+    </div>
+
+    <div class="row08 flex-row">
+      2. 감가상각자산 취득명세 합계
+    </div>
+    
+    <div class="row09">
+      <table>
+        <tr>
+          <td class="col1">감가상각자산 종류</td>
+          <td class="col2">건수</td>
+          <td class="col3">공급가액</td>
+          <td class="col4">세액</td>
+          <td class="col5">비고</td>
+        </tr>
+        <tr>
+          <td class="label">⑤ 합계</td>
+          <td>{{row09.FaSum.count}}</td>
+          <td>{{row09.FaSum.supply}}</td>
+          <td>{{row09.FaSum.vat}}</td>
+          <td>{{row09.FaSum.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑥ 건물ㆍ구축물</td>
+          <td>{{row09.FaBld.count}}</td>
+          <td>{{row09.FaBld.supply}}</td>
+          <td>{{row09.FaBld.vat}}</td>
+          <td>{{row09.FaBld.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑦ 기계장치</td>
+          <td>{{row09.FaFac.count}}</td>
+          <td>{{row09.FaFac.supply}}</td>
+          <td>{{row09.FaFac.vat}}</td>
+          <td>{{row09.FaFac.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑧ 차량운반구</td>
+          <td>{{row09.FaWheel.count}}</td>
+          <td>{{row09.FaWheel.supply}}</td>
+          <td>{{row09.FaWheel.vat}}</td>
+          <td>{{row09.FaWheel.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑨ 그 밖의 감가상각자산</td>
+          <td>{{row09.FaEtcdep.count}}</td>
+          <td>{{row09.FaEtcdep.supply}}</td>
+          <td>{{row09.FaEtcdep.vat}}</td>
+          <td>{{row09.FaEtcdep.note}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row10">
+      「부가가치세법 시행령」 제90조제3항의 표 제7호, 제91조제2항의 표 제10호 및 제107조제3항에 따라 건물 등 감가상각자산 취득명세서를 제출합니다.
+    </div>
+
+    <div class="row11">
+      <span>{{row11.registDate.getFullYear()}}</span>
+      <span class="unit">년</span>
+      <span>{{row11.registDate.getMonth() + 1}}</span>
+      <span class="unit">월</span>
+      <span>{{row11.registDate.getDate()}}</span>
+      <span class="unit">일</span>
+    </div>
+
+    <div class="row12 flex-row">
+      <div class="label">제출자</div>
+      <div class="name">{{row12.comCeo}}</div>
+      <div class="stamp">(서명 또는 인)</div>
+    </div>
+
+    <div class="row13 flex-row">
+      <div class="data">{{row13.location}}</div>
+      <div class="label">
+        <span>세무서장</span>
+        <span>귀하</span>
+      </div>
+    </div>
+
+    <div class="row14">
+      작 성 방 법
+    </div>
+
+    <div class="row15">
+      <div class="note">
+        ① ~ ④: 제출자의 성명 또는 법인명과 사업자등록번호, 업태, 종목을 적습니다.
+      </div>
+      <div class="note flex-row">
+        <span>⑤:</span>
+        <span>신고대상기간 중 취득한 건물ㆍ구축물ㆍ기계장비ㆍ차량운반구 등 감가상각자산의 건수ㆍ공급가액ㆍ세액을 합하여 적으며, 공급가액 및 세액 합계액은 부가가치세 신고서 “(11)번+(40)번 고정자산”란의 금액 및 세액과 일치하여야 합니다.</span>
+      </div>
+      <div class="note flex-row">
+        <span>⑥:</span>
+        <span>신고대상기간 중 건물ㆍ구축물을 취득하고 발급받은 신용카드매출전표등 수취분이나 세금계산서상의 건수ㆍ공급가액ㆍ세액을 더하여 적습니다.</span>
+      </div>
+      <div class="note flex-row">
+        <span>⑦:</span>
+        <span>신고대상기간 중 기계 및 장비를 취득하고 발급받은 신용카드매출전표등 수취분이나 세금계산서의 건수ㆍ공급가액ㆍ세액을 더하여 적습니다.</span>
+      </div>
+      <div class="note flex-row">
+        <span>⑧:</span>
+        <span>신고대상기간 중 차량운반구를 취득하고 발급받은 신용카드매출전표등 수취분이나 세금계산서의 건수ㆍ공급가액ㆍ세액을더하여 적습니다.</span>
+      </div>
+      <div class="note flex-row">
+        <span>⑨:</span>
+        <span>신고대상기간 중 건물ㆍ구축물ㆍ기계 및 장비ㆍ차량운반구를 제외한 그 밖의 감가상각자산을 취득하고 발급받은 신용카드매출전표등 수취분이나 세금계산서의 건수ㆍ공급가액ㆍ세액을 더하여 적습니다.</span>
+      </div>
+    </div>
+
+    <div class="row16">
+      210㎜×297㎜[백상지 80g/㎡(재활용품)]
+    </div>
+
+  </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.row05 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row06 {
+  border-bottom: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row06 > div {
+  text-align: left;
+  justify-content: space-between;
+  padding: 2vw 1vw;
+}
+
+.row06 > div:first-child {
+  width: 55%;
+  border-right: 0.1pt solid black;
+}
+
+.row06 > div:last-child {
+  width: 45%;
+}
+
+.row07 {
+  border-bottom: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row07 > div {
+  text-align: left;
+  justify-content: space-between;
+  padding: 2vw 1vw;
+}
+
+.row07 > div:first-child {
+  width: 55%;
+  border-right: 0.1pt solid black;
+}
+
+.row07 > div:last-child {
+  width: 45%;
+}
+
+.row07 > div .label {
+  text-align: left;
+  width: 100%;
+}
+
+.row07 > div .data {
+  text-align: right;
+  width: 100%;
+}
+
+.row08 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  margin-top: 1vw;
+  font-size: 2vw;
+}
+
+.row09 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row09 table th:nth-child(1) {
+  width: 28%;
+}
+
+.row09 table th:nth-child(2) {
+  width: 6%;
+}
+
+.row09 table th:nth-child(3) {
+  width: 6%;
+}
+
+.row09 table th:nth-child(4) {
+  width: 30%;
+}
+
+.row09 table th:nth-child(5) {
+  width: 30%;
+}
+
+.row09 th, .row09 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row09 th:first-child, .row09 td:first-child {
+  border-left: 0vw;
+}
+
+.row09 th:last-child, .row09 td:last-child {
+  border-right: 0vw;
+}
+
+.row09 th {
+  height: 4vw;
+}
+
+.row10 {
+  padding: 0.5vw 0vw;
+  margin-bottom: 1vw;
+  border-bottom: 0.1pt solid black;
+}
+
+.row11 {
+  align-items: flex-start;
+  padding: 2vw 0;
+  border-top: 0.1pt solid black;
+}
+
+.row11 .label {
+  font-size: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.row11 .comment {
+  padding-left: 2vw;
+}
+
+.row12 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row12 th, .row12 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row12 th:first-child, .row12 td:first-child {
+  border-left: 0vw;
+}
+
+.row12 th:last-child, .row12 td:last-child {
+  border-right: 0vw;
+}
+
+.row12 th {
+  padding: 0.5vw;
+}
+
+.row12 td {
+  height: 4vw;
+}
+
+.row13 {
+  justify-content: flex-start;
+  padding: 2vw;
+  border-bottom: 0.1pt solid black;
+  margin-bottom: 2vw;
+}
+
+.row13 .wrapper {
+  width: 35vw;
+  height: 4vw;
+  border: 0.1pt solid black;
+  justify-content: space-between;
+}
+
+.row13 .wrapper .number {
+  width: 50%;
+  height: 100%;
+  border-right: 0.1pt solid black;
+}
+
+.row13 .wrapper .input {
+  width: 50%;
+}
+
+.row14 {
+  text-align: right;
+  border-bottom: 3px solid #999999;
+  width: 100%;
+  padding-bottom: 0.5vw;
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.row15 {
+  text-align: center;
+  font-size: 2vw;
+  background-color: #f5f5f5;
+  border-top: 0.1pt solid black;
+  padding: 1vw 1vw;
+  margin-bottom: 2vw;
+}
+
+.row16 {
+  border-bottom: 0.1pt solid black;
+}
+
+.row16 div {
+  margin-bottom: 1vw;
+  line-height: 2vw;
+}
+
+.row16 .comment {
+  text-indent: -2vw;
+  padding-left: 2vw;
+}
+
+.row16 .sub-comment {
+  text-indent: -2vw;
+  padding-left: 4vw;
+  margin-top: 2vw;
+}
+/*# sourceMappingURL=doc08.css.map */

@@ -1,0 +1,148 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: flex-end;
+  margin-bottom: 0.5vw;
+}
+
+.row04 .inc-number-wrapper {
+  border: 1px solid black;
+}
+
+.row04 .inc-number-wrapper .label {
+  border-right: 1px solid black;
+  padding: 1vw 3vw;
+}
+
+.row04 .inc-number-wrapper .number {
+  padding: 1vw 3vw;
+}
+
+.row05 table {
+  width: 100%;
+  border: 0.1pt solid black;
+  border-left: 0vw;
+  border-right: 0vw;
+  border-collapse: collapse;
+}
+
+.row05 th, .row05 td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.row05 th:first-child, .row05 td:first-child {
+  border-left: 0vw;
+}
+
+.row05 th:last-child, .row05 td:last-child {
+  border-right: 0vw;
+}
+
+.row05 th {
+  padding: 0.5vw;
+}
+
+.row05 td {
+  height: 6vw;
+}
+
+.row06 {
+  padding-left: 2vw;
+  padding-top: 1vw;
+  justify-content: flex-start;
+}
+
+.row07 {
+  text-align: right;
+  border-bottom: 0.1pt solid black;
+  width: 100%;
+  padding-bottom: 4vw;
+  margin-top: 2vw;
+  justify-content: flex-end;
+}
+
+.row08 {
+  justify-content: flex-end;
+  margin-bottom: 3vw;
+  padding: 1vw 0vw;
+}
+
+.row08 .number-wrapper {
+  width: 40%;
+  border: 0.1pt solid black;
+}
+
+.row08 .number-wrapper .number {
+  width: 50%;
+  height: 100%;
+  padding: 1.5vw 2vw;
+  border-right: 0.1pt solid black;
+}
+
+.row08 .number-wrapper .input {
+  width: 50%;
+  padding: 1.5vw 2vw;
+}
+/*# sourceMappingURL=doc09-sub.css.map */

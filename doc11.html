@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc11.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body class="flex-col">
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제16호서식(1)] &lt;개정 2015.3.6.&gt;</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">신용카드매출전표등 수령명세서(갑)</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <span></span>
+      <span>(앞쪽)</span>
+    </div>
+
+    <div class="row05 flex-row">
+      1. 제출자 인적사항
+    </div>
+
+    <div class="row06 flex-row">
+      <div class="box left flex-col">
+        <div class="label">① 상호(법인명)</div>
+        <div class="data">{{row06.comName}}</div>
+      </div>
+      <div class="box inc-number-label right flex-col">
+        <div class="label">② 사업자등록번호</div>
+      </div>
+      <div class="box left flex-col">
+        <div class="label">③ 성명(대표자)</div>
+        <div class="data">{{row06.comCeo}}</div>
+      </div>
+      <div class="box right inc-number-data flex-col">
+        <div class="data">{{row06.comBizNo}}</div>
+      </div>
+    </div>
+
+    <div class="row07 flex-row">
+      2. 신용카드 등 매입명세 합계
+    </div>
+
+    <div class="row08">
+      <table>
+        <tr>
+          <td class="col1">구분</td>
+          <td class="col2">거래건수</td>
+          <td class="col3">공급가액</td>
+          <td class="col4">세액</td>
+        </tr>
+        <tr>
+          <td class="label">④ 합계</td>
+          <td>{{row08.CardSum.count}}</td>
+          <td>{{row08.CardSum.supply}}</td>
+          <td>{{row08.CardSum.vat}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑤ 현금영수증</td>
+          <td>{{row08.CardCashBill.count}}</td>
+          <td>{{row08.CardCashBill.supply}}</td>
+          <td>{{row08.CardCashBill.vat}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑥ 기계장치</td>
+          <td>{{row08.CardFac.count}}</td>
+          <td>{{row08.CardFac.supply}}</td>
+          <td>{{row08.CardFac.vat}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑦ 차량운반구</td>
+          <td>{{row08.CardWheel.count}}</td>
+          <td>{{row08.CardWheel.supply}}</td>
+          <td>{{row08.CardWheel.vat}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑧ 그 밖의 감가상각자산</td>
+          <td>{{row08.CardEtcdep.count}}</td>
+          <td>{{row08.CardEtcdep.supply}}</td>
+          <td>{{row08.CardEtcdep.vat}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row09">
+      3. 그 밖의 신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계
+    </div>
+
+    <div class="row10">
+      <table>
+        <tr>
+          <td rowspan="2" style="width: 5%">일렬
+            <br>번호</td>
+          <td rowspan="2" style="width: 30%">⑨ 카드회원번호</td>
+          <td rowspan="2" style="width: 20%">
+            ⑩
+            <br> 공급자(가맹점)
+            <br> 사업자등록번호
+          </td>
+          <td colspan="3" style="width: 45%">⑪ 그 밖의 신용카드 등 거래명세 합계</td>
+          <!-- <td></td>
+          <td></td> -->
+        </tr>
+        <tr>
+          <!-- <td></td>
+          <td></td>
+          <td></td> -->
+          <td style="width: 15%">거래건수</td>
+          <td style="width: 15%">공급가액</td>
+          <td style="width: 15%">세액</td>
+        </tr>
+        <tr ng-repeat="(val, row) in row10.list;">
+          <td>{{val*1+1}}</td>
+          <td>{{row.cdMemberDiv}}</td>
+          <td>{{row.franchComBizNo}}</td>
+          <td>{{row.tranCount}}</td>
+          <td>{{row.supplyAmount}}</td>
+          <td>{{row.vatAmount}}</td>
+        </tr>
+        <tr ng-repeat="index in row10.left;">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+      </table>
+    </div>
+
+    <div class="row11">
+      ※ 기재내용이 많은 경우 『신용카드매출전표등 수령명세서(을)』 [별지 제16호서식(2)]에 이어서 작성합니다.
+    </div>
+
+    <div class="page-size-label">
+      210㎜×297㎜[백상지 80g/㎡(재활용품)]
+    </div>
+    <div style="page-break-before:always;"></div>
+  </div>
+  
+  <div class="content">
+    <div class="row12">
+      (뒤쪽)
+    </div>
+
+    <div class="row13 flex-row">
+      작 성 방 법
+    </div>
+
+    <div class="row14">
+      <div class="comment">
+        이 명세서는 아래의 작성방법에 따라 한글과 아라비아 숫자로 정확하게 적어야 하며, 거래금액은 원 단위까지 표시하여야 합니다.
+      </div>
+      <div class="label">
+        1. 제출자 인적사항란
+      </div>
+      <div class="comment">
+        ① ∼ ③: 제출자(세액공제 신청자)의 사업자등록증에 적은 상호(법인명)ㆍ사업자등록번호ㆍ성명(대표자)을 적습니다.
+      </div>
+      <div class="label">
+        2. 신용카드 등 매입명세 합계란
+      </div>
+      <div class="sub-comment">
+        ※ 사업과 직접 관련 없는 거래는 제외합니다(「부가가치세법」 제39조 참조)
+      </div>
+      <div class="comment flex-row">
+        <div class="number">④:</div>
+        <div class="comment-detail">
+          현금영수증, 화물운전자복지카드, 사업용 신용카드, 그 밖의 신용카드 등에 의한 거래건수ㆍ공급가액ㆍ세액을 합계하여 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="number">⑤:</div>
+        <div class="comment-detail">
+          「조세특례제한법」에 따라 수취한 현금영수증의 거래건수ㆍ공급가액ㆍ세액을 합계하여 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="number">⑥:</div>
+        <div class="comment-detail">
+          화물운전자가 발급받은 화물운전자복지카드 사용금액을 합계하여 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="number">⑦:</div>
+        <div class="comment-detail">
+          사업자가 등록한 사업용 신용카드 사용금액을 합계하여 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="number">⑧:</div>
+        <div class="comment-detail">
+          신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계란에 작성된 거래건수ㆍ공급가액ㆍ세액을 합계하여 적습니다.
+        </div>
+      </div>
+
+      <div class="label">
+        3. 그 밖의 신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계란
+      </div>
+
+      <div class="sub-comment">
+        ※ 세금계산서를 발급받은 거래, 사업과 관련 없는 거래는 제외합니다(「부가가치세법」 제39조 참조).
+      </div>
+
+      <div class="comment">
+        재화나 용역을 공급받고 발급받은 신용카드(화물운전자복지카드를 제외합니다) 매출전표를 카드번호별, 가맹점 사업자등록번호별로 합계금액을 적습니다.
+      </div>
+
+      <div class="comment flex-row">
+        <div class="number">⑨:</div>
+        <div class="comment-detail">
+          재화나 용역을 공급받으면서 결제한 신용ㆍ직불카드 등의 카드회원번호를 적습니다.
+        </div>
+      </div>
+
+      <div class="comment flex-row">
+        <div class="number">⑩:</div>
+        <div class="comment-detail">
+          신용카드매출전표 등에 적은 가맹점 사업자등록번호를 적습니다.
+        </div>
+      </div>
+
+      <div class="comment flex-row">
+        <div class="number">⑪:</div>
+        <div class="comment-detail">
+          신용카드매출전표 등에 적은 거래건수ㆍ공급가액ㆍ세액의 합계를 각각 적습니다.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row15">
+      <div class="title">【 작 성 예 시 】</div>
+
+      <div class="ex-wrapper">
+
+        <div class="ex-title">2. 신용카드 등 매입명세 합계</div>
+        <table class="table01">
+          <tr>
+            <td style="width: 25%">구 분</td>
+            <td style="width: 15%">거래건수</td>
+            <td style="width: 30%">공급가액</td>
+            <td style="width: 30%">세 액</td>
+          </tr>
+          <tr>
+            <td style="text-align:left">④ 합 계</td>
+            <td>34</td>
+            <td>2,727,000</td>
+            <td>272,700</td>
+          </tr>
+          <tr>
+            <td style="text-align:left">⑤ 현 금 영 수 증</td>
+            <td>2</td>
+            <td>450,000</td>
+            <td>45,000</td>
+          </tr>
+          <tr>
+            <td style="text-align:left">⑥ 화물운전자복지카드</td>
+            <td>10</td>
+            <td>1,340,000</td>
+            <td>134,000</td>
+          </tr>
+          <tr>
+            <td style="text-align:left">⑦ 사업용 신용카드</td>
+            <td>10</td>
+            <td>100,000</td>
+            <td>10,000</td>
+          </tr>
+          <tr>
+            <td style="text-align:left">⑧ 그 밖의 신용카드</td>
+            <td>12</td>
+            <td>837,000</td>
+            <td>83,700</td>
+          </tr>
+        </table>
+
+        <div class="ex-title">3. 그 밖의 신용ㆍ직불카드 및 기명식선불카드 매출전표 수령금액 합계</div>
+        <table class="table01">
+          <tr>
+            <td rowspan="2" style="width: 5%">일 렬<br>번 호</td>
+            <td rowspan="2" style="width: 30%">⑨ 카드회원번호</td>
+            <td rowspan="2" style="width: 15%">⑩ 공급자(가맹점)<br>사업자등록번호</td>
+            <td colspan="3" style="width: 50%">⑪ 그 밖의 신용카드 등 거래명세 합계</td>
+            <!-- 
+              <td></td>
+              <td></td> 
+            -->
+          </tr>
+          <tr>
+            <!-- 
+              <td></td>
+              <td></td>
+              <td></td> 
+            -->
+            <td>거 래 건 수</td>
+            <td>공 급 가 액</td>
+            <td>세 액</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1258-8547-8965-6745</td>
+            <td>102-02-34567</td>
+            <td>5</td>
+            <td>250,000</td>
+            <td>25,000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>7858-8547-8965-3257</td>
+            <td>102-02-34567</td>
+            <td>7</td>
+            <td>587,000</td>
+            <td>58,700</td>
+          </tr>
+
+        </table>
+      </div>
+
+    </div>
+
+    <div class="row16"></div>
+  </div>
+
+</body>
+
+</html>

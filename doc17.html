@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./doc17.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body class="flex-col">
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      <span>부가가치세법 시행규칙 [별지 제22호서식] &lt;개정 2014.3.14&gt;</span>
+      <span>홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+    </div>
+
+    <div class="row02 flex-row">공제받지 못할 매입세액 명세서</div>
+
+    <div class="row03 flex-row">
+      2017년 제1기 ( 1월 1일 ~ 6월 30일)
+    </div>
+
+    <div class="row04 flex-row">
+      <span>※ 뒤쪽의 작성방법을 읽고 작성하시기 바랍니다.</span>
+      <span>(앞쪽)</span>
+    </div>
+
+    <div class="row05 flex-row">
+      1. 제출자 인적사항
+    </div>
+
+    <div class="row06 flex-row">
+      <div class="box inc-name flex-row">
+        <div class="label">상호(법인명)</div>
+        <div class="data">{{row06.comName}}</div>
+      </div>
+      <div class="box name flex-row">
+        <div class="label">성명(대표자)</div>
+        <div class="data">{{row06.comCeo}}</div>
+      </div>
+      <div class="box inc-number-label flex-col">
+        <div class="label">사업자등록번호</div>
+        <div class="data">{{row06.comBizNo}}</div>
+      </div>
+
+    </div>
+
+    <div class="row07 flex-row">
+      2. 공제받지 못할 매입세액 명세
+    </div>
+
+    <div class="row08">
+      <table>
+        <tr>
+          <td rowspan="2" style="width: 40%">매입세액 불공제 사유</td>
+          <td colspan="3">세금계산서</td>
+          <!-- <td></td>
+          <td></td> -->
+          <td rowspan="2" style="width: 15%">비고</td>
+        </tr>
+        <tr>
+          <!-- <td class="label">⑤ 현금영수증</td> -->
+          <td style="width: 15%">매수</td>
+          <td style="width: 15%">공급가액</td>
+          <td style="width: 15%">매입세액</td>
+          <!-- <td></td> -->
+        </tr>
+        <tr>
+          <td class="label">① 필요적 기재사항 누락 등</td>
+          <td>{{row08.section01.count}}</td>
+          <td>{{row08.section01.supply}}</td>
+          <td>{{row08.section01.vat}}</td>
+          <td>{{row08.section01.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">② 사업과 직접 관련 없는 지출</td>
+          <td>{{row08.section02.count}}</td>
+          <td>{{row08.section02.supply}}</td>
+          <td>{{row08.section02.vat}}</td>
+          <td>{{row08.section02.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">③ 비영업용 소형승용자동차 구입ㆍ유지 및 임차</td>
+          <td>{{row08.section03.count}}</td>
+          <td>{{row08.section03.supply}}</td>
+          <td>{{row08.section03.vat}}</td>
+          <td>{{row08.section03.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">④ 접대비 및 이와 유사한 비용 관련</td>
+          <td>{{row08.section04.count}}</td>
+          <td>{{row08.section04.supply}}</td>
+          <td>{{row08.section04.vat}}</td>
+          <td>{{row08.section04.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑤ 면세사업등 관련</td>
+          <td>{{row08.section05.count}}</td>
+          <td>{{row08.section05.supply}}</td>
+          <td>{{row08.section05.vat}}</td>
+          <td>{{row08.section05.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑥ 토지의 자본적 지출 관련</td>
+          <td>{{row08.section06.count}}</td>
+          <td>{{row08.section06.supply}}</td>
+          <td>{{row08.section06.vat}}</td>
+          <td>{{row08.section06.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑦ 사업자등록 전 매입세액</td>
+          <td>{{row08.section07.count}}</td>
+          <td>{{row08.section07.supply}}</td>
+          <td>{{row08.section07.vat}}</td>
+          <td>{{row08.section07.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑧ 금ㆍ구리 스크랩 거래계좌 미사용 관련 매입세액</td>
+          <td>{{row08.section08.count}}</td>
+          <td>{{row08.section08.supply}}</td>
+          <td>{{row08.section08.vat}}</td>
+          <td>{{row08.section08.note}}</td>
+        </tr>
+        <tr>
+          <td class="label">⑨ 합계</td>
+          <td>{{row08.section09.count}}</td>
+          <td>{{row08.section09.supply}}</td>
+          <td>{{row08.section09.vat}}</td>
+          <td>{{row08.section09.note}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row09">
+      3. 공통매입세액 안분 계산 명세
+    </div>
+
+    <div class="row10">
+      <table>
+        <tr>
+          <td rowspan="2" style="width: 5%">일렬<br>번호</td>
+          <td colspan="2" style="width: 30%">과세ㆍ면세사업등 공통매입</td>
+          <!-- <td>과세ㆍ면세사업등 공통매입</td> -->
+          <td rowspan="2">
+              ⑫<br>
+              총공급가액 등
+          </td>
+          <td rowspan="2">
+              ⑬<br>
+              면세공급가액 등
+          </td>
+          <td rowspan="2">
+            ⑭ 불공제 매입세액<br>
+            [⑪×(⑬÷⑫)]
+          </td>
+        </tr>
+        <tr>
+          <!-- <td></td> -->
+          <td>⑩ 공급가액</td>
+          <td>⑪ 세액</td>
+          <!-- <td></td>
+          <td></td>
+          <td></td> -->
+        </tr>
+        <tr ng-repeat="(val, row) in row10.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.supply}}</td>
+          <td>{{row.vat}}</td>
+          <td>{{row.cominDivSupplySum}}</td>
+          <td>{{row.cominDivSupplyVat}}</td>
+          <td>{{row.ndinDivSupplyVat}}</td>
+        </tr>
+        <tr ng-repeat="index in row10.left">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>합계</td>
+          <td>{{row10.listSum.supply}}</td>
+          <td>{{row10.listSum.vat}}</td>
+          <td>{{row10.listSum.cominDivSupplySum}}</td>
+          <td>{{row10.listSum.cominDivSupplyVat}}</td>
+          <td>{{row10.listSum.ndinDivSupplyVat}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="row11">
+      4. 공통매입세액의 정산 명세
+    </div>
+    <div class="row12">
+      <table>
+        <tr>
+          <td>일렬<br>번호</td>
+          <td>
+            ⑮ 총공통매입<br>
+            세액
+          </td>
+          <td>
+            ⑯ 면세사업등<br>
+            확정비율
+          </td>
+          <td>
+            ⑰ 불공제 매입세액<br>
+            총액(⑮×⑯)
+          </td>
+          <td>
+            ⑱ 기 불공제<br>
+            매입세액
+          </td>
+          <td>
+            ⑲ 가산 또는 공제되는<br>
+            매입세액(⑰-⑱)
+          </td>
+        </tr>
+        <tr ng-repeat="(val, row) in row12.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.incomVat}}</td>
+          <td>{{row.except}}</td>
+          <td>{{row.ndinVatCal}}</td>
+          <td>{{row.yndinVatCal}}</td>
+          <td>{{row.addedVatCal}}</td>
+        </tr>
+        <tr ng-repeat="index in row12.left">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>합계</td>
+          <td>{{row12.listSum.incomVat}}</td>
+          <td>{{row12.listSum.except}}</td>
+          <td>{{row12.listSum.ndinVatCal}}</td>
+          <td>{{row12.listSum.yndinVatCal}}</td>
+          <td>{{row12.listSum.addedVatCal}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="row13">
+      5. 납부세액 또는 환급세액 재계산 명세
+    </div>
+    <div class="row14">
+      <table>
+        <tr>
+          <td>일렬<br>번호</td>
+          <td>
+            ⑳ 해당 재화의<br>
+            매입세액
+          </td>
+          <td>
+            ㉑ 경감률[1-(5/100 또는<br>
+            25/100×경과된<br>
+            과세기간의 수)]
+          </td>
+          <td>
+            ㉒ 증가 또는 감소된 면세<br>
+            공급가액(사용 면적) 비율
+          </td>
+          <td>
+            ㉓ 가산 또는 공제되는<br>
+            매입세액<br>
+            (⑳×㉑×㉒)
+          </td>
+        </tr>
+        <tr ng-repeat="(val, row) in row14.list">
+          <td>{{val*1+1}}</td>
+          <td>{{row.billVat}}</td>
+          <td>{{row.cutRate}}</td>
+          <td>{{row.billSupplyRate}}</td>
+          <td>{{row.addedVatCal}}</td>
+        </tr>
+        <tr ng-repeat="index in row14.left">
+          <td>{{index}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>합계</td>
+          <td>{{row14.listSum.billVat}}</td>
+          <td>{{row14.listSum.cutRate}}</td>
+          <td>{{row14.listSum.billSupplyRate}}</td>
+          <td>{{row14.listSum.addedVatCal}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="page-size-label">
+      210㎜×297㎜[백상지 80g/㎡(재활용품)]
+    </div>
+    <div style="page-break-before:always;"></div>
+    
+  </div>
+  
+  <div class="content">
+    <div class="row15">
+      (뒤쪽)
+    </div>
+
+    <div class="row16 flex-row">
+      작 성 방 법
+    </div>
+
+    <div class="row17">
+      <div class="label">
+        1. 공제받지 못할 매입세액 명세(①~⑨)
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">
+          가. 
+        </div>
+        <div class="comment-content">
+          매입세액 불공제 사유(①~⑦)란은 재화 또는 용역을 공급받고 받은 세금계산서 중 「부가가치세법」 제39조제1항 각 호에 따라 공제되지 않은 매입세액을 각 사유별로 구분하여 매수ㆍ공급가액 및 세액을 각각 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">
+          나. 
+        </div>
+        <div class="comment-content">
+          ⑧란은 「조세특례제한법」 제106조의4제6항 및 제106조의9제5항에 따라 공제되지 않는 매입세액의 매수ㆍ공급가액 및 세액을 각각 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">
+          다. 
+        </div>
+        <div class="comment-content">
+          ⑨ 합계란은 ①란 ∼ ⑧란의 합계로서 일반과세자 부가가치세 신고서(별지 제21호서식) 제2장 앞쪽 (16)공제받지 못할 매입세액 명세란의 (48)공제받지 못할 매입세액의 금액 및 세액과 일치해야 합니다.
+        </div>
+      </div>
+
+
+      <div class="label">
+        2. 공통매입세액 안분 계산 명세(⑩~⑭)
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">가.</div>
+        <div class="comment-content">
+          ⑩ㆍ⑪ 과세ㆍ면세사업등 공통매입란은 공통매입세액을 종류별로 구분하여 공급가액 및 세액의 합계액을 각각 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">나.</div>
+        <div class="comment-content">
+          ⑫ 총공급가액 등란은 ⑪ 세액란의 공통매입세액과 관련된 총공급가액ㆍ총매입가액ㆍ총예정공급가액 또는 총예정사용면적을 적습니다.(「부가가치세법 시행령」 제81조제1항ㆍ제4항)
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">다.</div>
+        <div class="comment-content">
+          ⑬ 면세공급가액 등란은 ⑪ 세액란의 공통매입세액과 관련된 면세사업등의 공급가액ㆍ매입가액ㆍ예정공급가액 또는 예정사용면적을 적습니다.(「부가가치세법 시행령」 제81조제1항ㆍ제4항)
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">라.</div>
+        <div class="comment-content">
+          ⑭ 불공제 매입세액란은 ⑪ 세액란의 공통매입세액에 ⑬ 면세공급가액 등을 ⑫ 총공급가액 등으로 나눈 금액을 곱하여 계산합니다.
+        </div>
+      </div>
+
+      <div class="label">
+        3. 공통매입세액의 정산 명세(⑮~⑲) : <span class="not-strong">「부가가치세법 시행령」 제81조제4항에 따라 공통매입세액을 안분 계산한 경우에 적습니다.</span>
+      </div>
+
+      <div class="comment flex-row">
+        <div class="comment-label">가.</div>
+        <div class="comment-content">
+          ⑮ 총공통매입세액란은 「부가가치세법 시행령」 제81조제4항에 따른 예정공급가액의 비율 등에 따라 안분 계산한 공통매입세액의 합계액을 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">나.</div>
+        <div class="comment-content">
+          ⑯ 면세사업등 확정비율란은 과세ㆍ면세사업등의 공급가액 또는 사용면적이 확정되는 과세기간의 공급가액 및 사용면적 비율을 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">다.</div>
+        <div class="comment-content">
+          ⑰ 불공제 매입세액 총액란은 ⑮ 총공통매입세액에 ⑯ 면세사업등 확정비율을 곱하여 계산합니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">라.</div>
+        <div class="comment-content">
+          ⑱ 기 불공제 매입세액란은 「부가가치세법 시행령」 제81조제4항에 따른 예정공급가액의 비율 등에 따라 안분 계산하여 면세사업등 관련 매입세액으로 불공제한 매입세액의 합계액을 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">마.</div>
+        <div class="comment-content">
+          ⑲ 가산 또는 공제되는 매입세액란은 ⑰ 불공제 매입세액 총액에서 ⑱ 기 불공제 매입세액을 차감하여 적으며, 차감한 금액이 0 미만인 경우에는 음수(-)로 적습니다.
+        </div>
+      </div>
+        
+        
+      <div class="label flex-row">
+        <div>4.</div>
+        <div>
+          납부세액 또는 환급세액 재계산 명세(⑳~㉓) : <span class="not-strong">「부가가치세법」 제41조 및 같은 법 시행령 제83조ㆍ제85조에 따라 감가상각자산에 대한 공통매입세액을 안분 계산한 후 면세사업등의 공급가액 비율이 증감되어 재계산하는 경우에 적습니다.</span> 
+        </div>
+      </div>
+
+      <div class="comment flex-row">
+        <div class="comment-label">가.</div>
+        <div class="comment-content">
+          ⑳ 해당 재화의 매입세액란은 감가상각자산 매입세액의 합계액을 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">나.</div>
+        <div class="comment-content">
+          ㉑ 경감률란은 건물 또는 구축물은 100분의 5(2001. 12. 31. 이전 취득분은 100분의 10을 적용합니다)를 적용하고, 그 밖의 감가상각자산은 100분의 25를 적용합니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">다.</div>
+        <div class="comment-content">
+          ㉒ 증가 또는 감소된 면세 공급가액(사용면적) 비율란은 해당 과세기간의 면세비율에서 해당 감가상각자산의 취득일이 속하는 과세기간(그 후의 과세기간에 재계산하였을 때에는 그 재계산한 과세기간을 말합니다)의 면세비율을 차감하여 적습니다.
+        </div>
+      </div>
+      <div class="comment flex-row">
+        <div class="comment-label">라.</div>
+        <div class="comment-content">
+          ㉓ 가산 또는 공제되는 매입세액란은 ⑳ 해당 재화의 매입세액에 ㉑ 경감률 및 ㉒ 증가 또는 감소된 면세 공급가액(사용면적) 비율을 곱하여 계산한 금액을 적습니다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.row01 {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+}
+
+.row01 span {
+  font-size: 1vw;
+}
+
+.row02 {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+}
+
+.row04 {
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.row05 {
+  justify-content: flex-start;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row06 {
+  margin-bottom: 1vw;
+  border-bottom: 0.1pt solid black;
+}
+
+.row06 div {
+  box-sizing: border-box;
+}
+
+.row06 .inc-name {
+  width: 35%;
+  justify-content: space-between;
+  padding: 1vw 2vw;
+  border-right: 0.1pt solid black;
+  height: 5vw;
+}
+
+.row06 .name {
+  width: 35%;
+  justify-content: space-between;
+  padding: 1vw 2vw;
+  border-right: 0.1pt solid black;
+  height: 5vw;
+}
+
+.row06 .inc-number-label {
+  width: 30%;
+  height: 5vw;
+  justify-content: space-around;
+}
+
+.row06 .inc-number-label .label {
+  width: 90%;
+}
+
+.row06 .inc-number-label .data {
+  width: 90%;
+  text-align: right;
+}
+
+.row07 {
+  justify-content: flex-start;
+  border-top: 0.75px solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row08 {
+  margin-bottom: 1vw;
+}
+
+.row08 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row08 table th, .row08 table td {
+  border: 0.5px solid black;
+  height: 2vw;
+  text-align: center;
+}
+
+.row08 table th.label, .row08 table td.label {
+  text-align: left;
+}
+
+.row08 table th:first-child, .row08 table td:first-child {
+  border-left: 0vw;
+}
+
+.row08 table th:last-child, .row08 table td:last-child {
+  border-right: 0vw;
+}
+
+.row09 {
+  justify-content: flex-start;
+  border-top: 0.75px solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row10 {
+  margin-bottom: 1vw;
+}
+
+.row10 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row10 table th, .row10 table td {
+  border: 0.5px solid black;
+  height: 2vw;
+  text-align: center;
+}
+
+.row10 table th.label, .row10 table td.label {
+  text-align: left;
+}
+
+.row10 table th:first-child, .row10 table td:first-child {
+  border-left: 0vw;
+}
+
+.row10 table th:last-child, .row10 table td:last-child {
+  border-right: 0vw;
+}
+
+.row11 {
+  justify-content: flex-start;
+  border-top: 0.75px solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row12 {
+  margin-bottom: 2vw;
+}
+
+.row12 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row12 table th, .row12 table td {
+  border: 0.5px solid black;
+  height: 2vw;
+  text-align: center;
+}
+
+.row12 table th.label, .row12 table td.label {
+  text-align: left;
+}
+
+.row12 table th:first-child, .row12 table td:first-child {
+  border-left: 0vw;
+}
+
+.row12 table th:last-child, .row12 table td:last-child {
+  border-right: 0vw;
+}
+
+.row13 {
+  justify-content: flex-start;
+  border-top: 0.75px solid black;
+  border-bottom: 0vw;
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+.row14 {
+  margin-bottom: 2vw;
+}
+
+.row14 table {
+  width: 100%;
+  border-top: 0.1pt solid black;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row14 table th, .row14 table td {
+  border: 0.5px solid black;
+  height: 2vw;
+  text-align: center;
+}
+
+.row14 table th.label, .row14 table td.label {
+  text-align: left;
+}
+
+.row14 table th:first-child, .row14 table td:first-child {
+  border-left: 0vw;
+}
+
+.row14 table th:last-child, .row14 table td:last-child {
+  border-right: 0vw;
+}
+
+.row15 {
+  text-align: right;
+  border-bottom: 3px solid #999999;
+  width: 100%;
+  padding-bottom: 0.5vw;
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+}
+
+.row16 {
+  padding: 1vw 0vw;
+  background-color: #f5f5f5;
+  border-top: 2px solid #999999;
+  margin-bottom: 2vw;
+}
+
+.row17 {
+  border-bottom: 0.1pt solid black;
+}
+
+.row17 .label {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 1vw;
+  margin-top: 2vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.row17 .label div:first-child {
+  margin-right: 0.5vw;
+}
+
+.row17 .label .not-strong {
+  font-weight: 400;
+}
+
+.row17 .comment {
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1vw;
+}
+
+.row17 .comment .comment-label {
+  width: 5%;
+  text-align: center;
+}
+
+.row17 .comment .comment-content {
+  width: 95%;
+  line-height: 2vw;
+}
+/*# sourceMappingURL=doc17.css.map */
