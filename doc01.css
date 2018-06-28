@@ -10,20 +10,36 @@ body {
 .content {
   padding: 1vw 5vw;
   width: 100vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .guide {
@@ -59,7 +75,9 @@ body {
 }
 
 .row01 {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 2vw;
 }
 
@@ -72,13 +90,17 @@ body {
 }
 
 .row02 .selection-wrapper {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0vw 2vw;
 }
 
 .row03 {
   margin-bottom: 1vw;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .row04 {
@@ -104,7 +126,9 @@ body {
 }
 
 .row05 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 1vw 0vw;
   border-bottom: 0.1pt solid black;
 }
@@ -319,7 +343,9 @@ body {
 
 .row12 {
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 4vw;
   border-top: 0.1pt solid black;
   border-bottom: 0.1pt solid black;
@@ -357,7 +383,9 @@ body {
 
 .row13 {
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 4vw;
   border-top: 0.1pt solid black;
   border-bottom: 0.1pt solid black;
@@ -430,7 +458,9 @@ body {
 }
 
 .row14 .table-wrapper table th .code-wrapper .cell, .row14 .table-wrapper table td .code-wrapper .cell {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   border-right: 0.1pt solid black;
 }
@@ -447,7 +477,9 @@ body {
   width: 50%;
   height: 100%;
   padding: 0vw 1vw;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .row14 .terms-wrapper .user-check-wrapper {
@@ -521,7 +553,9 @@ body {
 }
 
 .row15 {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-top: 0.1pt solid black;
   border-bottom: 0.1pt solid black;
   margin-bottom: 2vw;
@@ -603,11 +637,15 @@ body {
 }
 
 .row16 table td .note-wrapper .note {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .row16 table td .note-wrapper .note .note-cell {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: left;
   text-indent: -3vw;
   padding-left: 3vw;
@@ -637,7 +675,9 @@ body {
 }
 
 .row17 .stemp-wrapper {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .row17 .stemp-wrapper .stemp-label {
@@ -710,7 +750,9 @@ body {
 
 .row19 .comment {
   margin-bottom: 1vw;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .row19 .comment .number-box {
@@ -907,7 +949,9 @@ body {
 }
 
 .row25 table th .number-wrapper .number, .row25 table td .number-wrapper .number {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   border-right: 0.1pt solid black;
 }
@@ -952,7 +996,9 @@ body {
 }
 
 .row26 table th .number-wrapper .number, .row26 table td .number-wrapper .number {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
   border-right: 0.1pt solid black;
 }

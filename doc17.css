@@ -10,20 +10,36 @@ body {
 .content {
   padding: 1vw 5vw;
   width: 100vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .guide {
@@ -47,8 +63,12 @@ body {
 }
 
 .row01 {
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 2vw;
 }
 
@@ -66,12 +86,16 @@ body {
 }
 
 .row04 {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 0.5vw;
 }
 
 .row05 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.1pt solid black;
   border-bottom: 0.1pt solid black;
   padding: 2vw 0vw;
@@ -84,12 +108,15 @@ body {
 }
 
 .row06 div {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .row06 .inc-name {
   width: 35%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1vw 2vw;
   border-right: 0.1pt solid black;
   height: 5vw;
@@ -97,7 +124,9 @@ body {
 
 .row06 .name {
   width: 35%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1vw 2vw;
   border-right: 0.1pt solid black;
   height: 5vw;
@@ -106,7 +135,8 @@ body {
 .row06 .inc-number-label {
   width: 30%;
   height: 5vw;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .row06 .inc-number-label .label {
@@ -119,7 +149,9 @@ body {
 }
 
 .row07 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.75px solid black;
   border-bottom: 0vw;
   padding: 2vw 0vw;
@@ -156,7 +188,9 @@ body {
 }
 
 .row09 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.75px solid black;
   border-bottom: 0vw;
   padding: 2vw 0vw;
@@ -193,7 +227,9 @@ body {
 }
 
 .row11 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.75px solid black;
   border-bottom: 0vw;
   padding: 2vw 0vw;
@@ -230,7 +266,9 @@ body {
 }
 
 .row13 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.75px solid black;
   border-bottom: 0vw;
   padding: 2vw 0vw;
@@ -291,8 +329,12 @@ body {
   font-weight: 600;
   margin-bottom: 1vw;
   margin-top: 2vw;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .row17 .label div:first-child {
@@ -304,8 +346,12 @@ body {
 }
 
 .row17 .comment {
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   margin-bottom: 1vw;
 }

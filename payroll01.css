@@ -1,0 +1,738 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.page-number {
+  text-align: right;
+}
+
+.back-gray {
+  background-color: #ddd;
+}
+
+.row01 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+.row02 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4vw;
+}
+
+.row02 .selection {
+  width: 50%;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+
+.row03 {
+  margin-bottom: 1vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row03 .comment-wrapper {
+  font-size: 0.5vw;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row04 {
+  background-color: #f5f5f5;
+  border-top: 0.1pt solid #aaa;
+  border-bottom: 0.1pt solid #aaa;
+  margin-bottom: 0.5vw;
+}
+
+.row04 div {
+  padding: 1vw 2vw;
+}
+
+.row04 div:nth-child(1) {
+  width: 30%;
+  border-right: 0.1pt solid #aaa;
+}
+
+.row04 div:nth-child(2) {
+  width: 40%;
+  border-right: 0.1pt solid #aaa;
+}
+
+.row04 div:nth-child(3) {
+  width: 30%;
+}
+
+.row05 {
+  margin-bottom: 0.5vw;
+}
+
+.row05 table {
+  width: 100%;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row05 td {
+  border: 0.1pt solid black;
+  text-align: left;
+  padding: 0vw 0.5vw;
+  height: 4vw;
+}
+
+.row05 td.right {
+  text-align: right;
+}
+
+.row05 td.no-right-border {
+  border-right: 0px;
+}
+
+.row05 td.no-left-border {
+  border-left: 0px;
+}
+
+.row05 td:first-child {
+  border-left: 0vw;
+}
+
+.row05 td:last-child {
+  border-right: 0vw;
+}
+
+.row06 table {
+  width: 100%;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row06 td {
+  border: 0.1pt solid black;
+  text-align: left;
+  padding: 0vw 0.5vw;
+  height: 4vw;
+}
+
+.row06 td span {
+  font-size: 0.5vw;
+}
+
+.row06 td:first-child {
+  border-left: 0vw;
+}
+
+.row06 td:last-child {
+  border-right: 0vw;
+}
+
+.row07 .no-right-border {
+  border-right: 0px;
+}
+
+.row07 .no-left-border {
+  border-left: 0px;
+}
+
+.row07 table {
+  width: 100%;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row07 td {
+  border: 0.1pt solid black;
+  text-align: left;
+  padding: 0vw;
+  height: 4vw;
+}
+
+.row07 td .box {
+  height: 50%;
+  width: 100%;
+}
+
+.row07 td .box:first-child {
+  border-bottom: 0.1pt solid black;
+}
+
+.row07 td .box .inner-box {
+  width: 50%;
+  height: 100%;
+}
+
+.row07 td .box .inner-box:first-child {
+  border-right: 0.1pt solid black;
+}
+
+.row07 td:first-child {
+  border-left: 0vw;
+}
+
+.row07 td:last-child {
+  border-right: 0vw;
+}
+
+.row08 {
+  text-align: left;
+}
+
+.row09 {
+  text-align: right;
+}
+
+.row10 {
+  width: 100%;
+  margin-bottom: 0.5vw;
+}
+
+.row10 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.row10 table td {
+  padding: 0vw;
+  text-align: right;
+}
+
+.row11 {
+  margin-bottom: 0.5vw;
+  font-size: 2vw;
+}
+
+.row12 {
+  margin-bottom: 1vw;
+}
+
+.row12 table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row12 table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row12 table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row12 table td:last-child {
+  border-right: 0vw;
+}
+
+.row12 table td.regist {
+  text-align: left !important;
+  padding-left: 1vw;
+}
+
+.row12 table td .note-wrapper {
+  padding: 1vw;
+}
+
+.row12 table td .note-wrapper .note {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row12 table td .note-wrapper .note .note-cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  text-indent: -2.5vw;
+  padding-left: 2.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.row12 table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row13 {
+  border-bottom: 0.1pt solid #ccc;
+  margin-bottom: 1vw;
+}
+
+.row13 .label {
+  border-top: 3px solid #ccc;
+  border-bottom: 0.1pt solid #ccc;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1vw;
+}
+
+.row13 .note {
+  line-height: 2vw;
+  margin-bottom: 2vw;
+}
+
+.row13 .note table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row13 .note table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row13 .note table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row13 .note table td:last-child {
+  border-right: 0vw;
+}
+
+.row13 .note table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row14 {
+  border-bottom: 0.1pt solid #ccc;
+  margin-bottom: 1vw;
+}
+
+.row14 .label {
+  border-top: 3px solid #ccc;
+  border-bottom: 0.1pt solid #ccc;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1vw;
+}
+
+.row14 .note {
+  line-height: 2vw;
+  margin-bottom: 2vw;
+}
+
+.row14 .note table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row14 .note table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row14 .note table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row14 .note table td:last-child {
+  border-right: 0vw;
+}
+
+.row14 .note table td.regist {
+  text-align: left !important;
+  padding-left: 1vw;
+}
+
+.row14 .note table td .note-wrapper {
+  padding: 1vw;
+}
+
+.row14 .note table td .note-wrapper .note {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row14 .note table td .note-wrapper .note .note-cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  text-indent: -2vw;
+  padding-left: 2vw;
+  margin-bottom: 0.5vw;
+}
+
+.row14 .note table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row15 {
+  border-bottom: 0.1pt solid #ccc;
+  margin-bottom: 1vw;
+}
+
+.row15 .label {
+  border-top: 3px solid #ccc;
+  border-bottom: 0.1pt solid #ccc;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1vw;
+}
+
+.row15 .note {
+  line-height: 2vw;
+  margin-bottom: 2vw;
+}
+
+.row15 .note table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row15 .note table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row15 .note table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row15 .note table td:last-child {
+  border-right: 0vw;
+}
+
+.row15 .note table td.regist {
+  text-align: left !important;
+  padding-left: 1vw;
+}
+
+.row15 .note table td .note-wrapper {
+  padding: 1vw;
+}
+
+.row15 .note table td .note-wrapper .note {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row15 .note table td .note-wrapper .note .note-cell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  text-indent: -10.5vw;
+  padding-left: 10.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.row15 .note table td .note-wrapper .note .inner-note-cell {
+  text-align: left;
+  text-indent: -2vw;
+  padding-left: 2vw;
+}
+
+.row15 .note table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row16 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row17 {
+  border: 3px solid #999999;
+}
+
+.row17 .list-wrapper {
+  border-right: 1px solid #dddddd;
+  width: 25%;
+}
+
+.row17 .list-wrapper:last-child {
+  border-right: 0px;
+}
+
+.row17 .list-wrapper .list-panel .label {
+  background-color: #dddddd;
+  color: black;
+  font-size: 0.8vw;
+  padding: 0.3em 0;
+  font-weight: 600;
+}
+
+.row17 .list-wrapper .list-panel .list .item {
+  font-size: 0.8vw;
+  text-align: left;
+  text-indent: -2.4vw;
+  padding-left: 2.4vw;
+}
+
+.row18 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin-bottom: 0.5vw;
+}
+
+.row19 {
+  width: 100%;
+  margin-bottom: 0.5vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row20 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row20 div {
+  width: 50%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5vw 1vw;
+}
+
+.row20 div:first-child {
+  border-right: 1px solid black;
+}
+
+.row21 table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row21 table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row21 table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row21 table td:last-child {
+  border-right: 0vw;
+}
+
+.row21 table td.regist {
+  text-align: left !important;
+  padding-left: 1vw;
+}
+
+.row21 table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row22 {
+  text-align: left;
+  margin-bottom: 0.5vw;
+}
+
+.row23 {
+  text-align: right;
+  margin-bottom: 0.5vw;
+}
+
+.row24 {
+  text-align: right;
+  margin-bottom: 0.5vw;
+}
+
+.row24 div:first-child {
+  width: 70%;
+}
+
+.row24 div:last-child {
+  width: 30%;
+}
+
+.row25 {
+  font-size: 2.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.row25 span {
+  font-size: 2vw;
+}
+
+.row26 {
+  margin-bottom: 0.5vw;
+}
+
+.row26 table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border-bottom: 0.1pt solid black;
+}
+
+.row26 table td {
+  border: 0.1pt solid black;
+  text-align: left;
+  font-weight: 500;
+  padding: 0vw;
+  height: 2vw;
+}
+
+.row26 table td:first-child {
+  border-left: 0vw;
+  padding: 1vw 0vw;
+}
+
+.row26 table td:last-child {
+  border-right: 0vw;
+}
+
+.row26 table td.regist {
+  text-align: left !important;
+  padding-left: 1vw;
+}
+
+.row26 table td .indent {
+  text-align: left;
+  text-indent: -2vw;
+  padding-left: 2vw;
+}
+
+.row26 table tr:last-child td {
+  border-bottom: 0vw;
+}
+
+.row30 {
+  border-bottom: 0.1pt solid #ccc;
+  padding-bottom: 2vw;
+}
+
+.row30 .label {
+  border-top: 3px solid #ccc;
+  border-bottom: 0.1pt solid #ccc;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1vw;
+}
+
+.row30 .terms-wrapper .comment {
+  text-indent: -2vw;
+  padding-left: 2vw;
+  line-height: 2vw;
+}
+
+.row30 .terms-wrapper .comment .gray-box {
+  width: 2vw;
+  height: 2vw;
+  background-color: #dddddd;
+  display: inline-block;
+  margin-right: 1vw;
+}
+
+.row30 .terms-wrapper .terms-section {
+  margin-top: 1vw;
+}
+
+.row30 .terms-wrapper .terms-section .terms-list .terms {
+  text-indent: -2vw;
+  padding-left: 2vw;
+  line-height: 1.8vw;
+  font-size: 1.3vw;
+}
+/*# sourceMappingURL=payroll01.css.map */

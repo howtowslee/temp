@@ -10,20 +10,36 @@ body {
 .content {
   padding: 1vw 5vw;
   width: 100vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .guide {
@@ -47,8 +63,12 @@ body {
 }
 
 .row01 {
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 2vw;
 }
 
@@ -69,15 +89,20 @@ body {
 }
 
 .row04 {
-  justify-content: flex-end;
-  box-sizing: border-box;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 2vw;
   margin-bottom: 2vw;
 }
 
 .row04 .inc-number-wrapper {
   width: 40vw;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border: 0.1pt solid black;
 }
 
@@ -96,7 +121,9 @@ body {
 }
 
 .row05 {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 0.1pt solid black;
   padding: 2vw 0vw;
   font-size: 2vw;
@@ -140,7 +167,9 @@ body {
 }
 
 .row08 {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-bottom: 0.1pt solid black;
   padding-bottom: 2vw;
   margin-bottom: 2vw;
