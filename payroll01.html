@@ -55,7 +55,7 @@
     <div class="row05 flex-row">
       <table>
         <tr>
-          <td rowspan="3" style="width: 10%">사업장</td>
+          <td rowspan="3" style="width: 10%" class="text-center">사업장</td>
           <td style="width: 25%">사업장관리번호</td>
           <td style="width: 25%">명칭</td>
           <td style="width: 25%">단위사업장 명칭</td>
@@ -81,7 +81,7 @@
     <div class="row06 flex-row">
       <table>
         <tr>
-          <td style="width: 10%">보험사무<br>대행기관</td>
+          <td style="width: 10%" class="text-center">보험사무<br>대행기관</td>
           <td style="width: 25%">번호</td>
           <td style="width: 25%">명칭</td>
           <td style="width: 50%">하수급인 관리번호
@@ -97,13 +97,24 @@
           <td rowspan="2" style="width: 1%">구분</td>
           <td style="width: 11%">성명</td>
           <td style="width: 7%">국적</td>
-          <td rowspan="2" style="width: 8%">대표자여부</td>
-          <td rowspan="2" style="width: 10%">월 소득액(소득월액·보수월액·월 평균보수)(원)</td>
-          <td rowspan="2" style="width: 5%">자격 취득일</td>
+          <td rowspan="2" style="width: 8%">
+            대표자<br>
+            여부
+          </td>
+          <td rowspan="2" style="width: 13%">
+            월 소득액<br>
+            (소득월액·보수월<br>
+            액·월 평균보<br>
+            수)(원)
+          </td>
+          <td rowspan="2" style="width: 5%">
+            자격<br>
+            취득일
+          </td>
           <td colspan="3" style="width: 12%">국민연금</td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td colspan="4" style="width: 16%">건강보험</td>
+          <td colspan="4" style="width: 21%">건강보험</td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
@@ -112,55 +123,92 @@
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 10%">일자리 안정자금 지원 신청</td>
+          <td rowspan="2" style="width: 5%">일자리<br>안정자금<br>지원 신청</td>
         </tr>
         <tr>
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 11%">주민등록번호(외국인등록번호·국내거소신고번호)</td>
-          <td style="width: 7%">체류자격</td>
+          <td style="width: 11%">
+            주민등록번호<br>
+            (외국인등록번호·<br>
+            국내거소신고번호)
+          </td>
+          <td style="width: 7%">
+            체류<br>
+            자격
+          </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- 국민연금 -->
-          <td style="width: 4%">자격취득부호</td>
-          <td style="width: 4%">특수직종부호</td>
-          <td style="width: 4%">직역연금부호</td> 
-          <!-- 건강보험 -->
-          <td style="width: 4%">자격취득부호</td>
           <td style="width: 4%">
-            <div class="box">보험료</div>
-            <div class="box">감면부호</div>
+            자격<br>
+            취득<br>
+            부호
+          </td>
+          <td style="width: 4%">
+            특수<br>
+            직종<br>
+            부호
+          </td>
+          <td style="width: 4%">
+            직역<br>
+            연금<br>
+            부호
+          </td> 
+          <!-- 건강보험 -->
+          <td style="width: 6%">
+            자격<br>
+            취득<br>
+            부호
+          </td>
+          <td style="width: 4%">
+            <div class="box flex-row">보험료</div>
+            <div class="box flex-row">감면부호</div>
           </td>
           <td colspan="2" class="collapse-box" style="width: 8%">
-            <div class="box">공무원.교직원</div>
+            <div class="box flex-row">공무원.교직원</div>
             <div class="box flex-row">
-              <div class="inner-box">회계명 / 부호</div>
-              <div class="inner-box">직종명 / 부호</div>
+              <div class="inner-box flex-row">회계명 / 부호</div>
+              <div class="inner-box flex-row">직종명 / 부호</div>
             </div>
             <!-- <div class="box"></div>
             <div class="box"></div> -->
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- 고용보험 산재보험 -->
-          <td style="width: 4%">직종부호</td>
-          <td style="width: 4%">주 소정근로시간</td>
-          <td style="width: 4%">계약종료연월(계약직만 작성)</td>
+          <td style="width: 4%">
+            직종<br>
+            부호
+          </td>
+          <td style="width: 4%">
+            주<br>
+            소정<br>
+            근로<br>
+            시간
+          </td>
+          <td style="width: 4%">
+            계약<br>
+            종료<br>
+            연월<br>
+            (계약직만<br>
+            작성)
+          </td>
           <td colspan="2" style="width: 8%">
-            <div class="box">보험료 부과구분(해당자만)</div>
+            <div class="box flex-row">보험료 부과구분(해당자만)</div>
             <div class="box flex-row">
-              <div class="inner-box">부호</div>
-              <div class="inner-box">사유</div>
+              <div class="inner-box flex-row">부호</div>
+              <div class="inner-box flex-row">사유</div>
             </div>
           </td>
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 10%"></td>
+          <!-- <td style="width: 10%"></td> -->
         </tr>
 
         <tr>
           <td rowspan="2" style="width: 1%">1</td>
           <td style="width: 11%"></td>
           <td style="width: 7%"></td>
-          <td rowspan="2" style="width: 8%">
+          <td rowspan="2" class="text-left" style="width: 8%; padding-left: 1vw;">
             []예 <br>
             []아니오
           </td>
@@ -172,15 +220,15 @@
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 4%">[]건강보험</td>
-          <td colspan="3" style="width: 12%">
-            ([]피부양자 신청)
+          <td style="width: 4%; border-right: 0;">[]건강보험</td>
+          <td colspan="3" class="text-left" style="width: 12%; border-left: 0;">
+            ([]피부양자 신청)<br>
             ([]건강보험중 사업장으로 발송 희망)
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td colspan="5" style="width: 20%">
-            []고용보험(계약직 여부: []예, []아니오)
+          <td colspan="5" class="text-left" style="width: 20%">
+            []고용보험(계약직 여부: []예, []아니오)<br>
             []산재보험
           </td>
           <!-- <td style="width: 5%"></td> -->
@@ -231,9 +279,9 @@
       <table>
         <tr>
           <td style="width: 30%">신고인(사용자ㆍ대표자)</td>
-          <td style="width: 30%">(서명 또는 인)</td>
+          <td class="small" style="width: 30%">(서명 또는 인)</td>
           <td style="width: 20%">/[]보험사부대행기관</td>
-          <td style="width: 20%">(서명 또는 인)</td>
+          <td class="small" style="width: 20%">(서명 또는 인)</td>
         </tr>
       </table>
     </div>
@@ -243,7 +291,7 @@
     </div>
 
     <div class="page-size-label">
-      210mm×297mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+      297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
     </div>
     <div style="page-break-before:always;"></div>
 
@@ -257,8 +305,8 @@
           <td rowspan="3" style="width: 5%">
             첨부<br>서류
           </td>
-          <td style="width: 20%">국민연금</td>
-          <td>임금대장 사본 또는 선원수첩 사본 등 특수직종근로자임을 증명할 수 있는 서류 1부 </td>
+          <td style="width: 15%">국민연금</td>
+          <td class="text-left">임금대장 사본 또는 선원수첩 사본 등 특수직종근로자임을 증명할 수 있는 서류 1부 </td>
           <td rowspan="3" style="width: 5%;">수수료<br>없음</td>
         </tr>
         <tr>
@@ -284,7 +332,7 @@
         <tr>
           <!-- <td style="width: 10%"></td> -->
           <td>일자리안정자금 지원 신청</td>
-          <td> 해당 근로자의 주 소정근로시간 등을 기재한 서류</td>
+          <td class="text-left">해당 근로자의 주 소정근로시간 등을 기재한 서류</td>
           <!-- <td rowspan="3" style="width: 5%;">수수료<br>없음</td> -->
         </tr>
       </table>
@@ -297,16 +345,16 @@
       <div class="note">
         <table>
           <tr>
-            <td style="width: 20%">국민연금</td>
-            <td>피부양자가 있을 때에는 제5쪽의 직장가입자 자격취득 신고서(피부양자가 있는 경우)를 작성해 주시기 바랍니다.</td>
+            <td style="width: 8%">국민연금</td>
+            <td class="text-left">피부양자가 있을 때에는 제5쪽의 직장가입자 자격취득 신고서(피부양자가 있는 경우)를 작성해 주시기 바랍니다.</td>
           </tr>
           <tr>
             <td>건강보험</td>
-            <td>임의가입대상 외국인근로자는 "고용보험 외국인 가입ㆍ가입탈퇴ㆍ피보험자격 취득신청서"로 신청해 주시기 바랍니다.</td>
+            <td class="text-left">임의가입대상 외국인근로자는 "고용보험 외국인 가입ㆍ가입탈퇴ㆍ피보험자격 취득신청서"로 신청해 주시기 바랍니다.</td>
           </tr>
           <tr>
             <td>일자리안정자금 지원 신청</td>
-            <td>일자리안정자금은 고용노동부장관이 정하는 기준에 해당하는 경우만 신청이 가능하며, 해당 근로자에게 「최저임금법」에 따른 최저임금이 지급되고 있는지 확인하기 위하여 필요한 경우에는 해당 근로자의 소정근로시간 등을 확인할 수 있습니다.</td>
+            <td class="text-left">일자리안정자금은 고용노동부장관이 정하는 기준에 해당하는 경우만 신청이 가능하며, 해당 근로자에게 「최저임금법」에 따른 최저임금이 지급되고 있는지 확인하기 위하여 필요한 경우에는 해당 근로자의 소정근로시간 등을 확인할 수 있습니다.</td>
           </tr>
         </table>
       </div>
@@ -319,7 +367,7 @@
       <div class="note">
         <table>
           <tr>
-            <td style="width: 20%">공통사항</td>
+            <td style="width: 8%">공통사항</td>
             <td>
               <div class="note-wrapper">
                 <div class="note flex-col">
@@ -366,7 +414,13 @@
           </tr>
           <tr>
             <td>건강보험</td>
-            <td> 공무원ㆍ교직원의 경우에만 회계명, 회계부호, 직종명, 직종부호를 적습니다.</td>
+            <td>
+              <div class="note-wrapper">
+                <div class="note">
+                  <div class="note-cell">공무원ㆍ교직원의 경우에만 회계명, 회계부호, 직종명, 직종부호를 적습니다.</div>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>
@@ -400,14 +454,24 @@
       </div>
     </div>
 
+    </div>
+
+    <div class="content">
+
+    <div class="page-size-label">
+        297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+    </div>
+    <div style="page-break-before:always;"></div>
+
     <div class="row15">
+      <div class="page-number">(제3쪽)</div>
       <div class="label">
         자격취득 부호 등
       </div>
       <div class="note">
         <table>
           <tr>
-            <td style="width: 20%">국민연금</td>
+            <td style="width: 8%">국민연금</td>
             <td>
               <div class="note-wrapper">
                 <div class="note flex-col">
@@ -456,7 +520,7 @@
                   <div class="note-cell">
                     [보험료 부과구분 부호]
                   </div>
-                  <div class="flex-row">
+                  <div class="flex-row" style="width: 100%">
                     <table>
                       <tr>
                         <td rowspan="3" style="width: 5%">부호</td>
@@ -468,17 +532,17 @@
                       </tr>
                       <tr>
                         <!-- <td style="width: 5%">부호</td> -->
-                        <td colspan="2">산재보험</td>
+                        <td colspan="2" style="width: 18%;">산재보험</td>
                         <!-- <td></td> -->
-                        <td colspan="2">고용보험</td>
+                        <td colspan="2" style="width: 18%;">고용보험</td>
                         <!-- <td></td> -->
                       </tr>
                       <tr>
                         <!-- <td style="width: 5%">부호</td> -->
-                        <td>산재보험</td>
-                        <td>임금채권부담금</td>
-                        <td>실업급여</td>
-                        <td>고용안정직업능력개발</td>
+                        <td>산재<br>보험</td>
+                        <td>임금채권<br>부담금</td>
+                        <td>실업<br>급여</td>
+                        <td>고용안정<br>직업능력<br>개발</td>
                       </tr>
                       <tr>
                         <td style="width: 5%">51</td>
@@ -539,17 +603,17 @@
                       </tr>
                       <tr>
                         <!-- <td style="width: 5%">부호</td> -->
-                        <td colspan="2">산재보험</td>
+                        <td colspan="2" style="width: 18%">산재보험</td>
                         <!-- <td></td> -->
-                        <td colspan="2">고용보험</td>
+                        <td colspan="2" style="width: 18%">고용보험</td>
                         <!-- <td></td> -->
                       </tr>
                       <tr>
                         <!-- <td style="width: 5%">부호</td> -->
-                        <td>산재보험</td>
-                        <td>임금채권부담금</td>
-                        <td>실업급여</td>
-                        <td>고용안정직업능력개발</td>
+                        <td>산재<br>보험</td>
+                        <td>임금채권<br>부담금</td>
+                        <td>실업<br>급여</td>
+                        <td>고용안정<br>직업능력<br>개발</td>
                       </tr>
                       <tr>
                         <td style="width: 5%">55</td>
@@ -616,6 +680,15 @@
         </table>
       </div>
     </div>
+
+    </div>
+
+    <div class="content">
+
+    <div class="page-size-label">
+      297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+    </div>
+    <div style="page-break-before:always;"></div>
 
     <div class="row16 flex-row">
       <div>[별지]한국고용직업분류(KECO '07) 중 소분류(139개) 직종현황</div>
@@ -938,6 +1011,9 @@
     <div class="row18">
       직장가입자 자격취득 신고서(피부양자가 있는 경우)
     </div>
+    </div>
+
+    <div class="content">
 
     <div class="row19 flex-row">
       <div>※ 국민건강보험의 피부양자가 있는 경우에 작성하며, 색상이 어두운 란은 신고인이 적지 않습니다.</div>
@@ -1086,7 +1162,10 @@
     <div class="row26">
       <table>
         <tr>
-          <td style="width: 5%">첨부서류</td>
+          <td style="width: 5%">
+            첨부<br>
+            서류
+          </td>
           <td>
             <div class="indent">
               1. 주민등록표 등본(주민등록표 등본으로 해당 직장가입자와의 관계를 확인할 수 없는 경우는 가족관계등록부의 증명서를 제출합니다) 1부
@@ -1139,6 +1218,9 @@
         </div>
 
       </div>
+    </div>
+    <div class="page-size-label">
+      297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
     </div>
     <div style="page-break-before:always;"></div>
   </div>

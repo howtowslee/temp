@@ -52,6 +52,7 @@ body {
 
 .page-size-label {
   text-align: right;
+  font-size: 1.2vw;
 }
 
 .no-border-bottom {
@@ -60,6 +61,14 @@ body {
 
 .text-left {
   text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 .no-border-bottom {
@@ -93,6 +102,7 @@ body {
 .row02 .selection {
   width: 50%;
   font-size: 2vw;
+  font-weight: 400;
   margin-bottom: 1vw;
 }
 
@@ -104,10 +114,13 @@ body {
 }
 
 .row03 .comment-wrapper {
-  font-size: 0.5vw;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.row03 .comment-wrapper span {
+  font-size: 1.2vw;
 }
 
 .row04 {
@@ -118,7 +131,8 @@ body {
 }
 
 .row04 div {
-  padding: 1vw 2vw;
+  padding: 0.8vw 1vw;
+  font-size: 1vw;
 }
 
 .row04 div:nth-child(1) {
@@ -136,7 +150,7 @@ body {
 }
 
 .row05 {
-  margin-bottom: 0.5vw;
+  margin-bottom: 0.1vw;
 }
 
 .row05 table {
@@ -150,6 +164,7 @@ body {
   text-align: left;
   padding: 0vw 0.5vw;
   height: 4vw;
+  font-size: 1vw;
 }
 
 .row05 td.right {
@@ -172,6 +187,10 @@ body {
   border-right: 0vw;
 }
 
+.row06 {
+  margin-bottom: 0.1vw;
+}
+
 .row06 table {
   width: 100%;
   border-bottom: 0.1pt solid black;
@@ -183,10 +202,11 @@ body {
   text-align: left;
   padding: 0vw 0.5vw;
   height: 4vw;
+  font-size: 1vw;
 }
 
 .row06 td span {
-  font-size: 0.5vw;
+  font-size: 0.8vw;
 }
 
 .row06 td:first-child {
@@ -195,6 +215,10 @@ body {
 
 .row06 td:last-child {
   border-right: 0vw;
+}
+
+.row07 {
+  margin-bottom: 0.5vw;
 }
 
 .row07 .no-right-border {
@@ -213,14 +237,16 @@ body {
 
 .row07 td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   padding: 0vw;
   height: 4vw;
+  font-size: 1vw;
 }
 
 .row07 td .box {
   height: 50%;
   width: 100%;
+  font-size: 1vw;
 }
 
 .row07 td .box:first-child {
@@ -230,6 +256,7 @@ body {
 .row07 td .box .inner-box {
   width: 50%;
   height: 100%;
+  font-size: 1vw;
 }
 
 .row07 td .box .inner-box:first-child {
@@ -246,15 +273,17 @@ body {
 
 .row08 {
   text-align: left;
+  margin-bottom: 0.5vw;
 }
 
 .row09 {
   text-align: right;
+  margin-bottom: 1vw;
 }
 
 .row10 {
   width: 100%;
-  margin-bottom: 0.5vw;
+  margin-bottom: 1vw;
 }
 
 .row10 table {
@@ -267,9 +296,16 @@ body {
   text-align: right;
 }
 
+.row10 table td.small {
+  font-size: 1vw;
+}
+
 .row11 {
   margin-bottom: 0.5vw;
   font-size: 2vw;
+  letter-spacing: -1px;
+  padding-bottom: 0.5vw;
+  border-bottom: 3px solid #666;
 }
 
 .row12 {
@@ -285,15 +321,16 @@ body {
 
 .row12 table td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
-  padding: 0vw;
+  padding: 0vw 1vw;
   height: 2vw;
+  font-size: 1vw;
 }
 
 .row12 table td:first-child {
   border-left: 0vw;
-  padding: 1vw 0vw;
+  padding: 1vw;
 }
 
 .row12 table td:last-child {
@@ -321,8 +358,9 @@ body {
           flex: 1;
   text-align: left;
   text-indent: -2.5vw;
-  padding-left: 2.5vw;
+  padding-left: 1.5vw;
   margin-bottom: 0.5vw;
+  font-size: 1vw;
 }
 
 .row12 table tr:last-child td {
@@ -356,10 +394,12 @@ body {
 
 .row13 .note table td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
   padding: 0vw;
+  padding-left: 1vw;
   height: 2vw;
+  font-size: 1vw;
 }
 
 .row13 .note table td:first-child {
@@ -376,7 +416,6 @@ body {
 }
 
 .row14 {
-  border-bottom: 0.1pt solid #ccc;
   margin-bottom: 1vw;
 }
 
@@ -388,51 +427,47 @@ body {
   padding: 1vw;
 }
 
-.row14 .note {
+.row14 > .note {
   line-height: 2vw;
   margin-bottom: 2vw;
 }
 
-.row14 .note table {
+.row14 > .note table {
   width: 100%;
   height: 100%;
   border-collapse: collapse;
   border-bottom: 0.1pt solid black;
 }
 
-.row14 .note table td {
+.row14 > .note table td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
   padding: 0vw;
   height: 2vw;
+  font-size: 1vw;
 }
 
-.row14 .note table td:first-child {
+.row14 > .note table td:first-child {
   border-left: 0vw;
   padding: 1vw 0vw;
 }
 
-.row14 .note table td:last-child {
+.row14 > .note table td:last-child {
   border-right: 0vw;
 }
 
-.row14 .note table td.regist {
-  text-align: left !important;
-  padding-left: 1vw;
-}
-
-.row14 .note table td .note-wrapper {
+.row14 > .note table td .note-wrapper {
   padding: 1vw;
 }
 
-.row14 .note table td .note-wrapper .note {
+.row14 > .note table td .note-wrapper .note {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-.row14 .note table td .note-wrapper .note .note-cell {
+.row14 > .note table td .note-wrapper .note .note-cell {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -440,15 +475,11 @@ body {
   text-indent: -2vw;
   padding-left: 2vw;
   margin-bottom: 0.5vw;
+  font-size: 1vw;
 }
 
-.row14 .note table tr:last-child td {
+.row14 > .note table tr:last-child td {
   border-bottom: 0vw;
-}
-
-.row15 {
-  border-bottom: 0.1pt solid #ccc;
-  margin-bottom: 1vw;
 }
 
 .row15 .label {
@@ -459,51 +490,50 @@ body {
   padding: 1vw;
 }
 
-.row15 .note {
+.row15 > .note {
   line-height: 2vw;
-  margin-bottom: 2vw;
 }
 
-.row15 .note table {
+.row15 > .note table {
   width: 100%;
-  height: 100%;
+  height: 25vw;
   border-collapse: collapse;
   border-bottom: 0.1pt solid black;
 }
 
-.row15 .note table td {
-  border: 0.1pt solid black;
-  text-align: left;
-  font-weight: 500;
-  padding: 0vw;
-  height: 2vw;
+.row15 > .note table:first-child {
+  border-right: 1px solid black;
 }
 
-.row15 .note table td:first-child {
+.row15 > .note table td {
+  border: 0.1pt solid black;
+  text-align: center;
+  font-weight: 500;
+  padding: 0vw !important;
+  height: 2vw;
+  font-size: 1vw;
+}
+
+.row15 > .note table td:first-child {
   border-left: 0vw;
   padding: 1vw 0vw;
 }
 
-.row15 .note table td:last-child {
+.row15 > .note table td:last-child {
   border-right: 0vw;
 }
 
-.row15 .note table td.regist {
-  text-align: left !important;
-  padding-left: 1vw;
-}
-
-.row15 .note table td .note-wrapper {
+.row15 > .note table td .note-wrapper {
   padding: 1vw;
 }
 
-.row15 .note table td .note-wrapper .note {
+.row15 > .note table td .note-wrapper .note {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
-.row15 .note table td .note-wrapper .note .note-cell {
+.row15 > .note table td .note-wrapper .note .note-cell {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -511,15 +541,22 @@ body {
   text-indent: -10.5vw;
   padding-left: 10.5vw;
   margin-bottom: 0.5vw;
+  font-size: 1vw;
 }
 
-.row15 .note table td .note-wrapper .note .inner-note-cell {
+.row15 > .note table td .note-wrapper .note table {
+  width: 50%;
+}
+
+.row15 > .note table td .note-wrapper .note table .inner-note-cell {
   text-align: left;
   text-indent: -2vw;
   padding-left: 2vw;
+  font-size: 0.9vw;
+  letter-spacing: -1px;
 }
 
-.row15 .note table tr:last-child td {
+.row15 > .note table tr:last-child td {
   border-bottom: 0vw;
 }
 
@@ -527,6 +564,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.row16 div {
+  font-size: 1.2vw;
 }
 
 .row17 {
@@ -590,6 +632,10 @@ body {
   border-right: 1px solid black;
 }
 
+.row21 {
+  margin-bottom: 0.5vw;
+}
+
 .row21 table {
   width: 100%;
   height: 100%;
@@ -599,10 +645,11 @@ body {
 
 .row21 table td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
   padding: 0vw;
   height: 2vw;
+  font-size: 1vw;
 }
 
 .row21 table td:first-child {
@@ -612,11 +659,6 @@ body {
 
 .row21 table td:last-child {
   border-right: 0vw;
-}
-
-.row21 table td.regist {
-  text-align: left !important;
-  padding-left: 1vw;
 }
 
 .row21 table tr:last-child td {
@@ -668,10 +710,11 @@ body {
 
 .row26 table td {
   border: 0.1pt solid black;
-  text-align: left;
+  text-align: center;
   font-weight: 500;
-  padding: 0vw;
+  padding: 0.3vw;
   height: 2vw;
+  font-size: 1vw;
 }
 
 .row26 table td:first-child {
@@ -683,15 +726,12 @@ body {
   border-right: 0vw;
 }
 
-.row26 table td.regist {
-  text-align: left !important;
-  padding-left: 1vw;
-}
-
 .row26 table td .indent {
   text-align: left;
   text-indent: -2vw;
   padding-left: 2vw;
+  font-size: 1.3vw;
+  margin-bottom: 0.5vw;
 }
 
 .row26 table tr:last-child td {
