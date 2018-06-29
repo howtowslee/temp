@@ -24,16 +24,16 @@
 
     <div class="row02 flex-row">
       <div class="selection">
-        국민연금 [ ] 사업장가입자자격상실신고서
+        국민연금 [ {{row02.napensStat}} ] 사업장가입자자격상실신고서
       </div>
       <div class="selection">
-        건강보험 [ ] 직장가입자자격상실신고서
+        건강보험 [ {{row02.heinsuStat}} ] 직장가입자자격상실신고서
       </div>
       <div class="selection">
-        고용보험 [ ] 피보험자격상실신고서
+        고용보험 [ {{row02.ueinsuStat}} ] 피보험자격상실신고서
       </div>
       <div class="selection">
-        산재보험 [ ] 근로자고용종료신고서
+        산재보험 [ {{row02.indisinsrStat}} ] 근로자고용종료신고서
       </div>
     </div>
 
@@ -46,7 +46,7 @@
 
     <div class="row04 flex-row">
       <div>접수번호</div>
-      <div>접수일자</div>
+      <div>접수일자 {{row04.today}}</div>
       <div>처리기간: 3일(고용보험은 7일)</div>
     </div>
     
@@ -54,16 +54,16 @@
       <table>
         <tr>
           <td rowspan="2" style="width: 10%" class="text-center">사업장</td>
-          <td style="width: 25%">사업장관리번호</td>
-          <td style="width: 25%">명칭</td>
-          <td style="width: 25%">전화번호</td>
-          <td style="width: 25%">FAX번호</td>
+          <td style="width: 25%">사업장관리번호 {{row05.mngNo}}</td>
+          <td style="width: 25%">명칭 {{row05.cmpName}}</td>
+          <td style="width: 25%">전화번호 {{row05.telNo}}</td>
+          <td style="width: 25%">FAX번호 {{row05.fax}}</td>
         </tr>
         <tr>
           <!-- <td></td> -->
-          <td class="no-right-border" colspan="2">소재지</td>
+          <td class="no-right-border" colspan="2">소재지 {{row05.bizpAddr}} {{row05.bizpAddrDtl}} </td>
           <!-- <td></td> -->
-          <td class="right no-left-border" colspan="2">( - )</td>
+          <td class="right no-left-border" colspan="2">{{row05.zipCode}}</td>
           <!-- <td></td> -->
         </tr>
       </table>
@@ -73,10 +73,11 @@
       <table>
         <tr>
           <td style="width: 10%" class="text-center">보험사무대행기관</td>
-          <td style="width: 25%">명칭</td>
-          <td style="width: 25%">번호</td>
+          <td style="width: 25%">명칭 {{row06.agencyName}}</td>
+          <td style="width: 25%">번호 {{row06.agencyNo}}</td>
           <td style="width: 50%">하수급인 관리번호
             <span>(건설공사등의 미승인 하수급인으로 한정함)</span>
+            {{row06.agencyManageNo}}
           </td>
         </tr>
       </table>
@@ -199,121 +200,27 @@
           <!-- <td></td> -->
         </tr>
 
-        <tr>
+        <tr ng-repeat="(index,row) in row07.list">
+          <td>{{ index*1+1 }}</td>
+          <td>{{ row.name }}</td>
+          <td>{{ row.ssn }}</td>
+          <td>{{ row.telNo }}</td>
+          <td>{{ row.losDt }}</td>
+          <td>{{ row.napensLosCode }}</td>
+          <td>{{ row.losDt }}</td>
+          <td>{{ row.heinsuLosCode }}</td>
+          <td>{{ row.thsyrRemta }}</td>
           <td></td>
+          <td>{{ row.bfyrRemta }}</td>
           <td></td>
+          <td>{{ row.calcPay }}</td>
+          <td>{{ row.losDt }}</td>
+          <td>{{ row.lfempRsn }}</td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{ row.thsyrRemta }}</td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
+        
+        <tr ng-repeat="(index,row) in row07.left">
           <td></td>
           <td></td>
           <td></td>
@@ -339,7 +246,7 @@
         「고용보험법 시행령」 제7조 및 같은 법 시행규칙 제5조에 따라 위와 같이 자격상실신고를 합니다.
     </div>
     <div class="row09">
-      년 월 일
+      {{row09.year}} 년 {{row09.month}} 월 {{row09.date}} 일
     </div>
 
 
@@ -347,9 +254,9 @@
       <table>
         <tr>
           <td style="width: 30%">신고(확인)인(사용자ㆍ대표자)</td>
-          <td class="small" style="width: 30%">(서명 또는 인)</td>
+          <td class="small" style="width: 30%">{{row10.submitUser}} (서명 또는 인)</td>
           <td style="width: 20%">/ []보험사무대행기관</td>
-          <td class="small" style="width: 20%">(서명 또는 인)</td>
+          <td class="small" style="width: 20%">{{row10.agency}} (서명 또는 인)</td>
         </tr>
       </table>
     </div>

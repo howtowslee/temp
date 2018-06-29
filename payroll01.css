@@ -661,6 +661,10 @@ body {
   border-right: 0vw;
 }
 
+.row21 table td:nth-child(10) {
+  background-color: #dddddd;
+}
+
 .row21 table tr:last-child td {
   border-bottom: 0vw;
 }

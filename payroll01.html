@@ -21,19 +21,19 @@
     <div class="row01 flex-row">
       <span>고용보험법 시행규칙 [별지 제5호서식] &lt;개정 2017.12.28.&gt; </span>
     </div>
-
+    
     <div class="row02 flex-row">
       <div class="selection">
-        국민연금 [ ] 사업장가입자 자격취득 신고서
+        국민연금 [ {{row02.napensStat}} ] 사업장가입자 자격취득 신고서
       </div>
       <div class="selection">
-        건강보험 [ ] 직장가입자 자격취득 신고서
+        건강보험 [ {{row02.heinsuStat}} ] 직장가입자 자격취득 신고서
       </div>
       <div class="selection">
-        고용보험 [ ] 피보험 자격취득 신고서
+        고용보험 [ {{row02.ueinsuStat}} ] 피보험 자격취득 신고서
       </div>
       <div class="selection">
-        산재보험 [ ] 근로자 고용 신고서
+        산재보험 [ {{row02.indisinsrStat}} ] 근로자 고용 신고서
       </div>
     </div>
 
@@ -48,31 +48,31 @@
 
     <div class="row04 flex-row">
       <div>접수번호</div>
-      <div>접수일</div>
+      <div>접수일 {{row04.today}}</div>
       <div>처리기간: 3일(고용보험은 5일)</div>
     </div>
-    
+
     <div class="row05 flex-row">
       <table>
         <tr>
           <td rowspan="3" style="width: 10%" class="text-center">사업장</td>
-          <td style="width: 25%">사업장관리번호</td>
-          <td style="width: 25%">명칭</td>
-          <td style="width: 25%">단위사업장 명칭</td>
-          <td style="width: 25%">영업소 명칭</td>
+          <td style="width: 25%">사업장관리번호 {{row05.mngNo}}</td>
+          <td style="width: 25%">명칭 {{row05.cmpName}}</td>
+          <td style="width: 25%">단위사업장 명칭 {{row05.unitCmpName}}</td>
+          <td style="width: 25%">영업소 명칭 {{row05.cmpOfficeName}}</td>
         </tr>
         <tr>
           <!-- <td></td> -->
-          <td class="no-right-border" colspan="2">소재지</td>
+          <td class="no-right-border" colspan="2">소재지 {{row05.bizpAddr}} {{row05.bizpAddrDtl}}</td>
           <!-- <td></td> -->
-          <td class="right no-left-border" colspan="2">우편번호( - )</td>
+          <td class="right no-left-border" colspan="2">우편번호  ( {{row05.zipCode}} )</td>
           <!-- <td></td> -->
         </tr>
         <tr>
           <!-- <td></td> -->
           <td>전화번호</td>
-          <td>(유선) (이동전화)</td>
-          <td colspan="2">FAX번호</td>
+          <td>(유선) {{row05.telNo}} (이동전화)</td>
+          <td colspan="2">FAX번호 {{row05.fax}}</td>
           <!-- <td></td> -->
         </tr>
       </table>
@@ -82,10 +82,11 @@
       <table>
         <tr>
           <td style="width: 10%" class="text-center">보험사무<br>대행기관</td>
-          <td style="width: 25%">번호</td>
-          <td style="width: 25%">명칭</td>
+          <td style="width: 25%">번호 {{row06.agencyNo}}</td>
+          <td style="width: 25%">명칭 {{row06.agencyName}}</td>
           <td style="width: 50%">하수급인 관리번호
             <span>(건설공사 등의 미승인 하수급인만 해당함)</span>
+            {{row06.agencyManageNo}}
           </td>
         </tr>
       </table>
@@ -204,23 +205,29 @@
           <!-- <td style="width: 10%"></td> -->
         </tr>
 
+        <div ng-repeat="(index,row) in row07.list">
+
         <tr>
-          <td rowspan="2" style="width: 1%">1</td>
-          <td style="width: 11%"></td>
-          <td style="width: 7%"></td>
+          <td rowspan="2" style="width: 1%">{{ index*1+1 }}</td>
+          <td style="width: 11%">{{row.userName}}</td>
+          <td style="width: 7%">{{row.natny}}</td>
           <td rowspan="2" class="text-left" style="width: 8%; padding-left: 1vw;">
-            []예 <br>
-            []아니오
+              [ {{row.bsnmregRpstYn == 'Y' ? 'V':''}} ] 예 <br>
+              [ {{row.bsnmregRpstYn == 'Y' ? '':'V'}} ] 아니오
           </td>
-          <td rowspan="2" style="width: 10%"></td>
-          <td rowspan="2" style="width: 5%"></td>
+          <td rowspan="2" style="width: 10%">
+            {{row.monAvgPay}}
+          </td>
+          <td rowspan="2" style="width: 5%">
+            {{row.napensAcquDt}}
+          </td>
           <td colspan="3" style="width: 12%">
-            []국민연금<br>
-            ([]취득 월 납부 희망)
+            [{{row.napensStat == 'Y' ? 'V':''}}]국민연금<br>
+            ([{{row.pmntMethod == 'Y' ? 'V':''}}]취득 월 납부 희망)
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 4%; border-right: 0;">[]건강보험</td>
+          <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == 'Y' ? 'V':''}}]건강보험</td>
           <td colspan="3" class="text-left" style="width: 12%; border-left: 0;">
             ([]피부양자 신청)<br>
             ([]건강보험중 사업장으로 발송 희망)
@@ -228,8 +235,8 @@
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <td colspan="5" class="text-left" style="width: 20%">
-            []고용보험(계약직 여부: []예, []아니오)<br>
-            []산재보험
+            [{{row.ueinsuStat == 'Y' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
+            [{{row.indisinsrStat == 'Y' ? 'V':''}}]산재보험
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
@@ -242,28 +249,101 @@
         </tr>
         <tr>
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 11%"></td>
-          <td style="width: 7%"></td>
+          <td style="width: 11%">{{row.ssn}}</td>
+          <td style="width: 7%">{{row.stayQalf}}</td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <!-- 국민연금 -->
-          <td style="width: 4%"></td>
+          <td style="width: 4%">{{row.napensAcquCode}}</td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td> 
           <!-- 건강보험 -->
-          <td style="width: 4%"></td>
+          <td style="width: 4%">{{row.heinsuAcquCode}}</td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td>
           <!-- 고용보험 산재보험 -->
-          <td style="width: 4%"></td>
+          <td style="width: 4%">{{row.jobfunCl02}}</td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td>
           <td style="width: 4%"></td>
           <!-- <td style="width: 10%"></td> -->
         </tr>
+
+      </div>
+
+      <div ng-repeat="(index,row) in row07.left">
+
+          <tr>
+            <td rowspan="2" style="width: 1%"></td>
+            <td style="width: 11%">{{row.userName}}</td>
+            <td style="width: 7%">{{row.natny}}</td>
+            <td rowspan="2" class="text-left" style="width: 8%; padding-left: 1vw;">
+                [ {{row.bsnmregRpstYn == 'Y' ? 'V':''}} ] 예 <br>
+                [ {{row.bsnmregRpstYn == 'Y' ? '':'V'}} ] 아니오
+            </td>
+            <td rowspan="2" style="width: 10%">
+              {{row.monAvgPay}}
+            </td>
+            <td rowspan="2" style="width: 5%">
+              {{row.napensAcquDt}}
+            </td>
+            <td colspan="3" style="width: 12%">
+              [{{row.napensStat == 'Y' ? 'V':''}}]국민연금<br>
+              ([{{row.pmntMethod == 'Y' ? 'V':''}}]취득 월 납부 희망)
+            </td>
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == 'Y' ? 'V':''}}]건강보험</td>
+            <td colspan="3" class="text-left" style="width: 12%; border-left: 0;">
+              ([]피부양자 신청)<br>
+              ([]건강보험중 사업장으로 발송 희망)
+            </td>
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <td colspan="5" class="text-left" style="width: 20%">
+              [{{row.ueinsuStat == 'Y' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
+              [{{row.indisinsrStat == 'Y' ? 'V':''}}]산재보험
+            </td>
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <td rowspan="2" style="width: 10%">
+              []예<br>
+              []아니오
+            </td>
+          </tr>
+          <tr>
+            <!-- <td style="width: 5%"></td> -->
+            <td style="width: 11%">{{row.ssn}}</td>
+            <td style="width: 7%">{{row.stayQalf}}</td>
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <!-- <td style="width: 5%"></td> -->
+            <!-- 국민연금 -->
+            <td style="width: 4%">{{row.napensAcquCode}}</td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td> 
+            <!-- 건강보험 -->
+            <td style="width: 4%">{{row.heinsuAcquCode}}</td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td>
+            <!-- 고용보험 산재보험 -->
+            <td style="width: 4%">{{row.jobfunCl02}}</td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td>
+            <td style="width: 4%"></td>
+            <!-- <td style="width: 10%"></td> -->
+          </tr>
+  
+        </div>
+
+
       </table>
     </div>
 
@@ -271,7 +351,7 @@
       위와 같이 자격취득을 신고합니다.
     </div>
     <div class="row09">
-      년 월 일
+      {{row09.year}} 년 {{row09.month}} 월 {{row09.date}} 일
     </div>
 
 
@@ -279,9 +359,9 @@
       <table>
         <tr>
           <td style="width: 30%">신고인(사용자ㆍ대표자)</td>
-          <td class="small" style="width: 30%">(서명 또는 인)</td>
-          <td style="width: 20%">/[]보험사부대행기관</td>
-          <td class="small" style="width: 20%">(서명 또는 인)</td>
+          <td class="small" style="width: 30%">{{row10.submitUser}} (서명 또는 인)</td>
+          <td style="width: 20%">/[]보험사무대행기관 </td>
+          <td class="small" style="width: 20%">{{row10.agency}} (서명 또는 인)</td>
         </tr>
       </table>
     </div>
@@ -290,13 +370,13 @@
       국민연금공단 이사장/국민건강보험공단 이사장/근로복지공단 ○○지역본부(지사)장 귀하 
     </div>
 
-    <div class="page-size-label">
-      297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
-    </div>
-    <div style="page-break-before:always;"></div>
-
   </div>
 
+  <div class="page-size-label">
+    297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+  </div>
+  <div style="page-break-before:always;"></div>
+  
   <div class="content">
     <div class="page-number">(제2쪽)</div>
     <div class="row12">
@@ -455,13 +535,13 @@
     </div>
 
     </div>
-
-    <div class="content">
-
+    
     <div class="page-size-label">
         297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
     </div>
     <div style="page-break-before:always;"></div>
+
+    <div class="content">
 
     <div class="row15">
       <div class="page-number">(제3쪽)</div>
@@ -683,12 +763,12 @@
 
     </div>
 
-    <div class="content">
-
     <div class="page-size-label">
       297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
     </div>
     <div style="page-break-before:always;"></div>
+    
+    <div class="content">
 
     <div class="row16 flex-row">
       <div>[별지]한국고용직업분류(KECO '07) 중 소분류(139개) 직종현황</div>
@@ -1008,13 +1088,21 @@
       </div>
     </div>
 
+    
+  </div>
+  
+  
+  <div class="page-size-label">
+      297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
+  </div>
+  <div style="page-break-before:always;"></div>
+  
+    <div class="content">
+      
     <div class="row18">
       직장가입자 자격취득 신고서(피부양자가 있는 경우)
     </div>
-    </div>
-
-    <div class="content">
-
+    
     <div class="row19 flex-row">
       <div>※ 국민건강보험의 피부양자가 있는 경우에 작성하며, 색상이 어두운 란은 신고인이 적지 않습니다.</div>
       <div>(제5쪽)</div>
@@ -1057,15 +1145,15 @@
         </tr>
         <tr>
           <!-- <td></td> -->
+          <td>{{row21.relCode}}</td>
+          <td>{{row21.suptFamName}}</td>
+          <td>{{row21.ssn}}</td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{row21.stayQalf}}</td>
+          <td>{{row21.stayStartDt}} ~ {{row21.stayEndDt}}</td>
           <td></td>
           <td></td>
         </tr>
@@ -1147,12 +1235,12 @@
     </div>
 
     <div class="row23">
-      년 월 일
+      {{row23.year}} 년 {{row23.month}} 월 {{row23.date}} 일
     </div>
 
     <div class="row24 flex-row">
       <div>신고인(사용자)</div>
-      <div>(서명 또는 인)</div>
+      <div>{{row24.submitUser}}(서명 또는 인)</div>
     </div>
 
     <div class="row25">
@@ -1222,7 +1310,6 @@
     <div class="page-size-label">
       297mm×210mm[백상지 80g/㎡ 또는 중질지 80g/㎡]
     </div>
-    <div style="page-break-before:always;"></div>
   </div>
 
 </body>

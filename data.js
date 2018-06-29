@@ -1187,6 +1187,165 @@ var doc01 = {
 
 }
 
+var payroll01 = {
+  row02:{
+    napensStat: "row02.napensStat",
+    heinsuStat: "row02.heinsuStat",
+    ueinsuStat: "row02.ueinsuStat",
+    indisinsrStat: "row02.indisinsrStat"
+  },
+  row04:{
+    today: "row04.today"
+  },
+  row05: {
+    mngNo: "row05.mngNo",
+    cmpName: "row05.cmpName",
+    unitCmpName: "row05.unitCmpName",
+    cmpOfficeName: "row05.cmpOfficeName",
+    bizpAddr: "row05.bizpAddr",
+    bizpAddrDtl: "row05.bizpAddrDtl",
+    zipCode: "row05.zipCode",
+    telNo: "row05.telNo",
+    fax: "row05.fax"
+  },
+  row06:{
+    agencyNo: "row06.agencyNo",
+    agencyName: "row06.agencyName",
+    agencyManageNo: "row06.agencyManageNo",
+  },
+  row07: {
+    list: [
+      {
+        userName: 'row07.userName',
+        natny: 'row07.natny',
+        bsnmregRpstYn: 'row07.bsnmregRpstYn',
+        monAvgPay: 'row07.monAvgPay',
+        napensAcquDt:'row07.napensAcquDt',
+    
+        napensStat : 'row07.napensStat',
+        pmntMethod: 'row07.pmntMethod',
+        heinsuStat : 'row07.heinsuStat',
+        ueinsuStat : 'row07.ueinsuStat',
+        indisinsrStat : 'row07.indisinsrStat',
+        
+        ssn: 'row07.ssn',
+        stayQalf: 'row07.stayQalf',
+        napensAcquCode:'row07.napensAcquCode',
+        heinsuAcquCode:'row07.heinsuAcquCode',
+        jobfunCl02:'row07.jobfunCl02',
+      },
+      {
+        userName: 'row07.userName',
+        natny: 'row07.natny',
+        bsnmregRpstYn: 'row07.bsnmregRpstYn',
+        monAvgPay: 'row07.monAvgPay',
+        napensAcquDt:'row07.napensAcquDt',
+    
+        napensStat : 'row07.napensStat',
+        pmntMethod: 'row07.pmntMethod',
+        heinsuStat : 'row07.heinsuStat',
+        ueinsuStat : 'row07.ueinsuStat',
+        indisinsrStat : 'row07.indisinsrStat',
+        
+        ssn: 'row07.ssn',
+        stayQalf: 'row07.stayQalf',
+        napensAcquCode:'row07.napensAcquCode',
+        heinsuAcquCode:'row07.heinsuAcquCode',
+        jobfunCl02:'row07.jobfunCl02',
+      },
+    ],
+  },
+  row09: {
+    year: "row09.year",
+    month: "row09.month",
+    date: "row09.date",
+  },
+  row10: {
+    submitUser: "row10.submitUser",
+    agency: "row10.agency",
+  },
+  row21: {
+    relCode: 'row21.relCode',
+    suptFamName: 'row21.suptFamName',
+    ssn: 'row21.ssn',
+    stayQalf: 'row21.stayQalf',
+    stayStartDt: 'row21.stayStartDt',
+    stayEndDt: 'row21.stayEndDt',
+  },
+  row23: {
+    year: "row23.year",
+    month: "row23.month",
+    date: "row23.date"
+  },
+  row24: {
+    submitUser:"row24.submitUser"
+  }
+  
+}
+
+var payroll02 = {
+  row02:{
+    napensStat: "row02.napensStat",
+    heinsuStat: "row02.heinsuStat",
+    ueinsuStat: "row02.ueinsuStat",
+    indisinsrStat: "row02.indisinsrStat"
+  },
+  row04: {
+    today: "row04.today"
+  },
+  row05: {
+    mngNo: "row05.mngNo",
+    cmpName: "row05.cmpName",
+    telNo: "row05.telNo",
+    fax: "row05.fax",
+    bizpAddr: "row05.bizpAddr",
+    bizpAddrDtl: "row05.bizpAddrDtl",
+    zipCode: "row05.zipCode",
+  },
+  row06:{
+    agencyNo: "row06.agencyNo",
+    agencyName: "row06.agencyName",
+    agencyManageNo: "row06.agencyManageNo",
+  },
+  row07:{
+    list: [
+      {
+        name: "row07.name",
+        ssn: "row07.ssn",
+        telNo: "row07.telNo",
+        losDt: "row07.losDt",
+        napensLostCode: "row07.napensLostCode",
+        heinsuLostCode: "row07.heinsuLostCode",
+        thsyrRemta: "row07.thsyrRemta",
+        bfyrRemta: "row07.bfyrRemta",
+        calcPay: "row07.calcPay",
+        lfempRsn: "row07.lfempRsn",
+      },
+      {
+        name: "row07.name",
+        ssn: "row07.ssn",
+        telNo: "row07.telNo",
+        losDt: "row07.losDt",
+        napensLostCode: "row07.napensLostCode",
+        heinsuLostCode: "row07.heinsuLostCode",
+        thsyrRemta: "row07.thsyrRemta",
+        bfyrRemta: "row07.bfyrRemta",
+        calcPay: "row07.calcPay",
+        lfempRsn: "row07.lfempRsn",
+      }
+    ]
+  },
+  row09: {
+    year: 'row09.year',
+    month: 'row09.month',
+    date: 'row09.date',
+  },
+  row10: {
+    submitUser: "row10.submitUser",
+    agency: "row10.agency",
+  },
+}
+
 doc02.row12.left = leftList(doc02.row12.list, 4);
 doc02Sub.row05.left = leftList(doc02Sub.row05.list, 15);
 doc03.row10.left = leftList(doc03.row10.list, 4);
@@ -1200,6 +1359,9 @@ doc11Sub.row06.left = leftList(doc11Sub.row06.list, 26);
 doc17.row10.left = leftList(doc17.row10.list, 5);
 doc17.row12.left = leftList(doc17.row12.list, 2);
 doc17.row14.left = leftList(doc17.row14.list, 2);
+
+payroll01.row07.left = leftList(payroll01.row07.list, 4);
+payroll02.row07.left = leftList(payroll02.row07.list, 8);
 
 module.exports = {
   doc01,
@@ -1215,6 +1377,8 @@ module.exports = {
   doc11,
   doc11Sub,
   doc17,
-  doc18
+  doc18,
+  payroll01,
+  payroll02,
 }
 
