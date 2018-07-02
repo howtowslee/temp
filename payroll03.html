@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./payroll03.css">
+  <!--commonStyleHere-->
+  <!--docStyleHere-->
+</head>
+
+<body>
+  <!-- <div class="no-print guide"></div> -->
+  <div class="content">
+    <div class="row01 flex-row">
+      표준근로계약서
+    </div>
+
+    <div class="row02">
+      {{row02.comName}} (이하 "사업주"라 함)과(와) {{row02.owner}} (이하 "근로자"라 함)은 다음과 같이 근로계약을 체결한다.
+    </div>
+    
+    <div class="row03 terms">
+      1. 근로계시일 {{ row03.startYear }}년 {{ row03.startMonth }}월 {{ row03.startDate }}일(입사일)부터
+      (계약직 근로계약기간: {{ row03.dylrrStartYear }}년 {{ row03.dylrrStartMonth }}월 {{ row03.dylrrStartDate }}일
+      부터 {{ row03.dylrrEndYear }}년 {{ row03.dylrrEndMonth }}월 {{ row03.dylrrEndDate }}일까지)
+    </div>
+
+    <div class="row04 terms">
+      2. 근무장소: {{row04.office}}
+    </div>
+
+    <div class="row05 terms">
+      3. 업무내용: {{row05.workDetail}}
+    </div>
+
+    <div class="row06 terms">
+      4.근무시간: {{row06.workStart}} 부터 {{row06.workStart}}까지 (휴게시간: {{row06.restStart}} ~ {{row06.restEnd}})
+    </div>
+
+    <div class="row07 terms">
+      5.근무일/휴일: 매주 5 일 (월~금)근무, 주휴일 매주 토, 일요일
+    </div>
+
+    <div class="row08 terms">
+      6.임금<br>
+        - 월급: 급여액 {{row08.wage}} 원 (비과세 포함)<br>
+        - 상여금: 있음 {{row08.bonus}} 원, 없음 ({{!!row08.bonus ? '' : 'V'}})<br>
+        - 기타급여(재수당 등): 있음({{row08.extra == 'Y' ? 'V' : ''}}), 없음({{row08.extra == 'Y' ? '' : 'V'}})<br>
+        - 임금재급일: 매월(매주 또는 매일) 화사설정 {{row08.wageDate}}일(휴일의 경우는 전일 지급)<br>
+        - 지급방법: 근로자에게 직접지급({{row08.paymentWay == 'Y' ? 'V' : ''}}), 근로자 명의 예금통장에 입금({{row08.paymentWay == 'Y' ? '' : 'V'}})<br>
+    </div>
+
+    <div class="row09 terms">
+      7.연차유급휴가<br>
+        - 연차유급휴가는 근로기준법에서 정하는 바에 따라 부여함
+    </div>
+
+    <div class="row10 terms">
+      8.사회보험 적용여부(해당란에 체크)<br>
+        [{{row10.ueinsuStat == 'Y' ? 'V' : ''}}]고용보험,
+        [{{row10.indisinsrStat == 'Y' ? 'V' : ''}}]산재보험,
+        [{{row10.napensStat == 'Y' ? 'V' : ''}}]국민연금,
+        [{{row10.heinsuStat == 'Y' ? 'V' : ''}}]건강보험 
+    </div>
+
+    <div class="row11 terms">
+      9.근로계약서 교부<br>
+        사업주는 근로계약을 체결함과 동시에 본 계약서를 사본하여 근로자의 교부요구와 관계없이 근로자에게 교부함(근로기준법 제17조 이행)
+    </div>
+
+    <div class="row12 terms">
+      10.기타<br>
+        이 계약에 정함이 없는 사항은 근로기준법령에 의함
+    </div>
+
+    <div class="row13 flex-row">
+      {{row13.joinYear}}년 {{row13.joinMonth}}월 {{row13.joinDate}}일(입사일)
+    </div>
+
+    <div class="row14">
+      <div class="info">
+        (사업주) 사업체명: {{row14.ownerComName}}<br>
+        주 소: {{row14.ownerAddress}}<br>
+        대표자 : {{row14.ownerName}} (서명)
+      </div>
+      <div class="info">
+        (근로자) 주 소: {{row14.employeeAddress}}<br>
+        연락처: {{row14.employeePhone}}<br>
+        성명: {{row14.employeeName}} (서명)
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1346,6 +1346,63 @@ var payroll02 = {
   },
 }
 
+var payroll03 = {
+  row02: {
+    comName: "row02.comName",
+    owner: "row02.owner",
+  },
+  row03: {
+    startYear: "row03.startYear",  
+    startMonth: "row03.startMonth",  
+    startDate: "row03.startDate",  
+    dylrrStartYear: "row03.startYear",  
+    dylrrStartMonth: "row03.startMonth",  
+    dylrrStartDate: "row03.startDate",  
+    dylrrEndYear: "row03.EndYear",  
+    dylrrEndMonth: "row03.EndMonth",  
+    dylrrEndDate: "row03.EndDate"
+  },
+  row04: {
+    office: "row04.office"
+  },
+  row05: {
+    workDetail: "row05.workDetail"
+  },
+  row06: {
+    workStart: "row06.workStart",
+    workEnd: "row06.workEnd",
+    restStart: "row06.restStart",
+    restEnd: "row06.restEnd",
+  },
+  row08: {
+    wage: "row08.wage",
+    bonus: "row08.bonus",
+    extra: "row08.extra",
+    wageDate: "row08.wageDate",
+    paymentWay: "row08.paymentWay",
+  },
+  row10: {
+    napensStat: "row10.napensStat",
+    heinsuStat: "row10.heinsuStat",
+    ueinsuStat: "row10.ueinsuStat",
+    indisinsrStat: "row10.indisinsrStat"
+  },
+  row13: {
+    joinYear: "row13.joinYear",
+    joinMonth: "row13.joinMonth",
+    joinDate: "row13.joinDate",
+  },
+  row14: {
+    ownerComName: "row14.ownerComName",
+    ownerAddress: "row14.ownerAddress",
+    ownerName: "row14.ownerName",
+    employeeAddress: "row14.employeeAddress",
+    employeePhone: "row14.employeePhone",
+    employeeName: "row14.employeeName",
+  },
+
+}
+
 doc02.row12.left = leftList(doc02.row12.list, 4);
 doc02Sub.row05.left = leftList(doc02Sub.row05.list, 15);
 doc03.row10.left = leftList(doc03.row10.list, 4);
@@ -1380,5 +1437,6 @@ module.exports = {
   doc18,
   payroll01,
   payroll02,
+  payroll03,
 }
 

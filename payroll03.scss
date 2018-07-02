@@ -1,0 +1,42 @@
+@import './style.scss';
+
+.no-border-bottom{
+  border-bottom: 0px;
+}
+.page-number{
+  text-align: right;
+}
+.back-gray{
+  background-color: #ddd;
+}
+
+* {
+  font-size: 1.7vw;
+}
+
+.content{
+  width: 80%;
+  margin: 0 auto;
+  .terms{
+    line-height: 3.1vw;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
+  }  
+  .row01{
+    margin: 7vw 0;
+    font-size: 4vw;
+  }
+  .row13{
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+  }
+  .row14{
+    .info{
+      line-height: 3.1vw;
+      text-indent: -4em;
+      padding-left: 4em;
+    }
+  }
+}
+
+
