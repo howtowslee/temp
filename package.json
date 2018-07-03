@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "htmltempletepdf": "git+https://github.com/howtowslee/htmlTempletePdf.git"
+    "html-docx-js": "^0.3.1",
+    "htmltempletepdf": "git+https://github.com/howtowslee/htmlTempletePdf.git",
+    "node-pandoc": "^0.3.0"
   }
 }

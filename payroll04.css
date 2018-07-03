@@ -83,6 +83,10 @@ body {
   background-color: #ddd;
 }
 
+* {
+  font-size: 1.2vw;
+}
+
 .row01 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -90,11 +94,17 @@ body {
   margin-bottom: 2vw;
 }
 
+.row02 {
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+
 .row03 {
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 0.5vw;
 }
 
 .row04 {
@@ -119,5 +129,146 @@ body {
 
 .row04 div:nth-child(3) {
   width: 20%;
+}
+
+.row05 table {
+  width: 100%;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.row05 td {
+  border: 0.1pt solid black;
+  padding: 0.5vw;
+}
+
+.row05 td:first-child {
+  border-left: 0vw;
+}
+
+.row05 td:last-child {
+  border-right: 0vw;
+}
+
+.row06 table {
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+  height: 50vw;
+}
+
+.row06 table.date-table {
+  width: 25%;
+}
+
+.row06 table.date-table td:last-child {
+  border-right: 1px solid black;
+}
+
+.row06 table.info-table {
+  width: 75%;
+}
+
+.row06 td {
+  border: 0.1pt solid black;
+  border-top: 0;
+  padding: 0.5vw;
+}
+
+.row06 td:first-child {
+  border-left: 0vw;
+}
+
+.row06 td:last-child {
+  border-right: 0vw;
+}
+
+.row07 {
+  padding: 1vw;
+}
+
+.row08 {
+  text-align: right;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+
+.row08 strong {
+  margin-right: 2vw;
+}
+
+.row09 {
+  margin-bottom: 0.5vw;
+}
+
+.row09 .label {
+  width: 50%;
+  text-align: right;
+}
+
+.row09 .check-panel {
+  width: 20%;
+  padding-left: 3vw;
+}
+
+.row09 .name-panel {
+  width: 30%;
+  text-align: right;
+}
+
+.row10 {
+  margin-bottom: 2vw;
+}
+
+.row10 .label {
+  width: 50%;
+  text-align: right;
+}
+
+.row10 .check-panel {
+  width: 20%;
+  padding-left: 3vw;
+}
+
+.row10 .name-panel {
+  width: 30%;
+  text-align: right;
+}
+
+.row11 {
+  width: 100%;
+  padding-bottom: 0.5vw;
+  border-bottom: 2px solid black;
+}
+
+.row11 .label1 {
+  margin-right: 5vw;
+}
+
+.row11 span {
+  font-size: 0.7vw;
+}
+
+.row12 {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.row13 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.5vw;
+}
+
+.row13 .label {
+  text-align: center;
+  width: 10%;
+  background-color: #dddddd;
+  border-right: 1px solid black;
+  padding: 1vw 0;
+}
+
+.row13 .comment {
+  width: 90%;
+  padding: 1vw 0;
 }
 /*# sourceMappingURL=payroll04.css.map */
