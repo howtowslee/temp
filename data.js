@@ -1403,6 +1403,153 @@ var payroll03 = {
 
 }
 
+
+//   hrId: ['',Validators.required], // 직원 id 
+    //   retiDt : ['',Validators.required], // 퇴사일 YYYYMMDD 
+    //   exclDays : ['',Validators.required], // 제외일수 
+    //   retiRsn : ['',Validators.required], // 퇴직사유 1정년퇴직, 2정리해고, 3자발적퇴직, 4임원퇴직, 6기타
+    //   pymtAmt : ['',Validators.required], // 실지급액
+    //   pymtDt : ['',Validators.required], // 지급일자 YYYYMMDD
+    //   calcDtFrom : ['',Validators.required], // 3개월급여산정 시작일 YYYYMMDD
+    //   calcDtTo : ['',Validators.required], // 3개월급여산정 종료일 YYYYMMDD
+    //   calcPay : ['',Validators.required], // 3개월급여지급총액
+    //   calcBns : ['',Validators.required], // 3개월상여지급총액
+    //   calcTable : ['',Validators.required], // 3개월 급여내역
+    //   totPay : ['',Validators.required], // 퇴직년도 총급여액
+    //   totBns : [0,Validators.required], // 퇴직년도 총상여액
+    //   totIncmtax : ['',Validators.required], // 퇴직년도 총소득세액
+    //   totIncmtaxLocal : ['',Validators.required], // 퇴직년도 총지방소득세액
+    //   totHeinsuAmt : ['',Validators.required], // 퇴직년도 총건강보험료
+    //   totNapensAmt : ['',Validators.required], // 퇴직년도 총연금보험료
+    //   totUninsuAmt : ['',Validators.required] // 퇴직년도 총고용보험료
+    //   hrId: [''], // PK
+    //   losDt: ['', Validators.required], // 상실일
+    //   heinsuStat: ['1', Validators.required], // 건강보험여부 0, 1 // 사용여부는 의논후에
+    //   napensStat: ['1', Validators.required], // 연금보험여부 0, 1 // 사용여부는 의논후에
+    //   ueinsuStat: ['0', Validators.required], // 고용보험여부 0, 1 // 사용여부는 의논후에
+    //   indisinsrStat: ['0', Validators.required], // 산재보험여부 0, 1 // 사용여부는 의논후에
+    //   heinsuLosCode: ['', Validators.required], // 건강보험상실부호
+    //   napensLosCode: ['', Validators.required], // 연금보험상실부호
+    //   ueinsuLosRsn: [''], // 고용산재보험상실부호
+    //   lfempRsn: [''], // 구체적사유
+    //   bfyrRemta	: [0], // 전년도보수총액
+    //   thsyrRemta: [0], // 당해보수총액
+
+        // let retiamt = {
+        //     "hrId": "HR180626-00010",
+        //     "retiDt": "20180705",
+        //     "exclDays": "12",
+        //     "retiRsn": 1,
+        //     "pymtAmt": 0,
+        //     "pymtDt": "20180705",
+        //     "calcDtFrom": "20180405",
+        //     "calcDtTo": "20180704",
+        //     "calcPay": 0,
+        //     "calcBns": 0,
+        //     "calcTable": [
+        //         {
+        //             "from": "20180701",
+        //             "to": "20180704",
+        //             "pay": 0,
+        //             "bns": 0
+        //         },
+        //         {
+        //             "from": "20180601",
+        //             "to": "20180630",
+        //             "pay": 0,
+        //             "bns": 0
+        //         },
+        //         {
+        //             "from": "20180501",
+        //             "to": "20180531",
+        //             "pay": 0,
+        //             "bns": 0
+        //         },
+        //         {
+        //             "from": "20180405",
+        //             "to": "20180430",
+        //             "pay": 0,
+        //             "bns": 0
+        //         }
+        //     ],
+        //     "totPay": 0,
+        //     "totBns": 0,
+        //     "totIncmtax": 0,
+        //     "totIncmtaxLocal": 0,
+        //     "totHeinsuAmt": 0,
+        //     "totNapensAmt": 0,
+        //     "totUninsuAmt": 0
+        // }
+        // let insuranceLoss = {
+        //     "hrId": "HR180626-00010",
+        //     "losDt": "20180705",
+        //     "heinsuLosCode": "05",
+        //     "napensLosCode": "21",
+        //     "ueinsuLosRsn": "22",
+        //     "lfempRsn": "구체적사유",
+        //     "bfyrRemta": 0,
+        //     "thsyrRemta": 0
+        // }
+
+
+var payroll04 = {
+  row05: {
+    mngNo: "row05.mngNo",
+    cmpName: "row05.cmpName",
+    telNo: "row05.telNo",
+    bizpAddr: "row05.bizpAddr",
+    bizpAddrDtl: "row05.bizpAddrDtl",
+    employeeName: "row05.employeeName",
+    ssn: "row05.ssn",
+    addr: "row05.addr",
+    ecnyDt: "row05.ecnyDt",
+    losDt: "row05.losDt",
+    lfempRsn: "row05.lfempRsn",
+  },
+  row06:{
+    calcTable: [
+      {
+        from: "20180701",
+        to: "20180704",
+        pay: 0,
+        bns: 0
+      },
+      {
+        from: "20180601",
+        to: "20180630",
+        pay: 0,
+        bns: 0
+      },
+      {
+        from: "20180501",
+        to: "20180531",
+        pay: 0,
+        bns: 0
+      },
+      {
+        from: "20180405",
+        to: "20180430",
+        pay: 0,
+        bns: 0
+      }
+    ],
+    totalDays: "row06.totalDays",
+    totalBns: "row06.totalBns",
+    bonus: "row06.bonus",
+    annualVacationPay: "row06.annualVacationPay",
+    nomalPay: "row06.nomalPay",
+    workTime: "row06.workTime"
+  },
+  row08:{
+    year: "row08.year",
+    month: "row08.month",
+    date: "row08.date",
+  },
+  row09:{
+    comName: "row09.comName"
+  }
+}
+
 doc02.row12.left = leftList(doc02.row12.list, 4);
 doc02Sub.row05.left = leftList(doc02Sub.row05.list, 15);
 doc03.row10.left = leftList(doc03.row10.list, 4);

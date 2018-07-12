@@ -24,16 +24,16 @@
     
     <div class="row02 flex-row">
       <div class="selection">
-        국민연금 [ {{row02.napensStat}} ] 사업장가입자 자격취득 신고서
+        국민연금 [ {{row02.napensStat == 1 ? "V": ""}} ] 사업장가입자 자격취득 신고서
       </div>
       <div class="selection">
-        건강보험 [ {{row02.heinsuStat}} ] 직장가입자 자격취득 신고서
+        건강보험 [ {{row02.heinsuStat == 1 ? "V": ""}} ] 직장가입자 자격취득 신고서
       </div>
       <div class="selection">
-        고용보험 [ {{row02.ueinsuStat}} ] 피보험 자격취득 신고서
+        고용보험 [ {{row02.ueinsuStat == 1 ? "V": ""}} ] 피보험 자격취득 신고서
       </div>
       <div class="selection">
-        산재보험 [ {{row02.indisinsrStat}} ] 근로자 고용 신고서
+        산재보험 [ {{row02.indisinsrStat == 1 ? "V": ""}} ] 근로자 고용 신고서
       </div>
     </div>
 
@@ -56,14 +56,14 @@
       <table>
         <tr>
           <td rowspan="3" style="width: 10%" class="text-center">사업장</td>
-          <td style="width: 25%">사업장관리번호 {{row05.mngNo}}</td>
-          <td style="width: 25%">명칭 {{row05.cmpName}}</td>
-          <td style="width: 25%">단위사업장 명칭 {{row05.unitCmpName}}</td>
-          <td style="width: 25%">영업소 명칭 {{row05.cmpOfficeName}}</td>
+          <td style="width: 25%">사업장관리번호 : {{row05.mngNo}}</td>
+          <td style="width: 25%">명칭 : {{row05.cmpName}}</td>
+          <td style="width: 25%">단위사업장 명칭 : {{row05.unitCmpName}}</td>
+          <td style="width: 25%">영업소 명칭 : {{row05.cmpOfficeName}}</td>
         </tr>
         <tr>
           <!-- <td></td> -->
-          <td class="no-right-border" colspan="2">소재지 {{row05.bizpAddr}} {{row05.bizpAddrDtl}}</td>
+          <td class="no-right-border" colspan="2">소재지 : {{row05.bizpAddr}} {{row05.bizpAddrDtl}}</td>
           <!-- <td></td> -->
           <td class="right no-left-border" colspan="2">우편번호  ( {{row05.zipCode}} )</td>
           <!-- <td></td> -->
@@ -72,7 +72,7 @@
           <!-- <td></td> -->
           <td>전화번호</td>
           <td>(유선) {{row05.telNo}} (이동전화)</td>
-          <td colspan="2">FAX번호 {{row05.fax}}</td>
+          <td colspan="2">FAX번호 : {{row05.fax}}</td>
           <!-- <td></td> -->
         </tr>
       </table>
@@ -212,8 +212,8 @@
           <td style="width: 11%">{{row.userName}}</td>
           <td style="width: 7%">{{row.natny}}</td>
           <td rowspan="2" class="text-left" style="width: 8%; padding-left: 1vw;">
-              [ {{row.bsnmregRpstYn == 'Y' ? 'V':''}} ] 예 <br>
-              [ {{row.bsnmregRpstYn == 'Y' ? '':'V'}} ] 아니오
+              [ {{row.bsnmregRpstYn == '1' ? 'V':''}} ] 예 <br>
+              [ {{row.bsnmregRpstYn == '1' ? '':'V'}} ] 아니오
           </td>
           <td rowspan="2" style="width: 10%">
             {{row.monAvgPay}}
@@ -222,12 +222,12 @@
             {{row.napensAcquDt}}
           </td>
           <td colspan="3" style="width: 12%">
-            [{{row.napensStat == 'Y' ? 'V':''}}]국민연금<br>
-            ([{{row.pmntMethod == 'Y' ? 'V':''}}]취득 월 납부 희망)
+            [{{row.napensStat == '1' ? 'V':''}}]국민연금<br>
+            ([{{row.pmntMethod == '1' ? 'V':''}}]취득 월 납부 희망)
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
-          <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == 'Y' ? 'V':''}}]건강보험</td>
+          <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == '1' ? 'V':''}}]건강보험</td>
           <td colspan="3" class="text-left" style="width: 12%; border-left: 0;">
             ([]피부양자 신청)<br>
             ([]건강보험중 사업장으로 발송 희망)
@@ -235,8 +235,8 @@
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
           <td colspan="5" class="text-left" style="width: 20%">
-            [{{row.ueinsuStat == 'Y' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
-            [{{row.indisinsrStat == 'Y' ? 'V':''}}]산재보험
+            [{{row.ueinsuStat == '1' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
+            [{{row.indisinsrStat == '1' ? 'V':''}}]산재보험
           </td>
           <!-- <td style="width: 5%"></td> -->
           <!-- <td style="width: 5%"></td> -->
@@ -281,8 +281,8 @@
             <td style="width: 11%">{{row.userName}}</td>
             <td style="width: 7%">{{row.natny}}</td>
             <td rowspan="2" class="text-left" style="width: 8%; padding-left: 1vw;">
-                [ {{row.bsnmregRpstYn == 'Y' ? 'V':''}} ] 예 <br>
-                [ {{row.bsnmregRpstYn == 'Y' ? '':'V'}} ] 아니오
+                [ {{row.bsnmregRpstYn == '1' ? 'V':''}} ] 예 <br>
+                [ {{row.bsnmregRpstYn == '1' ? '':'V'}} ] 아니오
             </td>
             <td rowspan="2" style="width: 10%">
               {{row.monAvgPay}}
@@ -291,12 +291,12 @@
               {{row.napensAcquDt}}
             </td>
             <td colspan="3" style="width: 12%">
-              [{{row.napensStat == 'Y' ? 'V':''}}]국민연금<br>
-              ([{{row.pmntMethod == 'Y' ? 'V':''}}]취득 월 납부 희망)
+              [{{row.napensStat == '1' ? 'V':''}}]국민연금<br>
+              ([{{row.pmntMethod == '1' ? 'V':''}}]취득 월 납부 희망)
             </td>
             <!-- <td style="width: 5%"></td> -->
             <!-- <td style="width: 5%"></td> -->
-            <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == 'Y' ? 'V':''}}]건강보험</td>
+            <td style="width: 4%; border-right: 0;">[{{row.heinsuStat == '1' ? 'V':''}}]건강보험</td>
             <td colspan="3" class="text-left" style="width: 12%; border-left: 0;">
               ([]피부양자 신청)<br>
               ([]건강보험중 사업장으로 발송 희망)
@@ -304,8 +304,8 @@
             <!-- <td style="width: 5%"></td> -->
             <!-- <td style="width: 5%"></td> -->
             <td colspan="5" class="text-left" style="width: 20%">
-              [{{row.ueinsuStat == 'Y' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
-              [{{row.indisinsrStat == 'Y' ? 'V':''}}]산재보험
+              [{{row.ueinsuStat == '1' ? 'V':''}}]고용보험(계약직 여부: []예, []아니오)<br>
+              [{{row.indisinsrStat == '1' ? 'V':''}}]산재보험
             </td>
             <!-- <td style="width: 5%"></td> -->
             <!-- <td style="width: 5%"></td> -->

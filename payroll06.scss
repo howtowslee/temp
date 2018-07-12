@@ -1,0 +1,67 @@
+@import './style.scss';
+
+.no-border-bottom{
+  border-bottom: 0px;
+}
+.page-number{
+  text-align: right;
+}
+.back-gray{
+  background-color: #ddd;
+}
+
+.row01{
+  margin-bottom: 1vw;
+  justify-content: space-between;
+  .comment-wrapper{
+    align-items: flex-start;
+    span{
+      font-size: 1.2vw;
+    }
+  }
+}
+
+.inner-content{
+  border: 1px solid black;
+  width: 100%;
+  .row02{
+    .number-panel{
+      justify-content: flex-start;
+      width: 20%;
+      padding-left: 0.5vw;
+      >div{
+        height: 5vw;
+        border: 1px solid black;
+      }
+      .number{
+        width: 8vw;
+        border-left: 0px;
+      }
+    }
+    .title-panel{
+      width: 50%;
+      .title{
+        font-size: 3vw;
+        font-weight: 600;
+        text-indent: 2vw;
+        margin-bottom: 1vw;
+      }
+      .sub-title{
+        letter-spacing: 2px;
+      }
+    }
+    .select-panel{
+      width: 30%;
+      padding: 0.5vw;
+      table{
+        width: 100%;
+        height: 100%;
+        border-bottom: $border1 solid black;
+        border-collapse: collapse;
+        td{
+          border: $border1 solid black;
+        }
+      }
+    }
+  }
+}

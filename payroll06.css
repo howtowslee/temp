@@ -1,0 +1,156 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.page-number {
+  text-align: right;
+}
+
+.back-gray {
+  background-color: #ddd;
+}
+
+.row01 {
+  margin-bottom: 1vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row01 .comment-wrapper {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row01 .comment-wrapper span {
+  font-size: 1.2vw;
+}
+
+.inner-content {
+  border: 1px solid black;
+  width: 100%;
+}
+
+.inner-content .row02 .number-panel {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 20%;
+  padding-left: 0.5vw;
+}
+
+.inner-content .row02 .number-panel > div {
+  height: 5vw;
+  border: 1px solid black;
+}
+
+.inner-content .row02 .number-panel .number {
+  width: 8vw;
+  border-left: 0px;
+}
+
+.inner-content .row02 .title-panel {
+  width: 50%;
+}
+
+.inner-content .row02 .title-panel .title {
+  font-size: 3vw;
+  font-weight: 600;
+  text-indent: 2vw;
+  margin-bottom: 1vw;
+}
+
+.inner-content .row02 .title-panel .sub-title {
+  letter-spacing: 2px;
+}
+
+.inner-content .row02 .select-panel {
+  width: 30%;
+  padding: 0.5vw;
+}
+
+.inner-content .row02 .select-panel table {
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.1pt solid black;
+  border-collapse: collapse;
+}
+
+.inner-content .row02 .select-panel table td {
+  border: 0.1pt solid black;
+}
+/*# sourceMappingURL=payroll06.css.map */

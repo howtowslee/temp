@@ -44,7 +44,7 @@
         <tr>
           <td style="width: 20%" colspan="2">①사업장관리번호</td>
           <!-- <td></td> -->
-          <td colspan="2">104-86-48372</td>
+          <td colspan="2">{{row05.mngNo}}</td>
           <!-- <td></td> -->
           <td colspan="2">②보험사무대행기관번호</td>
           <!-- <td></td> -->
@@ -54,17 +54,17 @@
         <tr>
           <td style="width: 10%" rowspan="2">사업장</td>
           <td style="width: 10%">③명칭</td>
-          <td colspan="2">주식회사 파킹스퀘어</td>
+          <td colspan="2">{{row05.cmpName}}</td>
           <!-- <td></td> -->
           <td colspan="2">④전화번호</td>
           <!-- <td></td> -->
-          <td colspan="2">02-782-8717</td>
+          <td colspan="2">{{row05.telNo}}</td>
           <!-- <td></td> -->
         </tr>
         <tr>
           <!-- <td></td> -->
           <td>⑤소재지</td>
-          <td colspan="6">경기도 성남시 분당구 판교역로231(삼평동, 에이치스퀘어 에스동) 304호</td>
+          <td colspan="6">{{row05.bizpAddr}} {{row05.bizpAddrDtl}}</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -87,17 +87,17 @@
             (이직자)
           </td>
           <td>⑦성명</td>
-          <td colspan="2">이상욱</td>
+          <td colspan="2">{{row05.employeeName}}</td>
           <!-- <td></td> -->
           <td colspan="2">⑧주민등록번호</td>
           <!-- <td></td> -->
-          <td colspan="2">000000-0000000</td>
+          <td colspan="2">{{row05.ssn}}</td>
           <!-- <td></td> -->
         </tr>
         <tr>
           <!-- <td></td> -->
           <td>⑨주소</td>
-          <td colspan="6"></td>
+          <td colspan="6">{{row05.addr}}</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -110,20 +110,21 @@
             (입사일)
           </td>
           <!-- <td></td> -->
-          <td colspan="2">2015-05-27</td>
+          <td colspan="2">{{row05.ecnyDt}}</td>
           <!-- <td></td> -->
           <td colspan="2">
             ⑪ 이직일
             (근로제공 마지막 날)
           </td>
           <!-- <td></td> -->
-          <td colspan="2">2018-06-15</td>
+          <td colspan="2">{{row05.losDt}}</td>
           <!-- <td></td> -->
         </tr>
         <tr>
           <td colspan="2">⑫이직사유</td>
           <td rowspan="2" colspan="7">
             (구체적사유, 글자수 13자 이상 기재)
+            {{row05.lfempRsn}}
           </td>
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -247,54 +248,54 @@
           <td colspan="2">⑰ 임금계산기간</td>
           <!-- <td></td> -->
           <td>
-            2018-06-01 부터<br>
-            2018-06-15 까지
+            {{ row06.calcTable[0].from}} 부터<br>
+            {{ row06.calcTable[0].to}} 까지
           </td>
           <td>
-            2018-06-01 부터<br>
-            2018-06-15 까지
+            {{ row06.calcTable[1].from}} 부터<br>
+            {{ row06.calcTable[1].to}} 까지
           </td>
           <td>
-            2018-06-01 부터<br>
-            2018-06-15 까지
+            {{ row06.calcTable[2].from}} 부터<br>
+            {{ row06.calcTable[2].to}} 까지
           </td>
           <td>
-            2018-06-01 부터<br>
-            2018-06-15 까지
+            {{ row06.calcTable[3].from}} 부터<br>
+            {{ row06.calcTable[3].to}} 까지
           </td>
           <td>계</td>
         </tr>
         <tr>
           <td colspan="2">⑱ 총 일수</td>
           <!-- <td></td> -->
-          <td>15 일</td>
-          <td>15 일</td>
-          <td>15 일</td>
-          <td>15 일</td>
+          <td>{{ row06.calcTable[0].range }} 일</td>
+          <td>{{ row06.calcTable[1].range }} 일</td>
+          <td>{{ row06.calcTable[2].range }} 일</td>
+          <td>{{ row06.calcTable[3].range }} 일</td>
           <td>15 일</td>
         </tr>
         <tr>
           <td rowspan="5">⑲ 임금내역</td>
           <td>기본급</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{row06.calcTable[0].pay}}</td>
+          <td>{{row06.calcTable[1].pay}}</td>
+          <td>{{row06.calcTable[2].pay}}</td>
+          <td>{{row06.calcTable[3].pay}}</td>
+          <td>{{row06.totalDays}}</td>
         </tr>
         <tr>
           <!-- <td></td> -->
           <td>그 밖의 수당</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{row06.calcTable[0].bns}}</td>
+          <td>{{row06.calcTable[1].bns}}</td>
+          <td>{{row06.calcTable[2].bns}}</td>
+          <td>{{row06.calcTable[3].bns}}</td>
+          <td>{{row06.totalBns}}</td>
         </tr>
         <tr>
           <!-- <td></td> -->
           <td>상여금</td>
-          <td colspan="5"></td>
+          <td colspan="5">{{row06.bonus}}</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -303,7 +304,7 @@
         <tr>
           <!-- <td></td> -->
           <td>연차수당</td>
-          <td colspan="5"></td>
+          <td colspan="5">{{row06.annualVacationPay}}</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -333,7 +334,7 @@
             * 기준보수로 납부한 경우만 기재
           </td>
           <!-- <td></td> -->
-          <td colspan="5">0 원</td>
+          <td colspan="5">{{row06.nomalPay}} 원</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -342,7 +343,7 @@
         <tr>
           <td colspan="2">㉒ 1일 소정근로시간</td>
           <!-- <td></td> -->
-          <td colspan="5">0 시간</td>
+          <td colspan="5">{{row06.workTime}} 시간</td>
           <!-- <td></td> -->
           <!-- <td></td> -->
           <!-- <td></td> -->
@@ -357,14 +358,14 @@
     </div>
 
     <div class="row08">
-      <strong>확인일</strong>2018 년 07 월 01 일
+      <strong>확인일</strong>{{row08.year}} 년 {{row08.month}} 월 {{row08.date}} 일
     </div>
 
     <div class="row09 flex-row">
       <div class="label">확인자</div>
       <div class="check-panel">[V] 사업장명</div>
       <div class="name-panel">
-        주식회사 파킹스퀘어
+        {{row09.comName}}
         <span>(서명 또는 인)</span>
       </div>
     </div>

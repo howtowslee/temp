@@ -1,0 +1,262 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.page-number {
+  text-align: right;
+}
+
+.back-gray {
+  background-color: #ddd;
+}
+
+* {
+  font-size: 1.2vw;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  padding: 6.72269vw;
+  height: 100%;
+  position: relative;
+}
+
+.content .logo {
+  position: absolute;
+  bottom: 6.72269vw;
+  right: 6.72269vw;
+  width: 11.09244vw;
+}
+
+.content .row01 {
+  color: #864cff;
+  font-size: 4.20168vw;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  padding-bottom: 2vw;
+  border-bottom: 1px solid #ede4ff;
+  width: 40.33613vw;
+}
+
+.content .row02 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5.04202vw;
+}
+
+.content .row02 .default-info-wrapper {
+  padding: 1.51261vw 0;
+  width: 40.33613vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .row02 .default-info-wrapper .info-item {
+  width: 50%;
+  padding: 0.84034vw 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content .row02 .default-info-wrapper .info-item .label {
+  text-align: left;
+  width: 6.72269vw;
+  color: #cbcbcb;
+  font-size: 1.84874vw;
+}
+
+.content .row02 .default-info-wrapper .info-item .data {
+  text-align: left;
+  width: 13.44538vw;
+  color: #4a4a4a;
+  font-size: 1.84874vw;
+}
+
+.content .row02 .wage-total-wrapper {
+  width: 40.33613vw;
+  border-radius: 10px;
+  border: 2px solid #ede4ff;
+}
+
+.content .row02 .wage-total-wrapper .label-wrapper {
+  background-color: #ede4ff;
+}
+
+.content .row02 .wage-total-wrapper .label-wrapper div {
+  width: 13.44538vw;
+  padding: 1.68067vw;
+  text-align: center;
+  color: #864cff;
+  font-size: 2.01681vw;
+  font-weight: 600;
+}
+
+.content .row02 .wage-total-wrapper .data-wrapper div {
+  width: 13.44538vw;
+  padding: 1.68067vw;
+  text-align: center;
+  color: #864cff;
+  font-size: 2.01681vw;
+  font-weight: 600;
+}
+
+.content .row03 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .row03 > div {
+  width: 40.33613vw;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.content .row03 > div .title {
+  width: 100%;
+  padding: 1.68067vw;
+  background-color: #b29bfe;
+  color: #ffffff;
+  font-size: 2.18487vw;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content .row03 > div .item-wrapper {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.content .row03 > div .item-wrapper > div {
+  width: 50%;
+  padding: 1.17647vw;
+  color: #4a4a4a;
+}
+
+.content .row03 > div .item-wrapper > div.label {
+  text-align: left;
+  padding-left: 2.85714vw;
+}
+
+.content .row03 > div .item-wrapper > div.data {
+  text-align: right;
+  padding-right: 2.85714vw;
+  background-color: #f7f7f7;
+}
+
+.content .row03 > div .item-wrapper > div.data span {
+  color: #cbcbcb;
+}
+
+.content .row03 > div .item-wrapper:last-child {
+  border-bottom: 3px solid #b29bfe;
+}
+
+.content .row03 > div .item-wrapper:last-child > div {
+  color: #864cff;
+}
+
+.content .row03 > div .item-wrapper:last-child > div.label {
+  text-align: left;
+  padding-left: 2.85714vw;
+  color: #864cff;
+  background-color: #f7f7f7;
+}
+
+.content .row03 > div .item-wrapper:last-child > div.data {
+  text-align: right;
+  padding-right: 2.85714vw;
+  background-color: #f2edff;
+  color: #864cff;
+}
+
+.content .row03 > div .item-wrapper:last-child > div.data span {
+  color: #b29bfe;
+}
+/*# sourceMappingURL=payroll05.css.map */
