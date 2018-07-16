@@ -1,0 +1,147 @@
+@import './style.scss';
+
+.no-border-bottom{
+  border-bottom: 0px;
+}
+.page-number{
+  text-align: right;
+}
+.back-gray{
+  background-color: #ddd;
+}
+
+table{
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  td{
+    border: $border1 solid black;
+    font-size: 0.5vw;
+    height: 2vw;
+    padding: 0;
+    &:first-child{
+      border-left: 0;
+    }
+    &:last-child{
+      border-right: 0;
+    }
+  }
+}
+
+.row01{
+  margin-bottom: 1vw;
+  justify-content: flex-start;
+  font-size: 1vw;
+}
+
+.row02{
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+
+.row03{
+  justify-content: space-between;
+  div{
+    font-size: 1vw;
+  }
+}
+
+.row04{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.3vw;
+  div{
+    background-color: #dddddd;
+    padding: 0.5vw 0;
+    font-size: 1vw;
+    &:nth-child(1){
+      width: 20%;
+    }
+    &:nth-child(2){
+      width: 50%;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+    &:nth-child(3){
+      width: 30%;
+    }
+  }
+}
+
+.row05{
+  margin-bottom: 0.3vw;
+  table{
+    tr, td{
+      font-size: 0.8vw;
+    }
+  }
+}
+
+.row06{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.3vw;
+  div{
+    padding: 0.5vw 0;
+    font-size: 1vw;
+    &:nth-child(1){
+      width: 10%;
+    }
+    &:nth-child(2){
+      width: 20%;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+    &:nth-child(3){
+      width: 30%;
+      border-right: 1px solid black;
+    }
+    &:nth-child(4){
+      width: 40%;
+    }
+  }
+}
+
+.row07{
+  margin-bottom: 0.5vw;
+  table{
+    tr, td{
+      font-size: 0.8vw;
+      text-align: center;
+    }
+  }
+  .inner-calender{
+    width: 100%;
+    >div{
+      flex: 1;
+      border: 1px solid #dddddd;
+      height: 1.5vw;
+      font-size: 1vw;
+      text-align: center;
+      line-height: 1.5vw;
+    }
+  }
+}
+
+.row08{
+  font-size: 1vw;
+  margin-bottom: 1.5vw;
+}
+
+.row09{
+  align-items: flex-end;
+  div{
+    font-size: 1vw;
+    margin-bottom: 0.5vw;
+  }
+}
+
+.row10{
+  font-size: 1.5vw;
+  border-bottom: 4px solid #666666;
+  padding-bottom: 0.3vw;
+  margin-bottom: 1vw;
+  span{
+    font-size: 1vw;
+  }
+}

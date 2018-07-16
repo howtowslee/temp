@@ -1,0 +1,244 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.page-number {
+  text-align: right;
+}
+
+.back-gray {
+  background-color: #ddd;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 0.1pt solid black;
+  font-size: 0.5vw;
+  height: 2vw;
+  padding: 0;
+}
+
+table td:first-child {
+  border-left: 0;
+}
+
+table td:last-child {
+  border-right: 0;
+}
+
+.row01 {
+  margin-bottom: 1vw;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1vw;
+}
+
+.row02 {
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+
+.row03 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row03 div {
+  font-size: 1vw;
+}
+
+.row04 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.3vw;
+}
+
+.row04 div {
+  background-color: #dddddd;
+  padding: 0.5vw 0;
+  font-size: 1vw;
+}
+
+.row04 div:nth-child(1) {
+  width: 20%;
+}
+
+.row04 div:nth-child(2) {
+  width: 50%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.row04 div:nth-child(3) {
+  width: 30%;
+}
+
+.row05 {
+  margin-bottom: 0.3vw;
+}
+
+.row05 table tr, .row05 table td {
+  font-size: 0.8vw;
+}
+
+.row06 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.3vw;
+}
+
+.row06 div {
+  padding: 0.5vw 0;
+  font-size: 1vw;
+}
+
+.row06 div:nth-child(1) {
+  width: 10%;
+}
+
+.row06 div:nth-child(2) {
+  width: 20%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.row06 div:nth-child(3) {
+  width: 30%;
+  border-right: 1px solid black;
+}
+
+.row06 div:nth-child(4) {
+  width: 40%;
+}
+
+.row07 {
+  margin-bottom: 0.5vw;
+}
+
+.row07 table tr, .row07 table td {
+  font-size: 0.8vw;
+  text-align: center;
+}
+
+.row07 .inner-calender {
+  width: 100%;
+}
+
+.row07 .inner-calender > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #dddddd;
+  height: 1.5vw;
+  font-size: 1vw;
+  text-align: center;
+  line-height: 1.5vw;
+}
+
+.row08 {
+  font-size: 1vw;
+  margin-bottom: 1.5vw;
+}
+
+.row09 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.row09 div {
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
+}
+
+.row10 {
+  font-size: 1.5vw;
+  border-bottom: 4px solid #666666;
+  padding-bottom: 0.3vw;
+  margin-bottom: 1vw;
+}
+
+.row10 span {
+  font-size: 1vw;
+}
+/*# sourceMappingURL=payroll08.css.map */

@@ -1,0 +1,140 @@
+@import './style.scss';
+
+@function vw($px){
+  @return ($px/842)*100vw;
+}
+
+.no-border-bottom{
+  border-bottom: 0px;
+}
+.page-number{
+  text-align: right;
+}
+.back-gray{
+  background-color: #ddd;
+}
+* {
+  font-size: 1.2vw;
+}
+div{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+.content{
+  padding: vw(40);
+  height: 100%;
+  position: relative;
+
+  .row01{
+    justify-content: space-between;
+    margin-bottom: vw(20);
+    .default-info-wrapper{
+      padding: vw(9) 0;
+      width: vw(240);
+      .default-info-panel{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .title{
+        color: #472e7c;
+        font-size: vw(25);
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        padding-bottom: 1vw;
+        width: vw(240);
+      }
+      .info-item{
+        width: 50%;
+        padding: vw(5) 0;
+        justify-content: flex-start;
+        .label{
+          text-align: left;
+          width: vw(30);
+          color: #472e7c;
+          font-size: vw(11);
+        }
+        .data{
+          text-align: left;
+          width: vw(90);
+          color: #472e7c;
+          font-size: vw(11);
+        }
+      }
+
+    }
+    .wage-total-wrapper{
+      width: vw(230);
+      border: 2px solid #ede4ff;
+      padding: 0 vw(30);
+      .label-wrapper{
+        border-bottom: 2px solid #ede4ff;
+        div{
+          width: vw(80);
+          padding: vw(10) 0;
+          text-align: center;
+          color: #472e7c;
+          font-size: vw(11);
+          font-weight: 600;
+        }
+      }
+      .data-wrapper{
+        div{
+          width: vw(80);
+          padding: vw(10) 0;
+          text-align: center;
+          color: #472e7c;
+          font-size: vw(11);
+          font-weight: 600;
+        }
+      }
+    }
+
+  }
+
+  .row02{
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2vw;
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      td{
+        border: 1px solid #ffffff;
+        font-size: 0.5vw;
+        height: 3vw;
+        text-align: center;
+      }
+      tr{
+        &:first-child{
+          background-color: #ede4ff;
+          color: #472e7c;
+          font-weight: 600;
+          td:first-child{
+            background-color: #e1d2ff;
+          }
+          td:last-child{
+            background-color: #e1d2ff;
+          }
+        }
+        &:nth-child(2), &:nth-child(3){
+          background-color: #fbf8ff;
+          color: #472e7c;
+          font-weight: 600;
+          font-size: vw(7);
+        }
+        &:nth-last-child(2){
+          background-color: #e4e8ea;
+        }
+        &:last-child{
+          background-color: #e4e8ea;
+        }
+      }
+    }
+  }
+}

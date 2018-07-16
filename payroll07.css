@@ -1,0 +1,239 @@
+* {
+  font-size: 1.5vw;
+  font-family: 'Nanum Gothic';
+}
+
+body {
+  width: 100vw;
+}
+
+.content {
+  padding: 1vw 5vw;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guide {
+  position: absolute;
+  top: 145vw;
+  width: 100vw;
+  height: 1vw;
+  border-top: 3px solid red;
+}
+
+.page-size-label {
+  text-align: right;
+  font-size: 1.2vw;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.no-border-bottom {
+  border-bottom: 0px;
+}
+
+.page-number {
+  text-align: right;
+}
+
+.back-gray {
+  background-color: #ddd;
+}
+
+* {
+  font-size: 1.2vw;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  padding: 4.75059vw;
+  height: 100%;
+  position: relative;
+}
+
+.content .row01 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.3753vw;
+}
+
+.content .row01 .default-info-wrapper {
+  padding: 1.06888vw 0;
+  width: 28.50356vw;
+}
+
+.content .row01 .default-info-wrapper .default-info-panel {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .row01 .default-info-wrapper .title {
+  color: #472e7c;
+  font-size: 2.96912vw;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  padding-bottom: 1vw;
+  width: 28.50356vw;
+}
+
+.content .row01 .default-info-wrapper .info-item {
+  width: 50%;
+  padding: 0.59382vw 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content .row01 .default-info-wrapper .info-item .label {
+  text-align: left;
+  width: 3.56295vw;
+  color: #472e7c;
+  font-size: 1.30641vw;
+}
+
+.content .row01 .default-info-wrapper .info-item .data {
+  text-align: left;
+  width: 10.68884vw;
+  color: #472e7c;
+  font-size: 1.30641vw;
+}
+
+.content .row01 .wage-total-wrapper {
+  width: 27.31591vw;
+  border: 2px solid #ede4ff;
+  padding: 0 3.56295vw;
+}
+
+.content .row01 .wage-total-wrapper .label-wrapper {
+  border-bottom: 2px solid #ede4ff;
+}
+
+.content .row01 .wage-total-wrapper .label-wrapper div {
+  width: 9.50119vw;
+  padding: 1.18765vw 0;
+  text-align: center;
+  color: #472e7c;
+  font-size: 1.30641vw;
+  font-weight: 600;
+}
+
+.content .row01 .wage-total-wrapper .data-wrapper div {
+  width: 9.50119vw;
+  padding: 1.18765vw 0;
+  text-align: center;
+  color: #472e7c;
+  font-size: 1.30641vw;
+  font-weight: 600;
+}
+
+.content .row02 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 2vw;
+}
+
+.content .row02 table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content .row02 table td {
+  border: 1px solid #ffffff;
+  font-size: 0.5vw;
+  height: 3vw;
+  text-align: center;
+}
+
+.content .row02 table tr:first-child {
+  background-color: #ede4ff;
+  color: #472e7c;
+  font-weight: 600;
+}
+
+.content .row02 table tr:first-child td:first-child {
+  background-color: #e1d2ff;
+}
+
+.content .row02 table tr:first-child td:last-child {
+  background-color: #e1d2ff;
+}
+
+.content .row02 table tr:nth-child(2), .content .row02 table tr:nth-child(3) {
+  background-color: #fbf8ff;
+  color: #472e7c;
+  font-weight: 600;
+  font-size: 0.83135vw;
+}
+
+.content .row02 table tr:nth-last-child(2) {
+  background-color: #e4e8ea;
+}
+
+.content .row02 table tr:last-child {
+  background-color: #e4e8ea;
+}
+/*# sourceMappingURL=payroll07.css.map */
